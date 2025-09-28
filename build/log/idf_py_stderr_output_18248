@@ -1,0 +1,20 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\Smart_Embed\build\Smart_Embed.elf D:\ESP32C3\Espressif\frameworks\Smart_Embed\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+[0;33m--- esp-idf-monitor 1.8.0 on com4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x403801dc: [0;33m_panic_handler[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/riscv/vectors.S[0m[0m:[1;31m383[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40380262: [0;33m_interrupt_handler[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/riscv/vectors.S[0m[0m:[1;31m451[0m
+[0m--- 0x40380226: [0;33m_interrupt_handler[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/riscv/vectors.S[0m[0m:[1;31m402[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'D:\\ESP32C3\\Espressif\\frameworks\\Smart_Embed\\build\\Smart_Embed.elf', '-ex', 'add-symbol-file D:\\ESP32C3\\Espressif\\frameworks\\Smart_Embed\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "D:\\ESP32C3\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\tutra\\AppData\\Local\\Temp\\tmp4vf5u3rf"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "D:ESP32C3EspressifframeworksSmart_Embedbuildbootloaderbootloader.elf"\r\nD:ESP32C3EspressifframeworksSmart_Embedbuildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'D:\\ESP32C3\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\tutra\\AppData\\Local\\Temp\\tmp4vf5u3rf\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x4038075e: [0;33mesp_restart_noos[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

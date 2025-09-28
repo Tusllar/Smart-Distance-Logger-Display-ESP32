@@ -1,0 +1,1844 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\Smart_Embed\build\Smart_Embed.elf D:\ESP32C3\Espressif\frameworks\Smart_Embed\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 28 2025 12:40:55[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2c674h (181876) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=0003c69c vaddr=3fc97000 size=02f24h ( 12068) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=0003f5c8 vaddr=40380000 size=00a50h (  2640) load[0m
+[0;32mI (122) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b8ebch (757436) map[0m
+[0;32mI (250) esp_image: segment 4: paddr=000f8ee4 vaddr=40380a50 size=16528h ( 91432) load[0m
+[0;32mI (267) esp_image: segment 5: paddr=0010f414 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (274) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (274) boot: Disabling RNG early entropy source...[0m
+[0;32mI (284) cpu_start: Unicore app[0m
+[0;32mI (293) cpu_start: Pro cpu start user code[0m
+[0;32mI (293) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (293) app_init: Application information:[0m
+[0;32mI (293) app_init: Project name:     Smart_Embed[0m
+[0;32mI (297) app_init: App version:      1[0m
+[0;32mI (301) app_init: Compile time:     Sep 28 2025 16:16:29[0m
+[0;32mI (306) app_init: ELF file SHA256:  5998e63ae...[0m
+[0;32mI (310) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (314) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (317) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (321) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (325) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (332) heap_init: At 3FC9E300 len 00021D00 (135 KiB): RAM[0m
+[0;32mI (337) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (343) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (349) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (355) spi_flash: detected chip: generic[0m
+[0;32mI (358) spi_flash: flash io: dio[0m
+[0;33mW (361) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (373) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (379) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (386) main_task: Started on CPU0[0m
+[0;32mI (404) main_task: Calling app_main()[0m
+[0;32mI (404) smart_embed: Starting Smart Distance Logger & Display[0m
+[0;32mI (404) example: Initializing SD card[0m
+[0;32mI (405) example: Using SPI peripheral[0m
+[0;32mI (409) example: Mounting filesystem[0m
+[0;32mI (413) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (460) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (490) example: Filesystem mounted[0m
+[0;32mI (499) wifi station: ESP_WIFI_MODE_STA[0m
+[0;32mI (501) pp: pp rom version: 9387209[0m
+[0;32mI (502) net80211: net80211 rom version: 9387209[0m
+[0;32mI (503) wifi:wifi driver task: 3fcaeb84, prio:23, stack:6656, core=0[0m
+[0;32mI (511) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (511) wifi:wifi certification version: v7.0[0m
+[0;32mI (513) wifi:config NVS flash: enabled[0m
+[0;32mI (517) wifi:config nano formatting: disabled[0m
+[0;32mI (521) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (526) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (530) wifi:Init management short buffer num: 32[0m
+[0;32mI (535) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (538) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (542) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (547) wifi:Init static rx buffer num: 10[0m
+[0;32mI (550) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (555) wifi_init: rx ba win: 6[0m
+[0;32mI (557) wifi_init: accept mbox: 6[0m
+[0;32mI (560) wifi_init: tcpip mbox: 32[0m
+[0;32mI (563) wifi_init: udp mbox: 6[0m
+[0;32mI (566) wifi_init: tcp mbox: 6[0m
+[0;32mI (569) wifi_init: tcp tx win: 5760[0m
+[0;32mI (572) wifi_init: tcp rx win: 5760[0m
+[0;32mI (575) wifi_init: tcp mss: 1440[0m
+[0;32mI (578) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (582) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (586) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (623) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (624) wifi:enable tsf[0m
+[0;32mI (627) wifi station: wifi_init_sta finished.[0m
+[0;32mI (637) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (638) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (670) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (732) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (838) wifi:connected with 4 chi em, aid = 11, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (839) wifi:security: WPA2-PSK, phy: bgn, rssi: -42[0m
+[0;32mI (841) wifi:pm start, type: 1[0m
+
+[0;32mI (843) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (851) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (940) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2158) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2158) wifi station: got ip:192.168.1.10[0m
+[0;32mI (2159) wifi station: connected to ap SSID:4 chi em password:daytro6868[0m
+D (2165) i2c.common: new bus(0) at 0x3fcb65e4
+D (2169) i2c.common: bus clock source frequency: 40000000hz
+[0;32mI (2277) oled_driver: OLED driver initialized successfully[0m
+[0;32mI (2277) ultrasonic: Ultrasonic sensor initialized[0m
+[0;32mI (2277) smart_embed: Ultrasonic sensor initialized[0m
+[0;32mI (2280) smart_embed: System initialized successfully[0m
+[0;32mI (2285) smart_embed: Sensor task started[0m
+[0;32mI (2289) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (2292) smart_embed: Display task started[0m
+[0;32mI (2296) smart_embed: LED task started[0m
+Guru Meditation Error: Core  0 panic'ed (Stack protection fault). 
+
+Detected in task "led_task" at 0x403801dc
+Stack pointer: 0x3fc9a8d0
+Stack bounds: 0x3fc9a2d0 - 0x3fc9a8d0
+
+
+Core  0 register dump:
+MEPC    : 0x40380262  RA      : 0x40380226  SP      : 0x3fc9a8d0  GP      : 0x3fc97800  
+TP      : 0x3fcb9780  T0      : 0x00000008  T1      : 0x600c2128  T2      : 0x00000002  
+S0/FP   : 0x3fc9e300  S1      : 0x80000005  A0      : 0x600ce000  A1      : 0x00000300  
+A2      : 0x600ce000  A3      : 0x3fcb98f0  A4      : 0x00000000  A5      : 0x600c2000  
+A6      : 0x00000000  A7      : 0x00019cac  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x600ce000  S5      : 0x40119cac  S6      : 0x00000004  S7      : 0x00000066  
+S8      : 0x00000001  S9      : 0x00000100  S10     : 0x00000000  S11     : 0x3fcb9374  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x0000001b  MTVAL   : 0x0000850a  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc9a8d0: 0x60023000 0x4038722c 0x40387238 0x00000000 0x3fc9a8dc 0x00000000 0x00000000 0x00000000
+3fc9a8f0: 0x3fc9a8f4 0xffffffff 0x3fc9a8f4 0x3fc9a8f4 0x00000000 0x3fc9a908 0xffffffff 0x3fc9a908
+3fc9a910: 0x3fc9a908 0x00000001 0x00000001 0x00000000 0x0001ffff 0x00000000 0x00000000 0x00000000
+3fc9a930: 0x00000000 0x3fc9a930 0x00000000 0x00000000 0x00000000 0x3fc9a948 0xffffffff 0x3fc9a948
+3fc9a950: 0x3fc9a948 0x00000000 0x3fc9a95c 0xffffffff 0x3fc9a95c 0x3fc9a95c 0x00000001 0x00000001
+3fc9a970: 0x00000000 0x0001ffff 0x00000000 0x00000000 0x00000000 0x60023000 0x4038722c 0x40387238
+3fc9a990: 0x3fc9e78c 0x3fc9e7b0 0x3fc9e7d8 0x3fc9e7fc 0x3fca9748 0x3fcaa038 0x00000000 0x00000000
+3fc9a9b0: 0x3fca97c0 0x00000000 0x00000000 0x00000000 0x00000000 0x40382ea8 0x00000000 0x4038131a
+3fc9a9d0: 0x00000000 0x40381832 0x00000000 0x4038226e 0x3fc9e0ec 0x40389274 0x3fc9a8d0 0x00000000
+3fc9a9f0: 0x00000000 0x42015f82 0x00000000 0x4038410e 0x3fca1d7c 0x40382db8 0x00000000 0x40380f66
+3fc9aa10: 0x3fcb662c 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9aa30: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9aa50: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9aa70: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9aa90: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9aab0: 0x00000000 0x00000000 0x00000000 0x00000001 0x00000009 0x00000000 0x00800000 0x00800000
+3fc9aad0: 0x000f0000 0x00710000 0x0000001b 0x00000001 0x3fca9994 0x3fca99e8 0x3fca993c 0x40381956
+3fc9aaf0: 0x4038235c 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x42015e48
+3fc9ab10: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000001
+3fc9ab30: 0x6001f000 0x3fc9ffe8 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9ab50: 0x00000000 0x00000673 0x3fcaca3c 0x3fcafe4c 0x00000002 0x3fcac0b4 0x00000000 0x00000000
+3fc9ab70: 0x3fcac0b4 0x00000000 0x00000000 0x4201c930 0x00000000 0x00000000 0x3fcb658c 0x3fcb65e4
+3fc9ab90: 0x00000001 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9abb0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9abd0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3fc9abe8 0x3fc9abe8
+3fc9abf0: 0x3fc9abe8 0x3fc9abe8 0x00000000 0x3fc9ac00 0xffffffff 0x3fc9ac00 0x3fc9ac00 0x00000000
+3fc9ac10: 0x3fc9ac14 0xffffffff 0x3fc9ac14 0x3fc9ac14 0x00000000 0x00000001 0x00000000 0x0001ffff
+3fc9ac30: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9ac50: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9ac70: 0x00000000 0x4201c8b4 0x00000000 0x3fc9ac78 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9ac90: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc9acb0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+
+
+
+ELF file SHA256: 5998e63ae
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038075e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 28 2025 12:40:55[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2c674h (181876) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=0003c69c vaddr=3fc97000 size=02f24h ( 12068) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0003f5c8 vaddr=40380000 size=00a50h (  2640) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b8ebch (757436) map[0m
+[0;32mI (255) esp_image: segment 4: paddr=000f8ee4 vaddr=40380a50 size=16528h ( 91432) load[0m
+[0;32mI (272) esp_image: segment 5: paddr=0010f414 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (279) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (279) boot: Disabling RNG early entropy source...[0m
+[0;32mI (289) cpu_start: Unicore app[0m
+[0;32mI (298) cpu_start: Pro cpu start user code[0m
+[0;32mI (298) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (298) app_init: Application information:[0m
+[0;32mI (298) app_init: Project name:     Smart_Embed[0m
+[0;32mI (302) app_init: App version:      1[0m
+[0;32mI (305) app_init: Compile time:     Sep 28 2025 16:16:29[0m
+[0;32mI (310) app_init: ELF file SHA256:  5998e63ae...[0m
+[0;32mI (315) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (318) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (322) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (326) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (330) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (336) heap_init: At 3FC9E300 len 00021D00 (135 KiB): RAM[0m
+[0;32mI (341) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (348) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (354) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (360) spi_flash: detected chip: generic[0m
+[0;32mI (363) spi_flash: flash io: dio[0m
+[0;33mW (366) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (378) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (384) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (391) main_task: Started on CPU0[0m
+[0;32mI (409) main_task: Calling app_main()[0m
+[0;32mI (409) smart_embed: Starting Smart Distance Logger & Display[0m
+[0;32mI (409) example: Initializing SD card[0m
+[0;32mI (410) example: Using SPI peripheral[0m
+[0;32mI (414) example: Mounting filesystem[0m
+[0;32mI (458) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (580) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (610) example: Filesystem mounted[0m
+[0;32mI (619) wifi station: ESP_WIFI_MODE_STA[0m
+[0;32mI (621) pp: pp rom version: 9387209[0m
+[0;32mI (622) net80211: net80211 rom version: 9387209[0m
+[0;32mI (623) wifi:wifi driver task: 3fcaeb84, prio:23, stack:6656, core=0[0m
+[0;32mI (631) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (631) wifi:wifi certification version: v7.0[0m
+[0;32mI (634) wifi:config NVS flash: enabled[0m
+[0;32mI (637) wifi:config nano formatting: disabled[0m
+[0;32mI (641) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (646) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (650) wifi:Init management short buffer num: 32[0m
+[0;32mI (655) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (658) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (662) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (667) wifi:Init static rx buffer num: 10[0m
+[0;32mI (670) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi_init: rx ba win: 6[0m
+[0;32mI (677) wifi_init: accept mbox: 6[0m
+[0;32mI (680) wifi_init: tcpip mbox: 32[0m
+[0;32mI (683) wifi_init: udp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp tx win: 5760[0m
+[0;32mI (692) wifi_init: tcp rx win: 5760[0m
+[0;32mI (695) wifi_init: tcp mss: 1440[0m
+[0;32mI (698) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (702) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (706) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (745) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (746) wifi:enable tsf[0m
+[0;32mI (749) wifi station: wifi_init_sta finished.[0m
+[0;32mI (755) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (756) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (771) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (825) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (931) wifi:connected with 4 chi em, aid = 8, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (931) wifi:security: WPA2-PSK, phy: bgn, rssi: -41[0m
+[0;32mI (934) wifi:pm start, type: 1[0m
+
+[0;32mI (936) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (944) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (983) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2197) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2197) wifi station: got ip:192.168.1.10[0m
+[0;32mI (2198) wifi station: connected to ap SSID:4 chi em password:daytro6868[0m
+D (2204) i2c.common: new bus(0) at 0x3fcb5dc4
+D (2208) i2c.common: bus clock source frequency: 40000000hz
+[0;32mI (2315) oled_driver: OLED driver initialized successfully[0m
+[0;32mI (2315) ultrasonic: Ultrasonic sensor initialized[0m
+[0;32mI (2315) smart_embed: Ultrasonic sensor initialized[0m
+[0;32mI (2318) smart_embed: System initialized successfully[0m
+[0;32mI (2323) smart_embed: Sensor task started[0m
+[0;32mI (2327) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (2330) smart_embed: Display task started[0m
+[0;32mI (2334) smart_embed: LED task started[0m
+[0;32mI (2337) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (2343) smart_embed: HTTP Server task started[0m
+[0;32mI (2343) smart_embed: SD Card task started[0m
+[0;32mI (2392) smart_embed: All tasks created successfully[0m
+[0;32mI (2407) smart_embed: Saved: 4.39 cm, 1991 ms[0m
+[0;32mI (2442) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (2542) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (2561) smart_embed: Saved: 4.39 cm, 2147 ms[0m
+[0;32mI (2642) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (2716) smart_embed: Saved: 4.39 cm, 2302 ms[0m
+[0;32mI (2742) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (2830) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (2842) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (2871) smart_embed: Saved: 4.39 cm, 2457 ms[0m
+[0;32mI (2942) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3028) smart_embed: Saved: 4.39 cm, 2612 ms[0m
+[0;32mI (3042) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3142) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3183) smart_embed: Saved: 4.39 cm, 2769 ms[0m
+[0;32mI (3242) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3331) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (3340) smart_embed: Saved: 4.39 cm, 2924 ms[0m
+[0;32mI (3342) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3442) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3495) smart_embed: Saved: 4.39 cm, 3081 ms[0m
+[0;32mI (3542) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3642) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3652) smart_embed: Saved: 4.39 cm, 3236 ms[0m
+[0;32mI (3742) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3811) smart_embed: Saved: 4.39 cm, 3392 ms[0m
+[0;32mI (3832) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (3843) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3943) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (3967) smart_embed: Saved: 4.39 cm, 3552 ms[0m
+[0;32mI (4043) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (4121) smart_embed: Saved: 4.39 cm, 3707 ms[0m
+[0;32mI (4143) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (4243) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (4276) smart_embed: Saved: 4.39 cm, 3862 ms[0m
+[0;32mI (4332) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (4343) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (4431) smart_embed: Saved: 4.39 cm, 4017 ms[0m
+[0;32mI (4443) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (4543) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (4586) smart_embed: Saved: 4.39 cm, 4172 ms[0m
+[0;32mI (4643) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (4742) smart_embed: Saved: 4.39 cm, 4327 ms[0m
+[0;32mI (4743) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (4832) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (4843) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (4896) smart_embed: Saved: 4.39 cm, 4482 ms[0m
+[0;32mI (4943) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5043) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5052) smart_embed: Saved: 4.39 cm, 4637 ms[0m
+[0;32mI (5143) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5212) smart_embed: Saved: 4.39 cm, 4793 ms[0m
+[0;32mI (5243) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5333) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (5343) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5367) smart_embed: Saved: 4.39 cm, 4953 ms[0m
+[0;32mI (5443) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5522) smart_embed: Saved: 4.39 cm, 5108 ms[0m
+[0;32mI (5543) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5643) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5678) smart_embed: Saved: 4.39 cm, 5263 ms[0m
+[0;32mI (5743) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5833) smart_embed: Saved: 4.39 cm, 5419 ms[0m
+[0;32mI (5834) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (5843) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5943) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (5989) smart_embed: Saved: 4.39 cm, 5575 ms[0m
+[0;32mI (6043) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (6143) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (6145) smart_embed: Saved: 4.39 cm, 5730 ms[0m
+[0;32mI (6243) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (6299) smart_embed: Saved: 4.39 cm, 5885 ms[0m
+[0;32mI (6335) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (6343) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (6443) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (6455) smart_embed: Saved: 4.39 cm, 6040 ms[0m
+[0;32mI (6543) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (6613) smart_embed: Saved: 4.39 cm, 6195 ms[0m
+[0;32mI (6643) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (6743) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (6768) smart_embed: Saved: 4.39 cm, 6354 ms[0m
+[0;32mI (6836) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (6843) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (6923) smart_embed: Saved: 4.39 cm, 6509 ms[0m
+[0;32mI (6943) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (7043) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (7080) smart_embed: Saved: 4.39 cm, 6665 ms[0m
+[0;32mI (7143) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (7235) smart_embed: Saved: 4.39 cm, 6820 ms[0m
+[0;32mI (7243) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (7337) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (7343) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (7391) smart_embed: Saved: 4.39 cm, 6976 ms[0m
+[0;32mI (7392) example: Starting server on port: '80'[0m
+[0;32mI (7393) example: Registering URI handlers[0m
+[0;32mI (7394) smart_embed: HTTP Server started on http://192.168.4.1[0m
+[0;32mI (7443) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (7543) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (7546) smart_embed: Saved: 4.39 cm, 7131 ms[0m
+[0;32mI (7643) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (7701) smart_embed: Saved: 4.39 cm, 7287 ms[0m
+[0;32mI (7743) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (7838) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (7843) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (7857) smart_embed: Saved: 4.39 cm, 7442 ms[0m
+[0;32mI (7943) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8011) smart_embed: Saved: 4.39 cm, 7597 ms[0m
+[0;32mI (8043) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8143) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8172) smart_embed: Saved: 4.39 cm, 7752 ms[0m
+[0;32mI (8243) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8327) smart_embed: Saved: 4.39 cm, 7913 ms[0m
+[0;32mI (8339) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (8343) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8443) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8484) smart_embed: Saved: 4.39 cm, 8068 ms[0m
+[0;32mI (8543) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8639) smart_embed: Saved: 4.39 cm, 8225 ms[0m
+[0;32mI (8643) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8743) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8795) smart_embed: Saved: 4.39 cm, 8380 ms[0m
+[0;32mI (8839) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (8843) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8943) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (8951) smart_embed: Saved: 4.39 cm, 8536 ms[0m
+[0;32mI (9043) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (9106) smart_embed: Saved: 4.39 cm, 8691 ms[0m
+[0;32mI (9143) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (9243) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (9260) smart_embed: Saved: 4.39 cm, 8846 ms[0m
+[0;32mI (9340) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (9343) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (9415) smart_embed: Saved: 4.39 cm, 9001 ms[0m
+[0;32mI (9443) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (9543) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (9575) smart_embed: Saved: 4.39 cm, 9156 ms[0m
+[0;32mI (9643) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (9730) smart_embed: Saved: 4.39 cm, 9316 ms[0m
+[0;32mI (9743) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (9841) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (9843) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (9885) smart_embed: Saved: 4.39 cm, 9471 ms[0m
+[0;32mI (9943) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10040) smart_embed: Saved: 4.39 cm, 9626 ms[0m
+[0;32mI (10043) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10143) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10205) smart_embed: Saved: 4.39 cm, 9781 ms[0m
+[0;32mI (10243) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10342) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (10343) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10360) smart_embed: Saved: 4.39 cm, 9946 ms[0m
+[0;32mI (10443) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10516) smart_embed: Saved: 4.39 cm, 10101 ms[0m
+[0;32mI (10543) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10643) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10671) smart_embed: Saved: 4.39 cm, 10257 ms[0m
+[0;32mI (10743) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10819) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:23:fc:a8), tid:0, ssn:4, winSize:64[0m
+[0;32mI (10832) smart_embed: Saved: 4.39 cm, 10412 ms[0m
+[0;32mI (10843) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (10844) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10944) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (10986) smart_embed: Saved: 4.39 cm, 10572 ms[0m
+[0;32mI (11031) example: Ultrasonic API called[0m
+[0;32mI (11031) example: Distance read: 4.39 cm[0m
+[0;32mI (11032) example: Sending response: {"distance":4.39,"timestamp":10672}[0m
+[0;32mI (11044) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (11142) smart_embed: Saved: 4.39 cm, 10727 ms[0m
+[0;32mI (11144) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (11244) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (11297) smart_embed: Saved: 4.39 cm, 10882 ms[0m
+[0;32mI (11344) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (11345) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (11445) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (11452) smart_embed: Saved: 4.39 cm, 11037 ms[0m
+[0;32mI (11545) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (11611) smart_embed: Saved: 4.39 cm, 11192 ms[0m
+[0;32mI (11645) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (11745) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (11766) smart_embed: Saved: 4.39 cm, 11352 ms[0m
+[0;32mI (11845) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (11846) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (11922) smart_embed: Saved: 4.39 cm, 11507 ms[0m
+[0;32mI (11946) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (12046) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (12076) smart_embed: Saved: 4.39 cm, 11662 ms[0m
+[0;32mI (12146) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (12232) smart_embed: Saved: 4.39 cm, 11817 ms[0m
+[0;32mI (12246) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (12346) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (12347) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (12386) smart_embed: Saved: 4.39 cm, 11972 ms[0m
+[0;32mI (12395) smart_embed: System running - Distance: 4.4 cm, Valid: Yes, LED: ON[0m
+[0;32mI (12447) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (12541) smart_embed: Saved: 4.39 cm, 12127 ms[0m
+[0;32mI (12547) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (12647) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (12696) smart_embed: Saved: 4.39 cm, 12282 ms[0m
+[0;32mI (12747) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (12847) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (12848) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (12853) smart_embed: Saved: 4.39 cm, 12437 ms[0m
+[0;32mI (12948) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13013) smart_embed: Saved: 4.39 cm, 12594 ms[0m
+[0;32mI (13048) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13148) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13169) smart_embed: Saved: 4.39 cm, 12754 ms[0m
+[0;32mI (13248) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13324) smart_embed: Saved: 4.39 cm, 12910 ms[0m
+[0;32mI (13348) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (13348) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13449) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13481) smart_embed: Saved: 4.39 cm, 13065 ms[0m
+[0;32mI (13483) example: Ultrasonic API called[0m
+[0;32mI (13484) example: Distance read: 4.39 cm[0m
+[0;32mI (13485) example: Sending response: {"distance":4.39,"timestamp":13125}[0m
+[0;32mI (13549) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13649) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13650) smart_embed: Saved: 4.40 cm, 13233 ms[0m
+[0;32mI (13749) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13804) smart_embed: Saved: 4.40 cm, 13390 ms[0m
+[0;32mI (13848) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (13849) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13949) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (13960) smart_embed: Saved: 4.40 cm, 13545 ms[0m
+[0;32mI (14049) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (14115) smart_embed: Saved: 4.40 cm, 13701 ms[0m
+[0;32mI (14149) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (14249) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (14270) smart_embed: Saved: 4.40 cm, 13856 ms[0m
+[0;32mI (14349) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (14350) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (14429) smart_embed: Saved: 4.40 cm, 14011 ms[0m
+[0;32mI (14450) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (14550) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (14584) smart_embed: Saved: 4.40 cm, 14170 ms[0m
+[0;32mI (14650) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (14739) smart_embed: Saved: 4.40 cm, 14325 ms[0m
+[0;32mI (14750) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (14850) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (14851) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (14894) smart_embed: Saved: 4.40 cm, 14480 ms[0m
+[0;32mI (14951) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15049) smart_embed: Saved: 4.40 cm, 14635 ms[0m
+[0;32mI (15051) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15151) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15204) smart_embed: Saved: 4.40 cm, 14790 ms[0m
+[0;32mI (15251) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15351) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (15352) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15361) smart_embed: Saved: 4.40 cm, 14945 ms[0m
+[0;32mI (15452) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15515) smart_embed: Saved: 4.40 cm, 15101 ms[0m
+[0;32mI (15552) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15652) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15670) smart_embed: Saved: 4.40 cm, 15256 ms[0m
+[0;32mI (15752) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15825) smart_embed: Saved: 4.40 cm, 15411 ms[0m
+[0;32mI (15852) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (15853) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15953) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (15987) smart_embed: Saved: 4.40 cm, 15566 ms[0m
+[0;32mI (16053) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (16143) smart_embed: Saved: 4.40 cm, 15727 ms[0m
+[0;32mI (16153) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (16253) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (16297) smart_embed: Saved: 4.40 cm, 15883 ms[0m
+[0;32mI (16353) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (16354) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (16453) smart_embed: Saved: 4.40 cm, 16038 ms[0m
+[0;32mI (16454) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (16554) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (16607) smart_embed: Saved: 4.40 cm, 16193 ms[0m
+[0;32mI (16654) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (16754) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (16763) smart_embed: Saved: 4.40 cm, 16348 ms[0m
+[0;32mI (16854) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (16855) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (16918) smart_embed: Saved: 4.40 cm, 16504 ms[0m
+[0;32mI (16955) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17055) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17074) smart_embed: Saved: 4.40 cm, 16659 ms[0m
+[0;32mI (17156) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17228) smart_embed: Saved: 4.40 cm, 16814 ms[0m
+[0;32mI (17256) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17355) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (17356) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17388) smart_embed: Saved: 4.40 cm, 16969 ms[0m
+[0;32mI (17456) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17543) smart_embed: Saved: 4.40 cm, 17129 ms[0m
+[0;32mI (17556) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17656) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17698) smart_embed: Saved: 4.40 cm, 17284 ms[0m
+[0;32mI (17756) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17853) smart_embed: Saved: 4.40 cm, 17439 ms[0m
+[0;32mI (17856) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (17856) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17957) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18009) smart_embed: Saved: 4.40 cm, 17594 ms[0m
+[0;32mI (18057) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18157) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18164) smart_embed: Saved: 4.40 cm, 17749 ms[0m
+[0;32mI (18257) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18319) smart_embed: Saved: 4.40 cm, 17904 ms[0m
+[0;32mI (18356) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (18357) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18457) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18473) smart_embed: Saved: 4.40 cm, 18059 ms[0m
+[0;32mI (18557) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18629) smart_embed: Saved: 4.40 cm, 18214 ms[0m
+[0;32mI (18657) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18757) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18787) smart_embed: Saved: 4.40 cm, 18369 ms[0m
+[0;32mI (18856) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (18857) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18942) smart_embed: Saved: 4.40 cm, 18528 ms[0m
+[0;32mI (18957) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (19057) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (19098) smart_embed: Saved: 4.40 cm, 18683 ms[0m
+[0;32mI (19157) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (19252) smart_embed: Saved: 4.40 cm, 18838 ms[0m
+[0;32mI (19257) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (19357) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (19358) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (19408) smart_embed: Saved: 4.40 cm, 18993 ms[0m
+[0;32mI (19458) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (19558) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (19564) smart_embed: Saved: 4.40 cm, 19149 ms[0m
+[0;32mI (19658) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (19720) smart_embed: Saved: 4.40 cm, 19305 ms[0m
+[0;32mI (19758) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (19858) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (19859) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (19875) smart_embed: Saved: 4.40 cm, 19461 ms[0m
+[0;32mI (19959) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20030) smart_embed: Saved: 4.40 cm, 19615 ms[0m
+[0;32mI (20059) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20159) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20189) smart_embed: Saved: 4.40 cm, 19771 ms[0m
+[0;32mI (20259) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20345) smart_embed: Saved: 4.40 cm, 19930 ms[0m
+[0;32mI (20359) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (20360) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20460) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20500) smart_embed: Saved: 4.40 cm, 20086 ms[0m
+[0;32mI (20560) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20655) smart_embed: Saved: 4.40 cm, 20241 ms[0m
+[0;32mI (20660) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20760) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20811) smart_embed: Saved: 4.40 cm, 20396 ms[0m
+[0;32mI (20859) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (20860) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20960) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (20967) smart_embed: Saved: 4.40 cm, 20551 ms[0m
+[0;32mI (21060) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (21122) smart_embed: Saved: 4.40 cm, 20707 ms[0m
+[0;32mI (21160) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (21260) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (21277) smart_embed: Saved: 4.40 cm, 20863 ms[0m
+[0;32mI (21360) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (21361) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (21432) smart_embed: Saved: 4.40 cm, 21018 ms[0m
+[0;32mI (21461) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (21561) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (21587) smart_embed: Saved: 4.40 cm, 21173 ms[0m
+[0;32mI (21661) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (21748) smart_embed: Saved: 4.40 cm, 21328 ms[0m
+[0;32mI (21761) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (21861) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (21862) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (21902) smart_embed: Saved: 4.40 cm, 21488 ms[0m
+[0;32mI (21962) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22057) smart_embed: Saved: 4.40 cm, 21643 ms[0m
+[0;32mI (22062) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22162) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22212) smart_embed: Saved: 4.40 cm, 21798 ms[0m
+[0;32mI (22262) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22362) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (22363) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22369) smart_embed: Saved: 4.40 cm, 21953 ms[0m
+[0;32mI (22395) smart_embed: System running - Distance: 4.4 cm, Valid: Yes, LED: ON[0m
+[0;32mI (22463) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22525) smart_embed: Saved: 4.40 cm, 22109 ms[0m
+[0;32mI (22563) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22663) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22680) smart_embed: Saved: 4.40 cm, 22266 ms[0m
+[0;32mI (22763) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22836) smart_embed: Saved: 4.40 cm, 22421 ms[0m
+[0;32mI (22863) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (22864) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22964) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (22991) smart_embed: Saved: 4.40 cm, 22577 ms[0m
+[0;32mI (23064) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (23151) smart_embed: Saved: 4.40 cm, 22732 ms[0m
+[0;32mI (23164) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (23264) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (23307) smart_embed: Saved: 4.40 cm, 22892 ms[0m
+[0;32mI (23364) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (23365) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (23461) smart_embed: Saved: 4.40 cm, 23047 ms[0m
+[0;32mI (23465) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (23565) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (23617) smart_embed: Saved: 4.40 cm, 23202 ms[0m
+[0;32mI (23665) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (23765) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (23772) smart_embed: Saved: 4.40 cm, 23357 ms[0m
+[0;32mI (23865) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (23866) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (23927) smart_embed: Saved: 4.40 cm, 23512 ms[0m
+[0;32mI (23966) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (24066) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (24081) smart_embed: Saved: 4.40 cm, 23667 ms[0m
+[0;32mI (24166) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (24237) smart_embed: Saved: 4.40 cm, 23822 ms[0m
+[0;32mI (24266) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (24341) example: Ultrasonic API called[0m
+[0;32mI (24342) example: Distance read: 4.40 cm[0m
+[0;32mI (24344) example: Sending response: {"distance":4.40,"timestamp":23984}[0m
+[0;32mI (24349) example: LED status response: {"status":"success","led":"on"}[0m
+[0;32mI (24368) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (24375) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;33mW (24380) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (24382) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (24415) smart_embed: Saved: 4.39 cm, 23999 ms[0m
+[0;32mI (24486) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (24574) smart_embed: Saved: 4.39 cm, 24155 ms[0m
+[0;32mI (24586) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (24686) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (24728) smart_embed: Saved: 4.39 cm, 24314 ms[0m
+[0;32mI (24786) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (24875) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (24885) smart_embed: Saved: 4.39 cm, 24469 ms[0m
+[0;32mI (24886) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (24986) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (25039) smart_embed: Saved: 4.39 cm, 24625 ms[0m
+[0;32mI (25086) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (25186) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (25195) smart_embed: Saved: 4.39 cm, 24780 ms[0m
+[0;32mI (25286) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (25350) smart_embed: Saved: 4.39 cm, 24936 ms[0m
+[0;32mI (25376) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (25386) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (25486) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (25505) smart_embed: Saved: 4.39 cm, 25091 ms[0m
+[0;32mI (25586) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (25661) smart_embed: Saved: 4.39 cm, 25246 ms[0m
+[0;32mI (25686) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (25786) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (25826) smart_embed: Saved: 4.39 cm, 25401 ms[0m
+[0;32mI (25877) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (25886) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (25981) smart_embed: Saved: 4.39 cm, 25566 ms[0m
+[0;32mI (25986) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (26086) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (26135) smart_embed: Saved: 4.39 cm, 25721 ms[0m
+[0;32mI (26186) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (26286) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (26291) smart_embed: Saved: 4.39 cm, 25876 ms[0m
+[0;32mI (26378) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (26386) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (26446) smart_embed: Saved: 4.39 cm, 26032 ms[0m
+[0;32mI (26486) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (26586) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (26601) smart_embed: Saved: 4.39 cm, 26187 ms[0m
+[0;32mI (26686) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (26756) smart_embed: Saved: 4.39 cm, 26342 ms[0m
+[0;32mI (26786) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (26879) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (26886) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (26911) smart_embed: Saved: 4.39 cm, 26497 ms[0m
+[0;32mI (26986) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (27066) smart_embed: Saved: 4.39 cm, 26652 ms[0m
+[0;32mI (27086) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (27186) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (27226) smart_embed: Saved: 4.39 cm, 26807 ms[0m
+[0;32mI (27286) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (27380) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (27386) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (27388) smart_embed: Saved: 4.39 cm, 26967 ms[0m
+[0;32mI (27486) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (27542) smart_embed: Saved: 4.39 cm, 27128 ms[0m
+[0;32mI (27586) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (27686) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (27698) smart_embed: Saved: 4.39 cm, 27283 ms[0m
+[0;32mI (27786) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (27853) smart_embed: Saved: 4.39 cm, 27439 ms[0m
+[0;32mI (27881) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (27886) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (27986) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (28008) smart_embed: Saved: 4.39 cm, 27594 ms[0m
+[0;32mI (28086) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (28163) smart_embed: Saved: 4.39 cm, 27749 ms[0m
+[0;32mI (28186) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (28286) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (28319) smart_embed: Saved: 4.39 cm, 27904 ms[0m
+[0;32mI (28381) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (28386) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (28474) smart_embed: Saved: 4.39 cm, 28060 ms[0m
+[0;32mI (28486) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (28586) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (28630) smart_embed: Saved: 4.39 cm, 28215 ms[0m
+[0;32mI (28686) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (28786) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (28790) smart_embed: Saved: 4.39 cm, 28371 ms[0m
+[0;32mI (28882) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (28886) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (28946) smart_embed: Saved: 4.39 cm, 28531 ms[0m
+[0;32mI (28986) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (29086) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (29100) smart_embed: Saved: 4.39 cm, 28686 ms[0m
+[0;32mI (29186) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (29255) smart_embed: Saved: 4.39 cm, 28841 ms[0m
+[0;32mI (29286) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (29383) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (29386) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (29410) smart_embed: Saved: 4.39 cm, 28996 ms[0m
+[0;32mI (29488) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (29565) smart_embed: Saved: 4.39 cm, 29151 ms[0m
+[0;32mI (29588) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (29688) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (29721) smart_embed: Saved: 4.39 cm, 29306 ms[0m
+[0;32mI (29788) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (29875) smart_embed: Saved: 4.39 cm, 29461 ms[0m
+[0;32mI (29884) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (29888) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (29988) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (30030) smart_embed: Saved: 4.39 cm, 29616 ms[0m
+[0;32mI (30088) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (30188) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (30190) smart_embed: Saved: 4.39 cm, 29771 ms[0m
+[0;32mI (30288) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (30345) smart_embed: Saved: 4.39 cm, 29930 ms[0m
+[0;32mI (30384) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (30388) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (30488) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (30500) smart_embed: Saved: 4.39 cm, 30085 ms[0m
+[0;32mI (30588) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (30654) smart_embed: Saved: 4.39 cm, 30240 ms[0m
+[0;32mI (30688) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (30791) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (30809) smart_embed: Saved: 4.39 cm, 30395 ms[0m
+[0;32mI (30885) smart_embed: Distance: 3.7 cm[0m
+[0;32mI (30893) smart_embed: LED ON - Distance: 3.7 cm < 10.0 cm[0m
+[0;32mI (30964) smart_embed: Saved: 4.39 cm, 30550 ms[0m
+[0;32mI (30993) smart_embed: LED ON - Distance: 3.7 cm < 10.0 cm[0m
+[0;32mI (31093) smart_embed: LED ON - Distance: 3.7 cm < 10.0 cm[0m
+[0;32mI (31121) smart_embed: Saved: 4.39 cm, 30705 ms[0m
+[0;32mI (31193) smart_embed: LED ON - Distance: 3.7 cm < 10.0 cm[0m
+[0;32mI (31275) smart_embed: Saved: 4.39 cm, 30861 ms[0m
+[0;32mI (31293) smart_embed: LED ON - Distance: 3.7 cm < 10.0 cm[0m
+[0;32mI (31386) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (31393) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (31431) smart_embed: Saved: 4.39 cm, 31016 ms[0m
+[0;32mI (31493) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (31585) smart_embed: Saved: 4.39 cm, 31171 ms[0m
+[0;32mI (31593) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (31693) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (31746) smart_embed: Saved: 4.39 cm, 31326 ms[0m
+[0;32mI (31793) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (31887) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (31893) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (31902) smart_embed: Saved: 4.39 cm, 31487 ms[0m
+[0;32mI (31993) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32062) smart_embed: Saved: 4.39 cm, 31644 ms[0m
+[0;32mI (32093) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32193) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32218) smart_embed: Saved: 4.39 cm, 31803 ms[0m
+[0;32mI (32293) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32375) smart_embed: Saved: 4.39 cm, 31960 ms[0m
+[0;32mI (32388) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (32393) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32395) smart_embed: System running - Distance: 4.4 cm, Valid: Yes, LED: ON[0m
+[0;32mI (32493) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32530) smart_embed: Saved: 4.39 cm, 32115 ms[0m
+[0;32mI (32593) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32684) smart_embed: Saved: 4.39 cm, 32270 ms[0m
+[0;32mI (32693) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32793) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32840) smart_embed: Saved: 4.39 cm, 32425 ms[0m
+[0;32mI (32889) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (32893) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32993) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (32995) smart_embed: Saved: 4.39 cm, 32580 ms[0m
+[0;32mI (33093) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (33155) smart_embed: Saved: 4.39 cm, 32735 ms[0m
+[0;32mI (33193) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (33293) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (33309) smart_embed: Saved: 4.39 cm, 32895 ms[0m
+[0;32mI (33390) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (33393) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (33465) smart_embed: Saved: 4.39 cm, 33050 ms[0m
+[0;32mI (33493) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (33593) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (33619) smart_embed: Saved: 4.39 cm, 33205 ms[0m
+[0;32mI (33693) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (33774) smart_embed: Saved: 4.39 cm, 33360 ms[0m
+[0;32mI (33793) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (33891) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (33893) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (33929) smart_embed: Saved: 4.39 cm, 33515 ms[0m
+[0;32mI (33993) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (34085) smart_embed: Saved: 4.39 cm, 33670 ms[0m
+[0;32mI (34093) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (34193) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (34239) smart_embed: Saved: 4.39 cm, 33825 ms[0m
+[0;32mI (34310) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (34392) smart_embed: Distance: 4.5 cm[0m
+[0;32mI (34395) smart_embed: Saved: 4.39 cm, 33980 ms[0m
+[0;32mI (34417) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (34517) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (34554) smart_embed: Saved: 4.39 cm, 34136 ms[0m
+[0;32mI (34617) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (34710) smart_embed: Saved: 4.39 cm, 34295 ms[0m
+[0;32mI (34717) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (34817) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (34864) smart_embed: Saved: 4.39 cm, 34450 ms[0m
+[0;32mI (34893) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (34917) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (35017) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (35020) smart_embed: Saved: 4.39 cm, 34605 ms[0m
+[0;32mI (35117) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (35175) smart_embed: Saved: 4.39 cm, 34761 ms[0m
+[0;32mI (35217) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (35317) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (35331) smart_embed: Saved: 4.39 cm, 34916 ms[0m
+[0;32mI (35394) smart_embed: Distance: 4.5 cm[0m
+[0;32mI (35417) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (35487) smart_embed: Saved: 4.39 cm, 35072 ms[0m
+[0;32mI (35517) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (35617) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (35641) smart_embed: Saved: 4.39 cm, 35227 ms[0m
+[0;32mI (35717) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (35797) smart_embed: Saved: 4.39 cm, 35382 ms[0m
+[0;32mI (35817) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (35895) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (35917) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (35956) smart_embed: Saved: 4.39 cm, 35538 ms[0m
+[0;32mI (36017) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (36112) smart_embed: Saved: 4.39 cm, 35697 ms[0m
+[0;32mI (36117) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (36217) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (36267) smart_embed: Saved: 4.39 cm, 35853 ms[0m
+[0;32mI (36317) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (36396) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (36417) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (36428) smart_embed: Saved: 4.39 cm, 36008 ms[0m
+[0;32mI (36517) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (36588) smart_embed: Saved: 4.39 cm, 36174 ms[0m
+[0;32mI (36618) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (36718) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (36742) smart_embed: Saved: 4.39 cm, 36328 ms[0m
+[0;32mI (36818) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (36897) smart_embed: Distance: 4.5 cm[0m
+[0;32mI (36898) smart_embed: Saved: 4.39 cm, 36483 ms[0m
+[0;32mI (36918) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (37018) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (37053) smart_embed: Saved: 4.39 cm, 36639 ms[0m
+[0;32mI (37118) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (37208) smart_embed: Saved: 4.39 cm, 36794 ms[0m
+[0;32mI (37218) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (37318) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (37363) smart_embed: Saved: 4.39 cm, 36949 ms[0m
+[0;32mI (37398) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (37398) smart_embed: HTTP Server running - Distance: 4.4 cm, LED: ON[0m
+[0;32mI (37418) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (37518) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (37525) smart_embed: Saved: 4.39 cm, 37104 ms[0m
+[0;32mI (37618) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (37679) smart_embed: Saved: 4.39 cm, 37265 ms[0m
+[0;32mI (37718) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (37818) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (37834) smart_embed: Saved: 4.39 cm, 37420 ms[0m
+[0;32mI (37898) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (37918) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (37989) smart_embed: Saved: 4.39 cm, 37575 ms[0m
+[0;32mI (38018) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (38118) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (38144) smart_embed: Saved: 4.39 cm, 37730 ms[0m
+[0;32mI (38218) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (38304) smart_embed: Saved: 4.39 cm, 37885 ms[0m
+[0;32mI (38318) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (38399) smart_embed: Distance: 4.5 cm[0m
+[0;32mI (38418) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (38465) smart_embed: Saved: 4.39 cm, 38051 ms[0m
+[0;32mI (38518) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (38618) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (38621) smart_embed: Saved: 4.39 cm, 38206 ms[0m
+[0;32mI (38718) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (38776) smart_embed: Saved: 4.39 cm, 38361 ms[0m
+[0;32mI (38818) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (38900) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (38918) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (38936) smart_embed: Saved: 4.39 cm, 38516 ms[0m
+[0;32mI (39018) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (39091) smart_embed: Saved: 4.39 cm, 38676 ms[0m
+[0;32mI (39118) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (39218) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (39246) smart_embed: Saved: 4.39 cm, 38831 ms[0m
+[0;32mI (39318) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (39400) smart_embed: Saved: 4.39 cm, 38986 ms[0m
+[0;32mI (39401) smart_embed: Distance: 4.5 cm[0m
+[0;32mI (39418) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (39518) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (39557) smart_embed: Saved: 4.39 cm, 39142 ms[0m
+[0;32mI (39618) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (39711) smart_embed: Saved: 4.39 cm, 39297 ms[0m
+[0;32mI (39718) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (39818) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (39866) smart_embed: Saved: 4.39 cm, 39452 ms[0m
+[0;32mI (39902) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (39918) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (40018) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (40022) smart_embed: Saved: 4.39 cm, 39607 ms[0m
+[0;32mI (40118) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (40177) smart_embed: Saved: 4.39 cm, 39763 ms[0m
+[0;32mI (40218) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (40318) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (40337) smart_embed: Saved: 4.39 cm, 39918 ms[0m
+[0;32mI (40403) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (40418) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (40491) smart_embed: Saved: 4.39 cm, 40077 ms[0m
+[0;32mI (40558) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (40646) smart_embed: Saved: 4.39 cm, 40232 ms[0m
+[0;32mI (40664) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (40764) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (40800) smart_embed: Saved: 4.39 cm, 40386 ms[0m
+[0;32mI (40864) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (40904) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (40956) smart_embed: Saved: 4.39 cm, 40541 ms[0m
+[0;32mI (40964) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (41064) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (41111) smart_embed: Saved: 4.39 cm, 40697 ms[0m
+[0;32mI (41164) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (41264) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (41267) smart_embed: Saved: 4.39 cm, 40852 ms[0m
+[0;32mI (41364) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (41405) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (41421) smart_embed: Saved: 4.39 cm, 41007 ms[0m
+[0;32mI (41464) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (41564) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (41577) smart_embed: Saved: 4.39 cm, 41162 ms[0m
+[0;32mI (41664) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (41731) smart_embed: Saved: 4.39 cm, 41317 ms[0m
+[0;32mI (41764) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (41864) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (41892) smart_embed: Saved: 4.39 cm, 41472 ms[0m
+[0;32mI (41906) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (41964) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (42048) smart_embed: Saved: 4.39 cm, 41633 ms[0m
+[0;32mI (42064) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (42164) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (42202) smart_embed: Saved: 4.39 cm, 41788 ms[0m
+[0;32mI (42298) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (42318) smart_embed: Saved: 4.39 cm, 41945 ms[0m
+[0;32mI (42395) smart_embed: System running - Distance: 4.4 cm, Valid: Yes, LED: ON[0m
+[0;32mI (42405) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (42407) smart_embed: Distance: 4.5 cm[0m
+[0;32mI (42475) smart_embed: Saved: 4.39 cm, 42059 ms[0m
+[0;32mI (42505) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (42605) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (42629) smart_embed: Saved: 4.39 cm, 42215 ms[0m
+[0;32mI (42708) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (42745) smart_embed: Saved: 4.39 cm, 42371 ms[0m
+[0;32mI (42814) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (42899) smart_embed: Saved: 4.39 cm, 42485 ms[0m
+[0;32mI (42907) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (42914) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43014) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43054) smart_embed: Saved: 4.39 cm, 42640 ms[0m
+[0;32mI (43114) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43214) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43218) smart_embed: Saved: 4.39 cm, 42795 ms[0m
+[0;32mI (43314) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43373) smart_embed: Saved: 4.39 cm, 42959 ms[0m
+[0;32mI (43407) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (43414) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43514) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43530) smart_embed: Saved: 4.39 cm, 43114 ms[0m
+[0;32mI (43614) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43685) smart_embed: Saved: 4.39 cm, 43271 ms[0m
+[0;32mI (43714) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43814) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43841) smart_embed: Saved: 4.39 cm, 43427 ms[0m
+[0;32mI (43908) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (43914) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (43997) smart_embed: Saved: 4.39 cm, 43582 ms[0m
+[0;32mI (44014) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (44114) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (44151) smart_embed: Saved: 4.39 cm, 43737 ms[0m
+[0;32mI (44214) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (44311) smart_embed: Saved: 4.39 cm, 43892 ms[0m
+[0;32mI (44314) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (44409) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (44418) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (44472) smart_embed: Saved: 4.39 cm, 44059 ms[0m
+[0;32mI (44518) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (44618) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (44632) smart_embed: Saved: 4.39 cm, 44213 ms[0m
+[0;32mI (44718) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (44787) smart_embed: Saved: 4.39 cm, 44373 ms[0m
+[0;32mI (44818) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (44901) smart_embed: Saved: 4.39 cm, 44528 ms[0m
+[0;32mI (44910) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (44918) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45018) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45056) smart_embed: Saved: 4.39 cm, 44642 ms[0m
+[0;32mI (45118) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45211) smart_embed: Saved: 4.39 cm, 44797 ms[0m
+[0;32mI (45218) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45318) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45366) smart_embed: Saved: 4.39 cm, 44952 ms[0m
+[0;32mI (45411) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (45419) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45519) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45521) smart_embed: Saved: 4.39 cm, 45106 ms[0m
+[0;32mI (45619) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45676) smart_embed: Saved: 4.39 cm, 45262 ms[0m
+[0;32mI (45719) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45819) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45832) smart_embed: Saved: 4.39 cm, 45417 ms[0m
+[0;32mI (45911) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (45919) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (45995) smart_embed: Saved: 4.39 cm, 45574 ms[0m
+[0;32mI (46019) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (46119) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (46150) smart_embed: Saved: 4.39 cm, 45735 ms[0m
+[0;32mI (46219) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (46305) smart_embed: Saved: 4.39 cm, 45891 ms[0m
+[0;32mI (46319) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (46412) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (46419) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (46469) smart_embed: Saved: 4.39 cm, 46046 ms[0m
+[0;32mI (46519) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (46619) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (46626) smart_embed: Saved: 4.39 cm, 46210 ms[0m
+[0;32mI (46719) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (46781) smart_embed: Saved: 4.39 cm, 46366 ms[0m
+[0;32mI (46819) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (46913) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (46919) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (46935) smart_embed: Saved: 4.39 cm, 46521 ms[0m
+[0;32mI (47019) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (47090) smart_embed: Saved: 4.39 cm, 46676 ms[0m
+[0;32mI (47119) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (47221) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (47241) smart_embed: Saved: 4.39 cm, 46859 ms[0m
+[0;32mI (47327) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (47396) smart_embed: Saved: 4.39 cm, 46982 ms[0m
+[0;32mI (47414) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (47427) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (47527) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (47557) smart_embed: Saved: 4.39 cm, 47137 ms[0m
+[0;32mI (47627) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (47711) smart_embed: Saved: 4.39 cm, 47297 ms[0m
+[0;32mI (47727) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (47833) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (47852) smart_embed: Saved: 4.39 cm, 47471 ms[0m
+[0;32mI (47914) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (47938) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (48007) smart_embed: Saved: 4.39 cm, 47593 ms[0m
+[0;32mI (48038) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (48138) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (48163) smart_embed: Saved: 4.39 cm, 47748 ms[0m
+[0;32mI (48238) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (48319) smart_embed: Saved: 4.39 cm, 47904 ms[0m
+[0;32mI (48338) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;33mW (48460) smart_embed: Distance reading error or out of range[0m
+[0;32mI (48476) smart_embed: Saved: 4.39 cm, 48101 ms[0m
+[0;32mI (48631) smart_embed: Saved: 4.39 cm, 48216 ms[0m
+[0;32mI (48786) smart_embed: Saved: 4.39 cm, 48371 ms[0m
+[0;32mI (48946) smart_embed: Saved: 4.39 cm, 48527 ms[0m
+[0;32mI (48960) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (48961) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (49061) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (49102) smart_embed: Saved: 4.39 cm, 48687 ms[0m
+[0;32mI (49161) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (49256) smart_embed: Saved: 4.39 cm, 48842 ms[0m
+[0;32mI (49261) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (49361) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (49411) smart_embed: Saved: 4.39 cm, 48997 ms[0m
+[0;32mI (49460) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (49461) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (49561) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (49567) smart_embed: Saved: 4.39 cm, 49152 ms[0m
+[0;32mI (49661) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (49722) smart_embed: Saved: 4.39 cm, 49308 ms[0m
+[0;32mI (49761) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (49861) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (49877) smart_embed: Saved: 4.39 cm, 49463 ms[0m
+[0;32mI (49961) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (49962) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (50046) smart_embed: Saved: 4.39 cm, 49618 ms[0m
+[0;32mI (50062) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (50183) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (50204) smart_embed: Saved: 4.39 cm, 49824 ms[0m
+[0;32mI (50296) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (50362) smart_embed: Saved: 4.39 cm, 49945 ms[0m
+[0;32mI (50396) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (50462) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (50496) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (50518) smart_embed: Saved: 4.39 cm, 50104 ms[0m
+[0;32mI (50596) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (50673) smart_embed: Saved: 4.39 cm, 50259 ms[0m
+[0;32mI (50696) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (50805) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (50823) smart_embed: Saved: 4.39 cm, 50448 ms[0m
+[0;32mI (50910) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (50963) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (50978) smart_embed: Saved: 4.39 cm, 50564 ms[0m
+[0;32mI (51010) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (51110) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (51134) smart_embed: Saved: 4.39 cm, 50719 ms[0m
+[0;32mI (51210) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (51289) smart_embed: Saved: 4.39 cm, 50875 ms[0m
+[0;32mI (51310) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (51414) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (51439) smart_embed: Saved: 4.39 cm, 51054 ms[0m
+[0;32mI (51464) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (51532) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (51596) smart_embed: Saved: 4.39 cm, 51180 ms[0m
+[0;32mI (51632) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (51732) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (51752) smart_embed: Saved: 4.39 cm, 51337 ms[0m
+[0;32mI (51832) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (51907) smart_embed: Saved: 4.39 cm, 51493 ms[0m
+[0;32mI (51932) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (51965) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (52034) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (52049) smart_embed: Saved: 4.39 cm, 51674 ms[0m
+[0;32mI (52134) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (52204) smart_embed: Saved: 4.39 cm, 51790 ms[0m
+[0;32mI (52234) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (52334) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (52360) smart_embed: Saved: 4.39 cm, 51945 ms[0m
+[0;32mI (52395) smart_embed: System running - Distance: 4.4 cm, Valid: Yes, LED: ON[0m
+[0;32mI (52434) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (52465) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (52515) smart_embed: Saved: 4.39 cm, 52101 ms[0m
+[0;32mI (52534) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (52634) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (52670) smart_embed: Saved: 4.39 cm, 52256 ms[0m
+[0;32mI (52746) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (52789) smart_embed: Saved: 4.39 cm, 52411 ms[0m
+[0;32mI (52853) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (52945) smart_embed: Saved: 4.39 cm, 52530 ms[0m
+[0;32mI (52953) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (52966) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (53053) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (53100) smart_embed: Saved: 4.39 cm, 52686 ms[0m
+[0;32mI (53153) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (53253) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (53256) smart_embed: Saved: 4.39 cm, 52841 ms[0m
+[0;32mI (53353) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (53410) smart_embed: Saved: 4.39 cm, 52996 ms[0m
+[0;32mI (53453) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (53467) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (53553) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (53566) smart_embed: Saved: 4.39 cm, 53152 ms[0m
+[0;32mI (53653) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (53722) smart_embed: Saved: 4.39 cm, 53307 ms[0m
+[0;32mI (53753) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (53853) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (53876) smart_embed: Saved: 4.39 cm, 53462 ms[0m
+[0;32mI (53953) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (53967) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (54033) smart_embed: Saved: 4.39 cm, 53617 ms[0m
+[0;32mI (54053) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (54153) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (54191) smart_embed: Saved: 4.39 cm, 53773 ms[0m
+[0;32mI (54253) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (54348) smart_embed: Saved: 4.39 cm, 53932 ms[0m
+[0;32mI (54353) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (54453) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (54468) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (54503) smart_embed: Saved: 4.39 cm, 54089 ms[0m
+[0;32mI (54553) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (54653) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (54659) smart_embed: Saved: 4.39 cm, 54244 ms[0m
+[0;32mI (54753) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (54814) smart_embed: Saved: 4.39 cm, 54400 ms[0m
+[0;32mI (54853) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (54953) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (54968) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (54971) smart_embed: Saved: 4.39 cm, 54555 ms[0m
+[0;32mI (55053) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (55125) smart_embed: Saved: 4.39 cm, 54711 ms[0m
+[0;32mI (55153) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (55253) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (55280) smart_embed: Saved: 4.39 cm, 54866 ms[0m
+[0;32mI (55353) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (55435) smart_embed: Saved: 4.39 cm, 55021 ms[0m
+[0;32mI (55453) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (55469) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (55553) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (55591) smart_embed: Saved: 4.39 cm, 55176 ms[0m
+[0;32mI (55653) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (55752) smart_embed: Saved: 4.39 cm, 55331 ms[0m
+[0;32mI (55753) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (55853) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (55906) smart_embed: Saved: 4.39 cm, 55492 ms[0m
+[0;32mI (55953) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (55970) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (56053) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (56062) smart_embed: Saved: 4.39 cm, 55647 ms[0m
+[0;32mI (56153) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (56216) smart_embed: Saved: 4.39 cm, 55802 ms[0m
+[0;32mI (56253) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (56353) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (56371) smart_embed: Saved: 4.39 cm, 55957 ms[0m
+[0;32mI (56453) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (56471) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (56526) smart_embed: Saved: 4.39 cm, 56112 ms[0m
+[0;32mI (56553) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (56653) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (56681) smart_embed: Saved: 4.39 cm, 56267 ms[0m
+[0;32mI (56753) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (56836) smart_embed: Saved: 4.39 cm, 56422 ms[0m
+[0;32mI (56853) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (56953) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (56971) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (56998) smart_embed: Saved: 4.39 cm, 56577 ms[0m
+[0;32mI (57053) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (57153) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (57164) smart_embed: Saved: 4.39 cm, 56738 ms[0m
+[0;32mI (57253) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (57327) smart_embed: Saved: 4.39 cm, 56905 ms[0m
+[0;32mI (57353) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (57453) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (57471) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (57484) smart_embed: Saved: 4.39 cm, 57068 ms[0m
+[0;32mI (57553) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (57638) smart_embed: Saved: 4.39 cm, 57224 ms[0m
+[0;32mI (57653) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (57753) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (57794) smart_embed: Saved: 4.39 cm, 57379 ms[0m
+[0;32mI (57853) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (57948) smart_embed: Saved: 4.39 cm, 57534 ms[0m
+[0;32mI (57953) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (57972) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (58054) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (58104) smart_embed: Saved: 4.39 cm, 57689 ms[0m
+[0;32mI (58154) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (58254) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (58259) smart_embed: Saved: 4.39 cm, 57844 ms[0m
+[0;32mI (58354) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (58414) smart_embed: Saved: 4.39 cm, 58000 ms[0m
+[0;32mI (58454) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (58472) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (58554) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (58574) smart_embed: Saved: 4.39 cm, 58155 ms[0m
+[0;32mI (58654) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (58728) smart_embed: Saved: 4.39 cm, 58314 ms[0m
+[0;32mI (58754) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (58854) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (58883) smart_embed: Saved: 4.39 cm, 58469 ms[0m
+[0;32mI (58954) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (58972) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (59038) smart_embed: Saved: 4.39 cm, 58624 ms[0m
+[0;32mI (59054) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (59154) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (59193) smart_embed: Saved: 4.39 cm, 58779 ms[0m
+[0;32mI (59254) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (59348) smart_embed: Saved: 4.39 cm, 58934 ms[0m
+[0;32mI (59354) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (59454) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (59473) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (59505) smart_embed: Saved: 4.39 cm, 59089 ms[0m
+[0;32mI (59554) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (59654) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (59661) smart_embed: Saved: 4.39 cm, 59245 ms[0m
+[0;32mI (59754) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (59816) smart_embed: Saved: 4.39 cm, 59401 ms[0m
+[0;32mI (59854) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (59954) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (59974) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (59977) smart_embed: Saved: 4.39 cm, 59557 ms[0m
+[0;32mI (60054) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (60132) smart_embed: Saved: 4.39 cm, 59717 ms[0m
+[0;32mI (60154) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (60254) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (60286) smart_embed: Saved: 4.39 cm, 59872 ms[0m
+[0;32mI (60354) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (60441) smart_embed: Saved: 4.39 cm, 60027 ms[0m
+[0;32mI (60454) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (60475) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (60554) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (60596) smart_embed: Saved: 4.39 cm, 60182 ms[0m
+[0;32mI (60654) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (60753) smart_embed: Saved: 4.39 cm, 60337 ms[0m
+[0;32mI (60754) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (60854) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (60907) smart_embed: Saved: 4.39 cm, 60493 ms[0m
+[0;32mI (60954) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (60976) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (61054) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (61063) smart_embed: Saved: 4.39 cm, 60648 ms[0m
+[0;32mI (61154) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (61219) smart_embed: Saved: 4.39 cm, 60803 ms[0m
+[0;32mI (61254) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (61354) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (61378) smart_embed: Saved: 4.39 cm, 60960 ms[0m
+[0;32mI (61454) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (61477) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (61533) smart_embed: Saved: 4.39 cm, 61118 ms[0m
+[0;32mI (61554) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (61654) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (61688) smart_embed: Saved: 4.39 cm, 61274 ms[0m
+[0;32mI (61754) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (61843) smart_embed: Saved: 4.39 cm, 61429 ms[0m
+[0;32mI (61854) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (61954) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (61978) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (61998) smart_embed: Saved: 4.39 cm, 61584 ms[0m
+[0;32mI (62054) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (62153) smart_embed: Saved: 4.39 cm, 61739 ms[0m
+[0;32mI (62154) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (62255) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (62308) smart_embed: Saved: 4.39 cm, 61894 ms[0m
+[0;32mI (62355) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (62395) smart_embed: System running - Distance: 4.9 cm, Valid: Yes, LED: ON[0m
+[0;32mI (62455) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (62464) smart_embed: Saved: 4.39 cm, 62049 ms[0m
+[0;32mI (62478) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (62555) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (62619) smart_embed: Saved: 4.39 cm, 62205 ms[0m
+[0;32mI (62655) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (62755) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (62774) smart_embed: Saved: 4.39 cm, 62360 ms[0m
+[0;32mI (62855) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (62936) smart_embed: Saved: 4.39 cm, 62515 ms[0m
+[0;32mI (62955) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (62978) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (63055) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (63090) smart_embed: Saved: 4.39 cm, 62676 ms[0m
+[0;32mI (63155) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (63246) smart_embed: Saved: 4.39 cm, 62831 ms[0m
+[0;32mI (63255) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (63355) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (63400) smart_embed: Saved: 4.39 cm, 62986 ms[0m
+[0;32mI (63455) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (63479) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (63555) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (63556) smart_embed: Saved: 4.39 cm, 63141 ms[0m
+[0;32mI (63655) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (63710) smart_embed: Saved: 4.39 cm, 63296 ms[0m
+[0;32mI (63755) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (63855) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (63867) smart_embed: Saved: 4.39 cm, 63451 ms[0m
+[0;32mI (63955) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (63980) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (64021) smart_embed: Saved: 4.39 cm, 63607 ms[0m
+[0;32mI (64055) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (64155) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (64177) smart_embed: Saved: 4.39 cm, 63762 ms[0m
+[0;32mI (64255) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (64337) smart_embed: Saved: 4.39 cm, 63918 ms[0m
+[0;32mI (64355) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (64455) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (64481) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (64493) smart_embed: Saved: 4.39 cm, 64077 ms[0m
+[0;32mI (64555) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (64647) smart_embed: Saved: 4.39 cm, 64233 ms[0m
+[0;32mI (64656) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (64756) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (64802) smart_embed: Saved: 4.39 cm, 64388 ms[0m
+[0;32mI (64856) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (64956) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (64958) smart_embed: Saved: 4.39 cm, 64543 ms[0m
+[0;32mI (64982) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (65056) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (65113) smart_embed: Saved: 4.39 cm, 64699 ms[0m
+[0;32mI (65156) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (65256) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (65270) smart_embed: Saved: 4.39 cm, 64854 ms[0m
+[0;32mI (65356) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (65424) smart_embed: Saved: 4.39 cm, 65010 ms[0m
+[0;32mI (65456) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (65483) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (65556) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (65579) smart_embed: Saved: 4.39 cm, 65165 ms[0m
+[0;32mI (65656) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (65738) smart_embed: Saved: 4.39 cm, 65320 ms[0m
+[0;32mI (65756) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (65856) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (65894) smart_embed: Saved: 4.39 cm, 65479 ms[0m
+[0;32mI (65956) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (65983) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (66048) smart_embed: Saved: 4.39 cm, 65634 ms[0m
+[0;32mI (66056) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (66156) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (66203) smart_embed: Saved: 4.39 cm, 65789 ms[0m
+[0;32mI (66256) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (66356) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (66359) smart_embed: Saved: 4.39 cm, 65944 ms[0m
+[0;32mI (66456) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (66484) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (66513) smart_embed: Saved: 4.39 cm, 66099 ms[0m
+[0;32mI (66556) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (66656) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (66669) smart_embed: Saved: 4.39 cm, 66254 ms[0m
+[0;32mI (66756) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (66824) smart_embed: Saved: 4.39 cm, 66410 ms[0m
+[0;32mI (66856) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (66956) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (66980) smart_embed: Saved: 4.39 cm, 66565 ms[0m
+[0;32mI (66985) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (67056) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (67134) smart_embed: Saved: 4.39 cm, 66720 ms[0m
+[0;32mI (67156) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (67256) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (67295) smart_embed: Saved: 4.39 cm, 66875 ms[0m
+[0;32mI (67358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (67436) smart_embed: HTTP Server running - Distance: 4.9 cm, LED: ON[0m
+[0;32mI (67451) smart_embed: Saved: 4.39 cm, 67036 ms[0m
+[0;32mI (67458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (67486) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (67558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (67605) smart_embed: Saved: 4.39 cm, 67191 ms[0m
+[0;32mI (67658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (67758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (67761) smart_embed: Saved: 4.39 cm, 67346 ms[0m
+[0;32mI (67858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (67916) smart_embed: Saved: 4.39 cm, 67502 ms[0m
+[0;32mI (67958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (67986) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (68058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (68072) smart_embed: Saved: 4.39 cm, 67657 ms[0m
+[0;32mI (68158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (68227) smart_embed: Saved: 4.39 cm, 67813 ms[0m
+[0;32mI (68258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (68358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (68384) smart_embed: Saved: 4.39 cm, 67968 ms[0m
+[0;32mI (68458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (68487) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (68539) smart_embed: Saved: 4.39 cm, 68125 ms[0m
+[0;32mI (68558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (68658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (68700) smart_embed: Saved: 4.39 cm, 68280 ms[0m
+[0;32mI (68758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (68855) smart_embed: Saved: 4.39 cm, 68441 ms[0m
+[0;32mI (68858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (68958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (68988) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (69010) smart_embed: Saved: 4.39 cm, 68596 ms[0m
+[0;32mI (69058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (69158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (69166) smart_embed: Saved: 4.39 cm, 68751 ms[0m
+[0;32mI (69258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (69321) smart_embed: Saved: 4.39 cm, 68906 ms[0m
+[0;32mI (69358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (69458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (69475) smart_embed: Saved: 4.39 cm, 69061 ms[0m
+[0;32mI (69489) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (69558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (69631) smart_embed: Saved: 4.39 cm, 69216 ms[0m
+[0;32mI (69658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (69758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (69785) smart_embed: Saved: 4.39 cm, 69371 ms[0m
+[0;32mI (69858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (69940) smart_embed: Saved: 4.39 cm, 69526 ms[0m
+[0;32mI (69958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (69990) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (70058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (70099) smart_embed: Saved: 4.39 cm, 69681 ms[0m
+[0;32mI (70158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (70254) smart_embed: Saved: 4.39 cm, 69840 ms[0m
+[0;32mI (70258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (70358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (70410) smart_embed: Saved: 4.39 cm, 69995 ms[0m
+[0;32mI (70458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (70490) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (70558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (70565) smart_embed: Saved: 4.39 cm, 70150 ms[0m
+[0;32mI (70658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (70721) smart_embed: Saved: 4.39 cm, 70305 ms[0m
+[0;32mI (70758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (70858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (70876) smart_embed: Saved: 4.39 cm, 70462 ms[0m
+[0;32mI (70958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (70991) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (71032) smart_embed: Saved: 4.39 cm, 70617 ms[0m
+[0;32mI (71058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (71158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (71187) smart_embed: Saved: 4.39 cm, 70773 ms[0m
+[0;32mI (71258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (71343) smart_embed: Saved: 4.39 cm, 70928 ms[0m
+[0;32mI (71358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (71458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (71492) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (71502) smart_embed: Saved: 4.39 cm, 71083 ms[0m
+[0;32mI (71558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (71658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (71659) smart_embed: Saved: 4.39 cm, 71243 ms[0m
+[0;32mI (71758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (71813) smart_embed: Saved: 4.39 cm, 71399 ms[0m
+[0;32mI (71858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (71958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (71969) smart_embed: Saved: 4.39 cm, 71554 ms[0m
+[0;32mI (71993) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (72058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (72124) smart_embed: Saved: 4.39 cm, 71709 ms[0m
+[0;32mI (72158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (72258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (72278) smart_embed: Saved: 4.39 cm, 71864 ms[0m
+[0;32mI (72358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (72419) smart_embed: System running - Distance: 4.9 cm, Valid: Yes, LED: ON[0m
+[0;32mI (72434) smart_embed: Saved: 4.39 cm, 72019 ms[0m
+[0;32mI (72458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (72494) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (72558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (72589) smart_embed: Saved: 4.39 cm, 72175 ms[0m
+[0;32mI (72658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (72744) smart_embed: Saved: 4.39 cm, 72330 ms[0m
+[0;32mI (72758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (72858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (72899) smart_embed: Saved: 4.39 cm, 72485 ms[0m
+[0;32mI (72958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (72995) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (73058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (73060) smart_embed: Saved: 4.39 cm, 72640 ms[0m
+[0;32mI (73158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (73215) smart_embed: Saved: 4.39 cm, 72801 ms[0m
+[0;32mI (73258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (73358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (73371) smart_embed: Saved: 4.39 cm, 72956 ms[0m
+[0;32mI (73458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (73496) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (73525) smart_embed: Saved: 4.39 cm, 73111 ms[0m
+[0;32mI (73558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (73658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (73680) smart_embed: Saved: 4.39 cm, 73266 ms[0m
+[0;32mI (73758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (73837) smart_embed: Saved: 4.39 cm, 73421 ms[0m
+[0;32mI (73858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (73958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (73992) smart_embed: Saved: 4.39 cm, 73578 ms[0m
+[0;33mW (74007) smart_embed: Distance reading error or out of range[0m
+[0;32mI (74148) smart_embed: Saved: 4.39 cm, 73733 ms[0m
+[0;32mI (74304) smart_embed: Saved: 4.39 cm, 73889 ms[0m
+[0;32mI (74463) smart_embed: Saved: 4.39 cm, 74044 ms[0m
+[0;32mI (74507) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (74558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (74619) smart_embed: Saved: 4.39 cm, 74204 ms[0m
+[0;32mI (74658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (74758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (74773) smart_embed: Saved: 4.39 cm, 74359 ms[0m
+[0;32mI (74858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (74928) smart_embed: Saved: 4.39 cm, 74514 ms[0m
+[0;32mI (74958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (75008) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (75058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (75083) smart_embed: Saved: 4.39 cm, 74669 ms[0m
+[0;32mI (75158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (75238) smart_embed: Saved: 4.39 cm, 74824 ms[0m
+[0;32mI (75258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (75358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (75393) smart_embed: Saved: 4.39 cm, 74979 ms[0m
+[0;32mI (75458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (75509) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (75549) smart_embed: Saved: 4.39 cm, 75134 ms[0m
+[0;32mI (75558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (75658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (75703) smart_embed: Saved: 4.39 cm, 75289 ms[0m
+[0;32mI (75758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (75858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (75863) smart_embed: Saved: 4.39 cm, 75444 ms[0m
+[0;32mI (75958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (76010) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (76020) smart_embed: Saved: 4.39 cm, 75604 ms[0m
+[0;32mI (76058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (76158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (76174) smart_embed: Saved: 4.39 cm, 75760 ms[0m
+[0;32mI (76258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (76329) smart_embed: Saved: 4.39 cm, 75915 ms[0m
+[0;32mI (76358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (76458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (76484) smart_embed: Saved: 4.39 cm, 76070 ms[0m
+[0;32mI (76511) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (76558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (76639) smart_embed: Saved: 4.39 cm, 76225 ms[0m
+[0;32mI (76658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (76758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (76794) smart_embed: Saved: 4.39 cm, 76380 ms[0m
+[0;32mI (76858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (76949) smart_embed: Saved: 4.39 cm, 76535 ms[0m
+[0;32mI (76958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (77012) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (77058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (77104) smart_embed: Saved: 4.39 cm, 76690 ms[0m
+[0;32mI (77158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (77258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (77260) smart_embed: Saved: 4.39 cm, 76845 ms[0m
+[0;32mI (77358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (77420) smart_embed: Saved: 4.39 cm, 77000 ms[0m
+[0;32mI (77458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (77513) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (77558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (77576) smart_embed: Saved: 4.39 cm, 77161 ms[0m
+[0;32mI (77658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (77730) smart_embed: Saved: 4.39 cm, 77316 ms[0m
+[0;32mI (77758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (77858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (77886) smart_embed: Saved: 4.39 cm, 77471 ms[0m
+[0;32mI (77958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78014) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (78040) smart_embed: Saved: 4.39 cm, 77626 ms[0m
+[0;32mI (78058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78196) smart_embed: Saved: 4.39 cm, 77781 ms[0m
+[0;32mI (78258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78351) smart_embed: Saved: 4.39 cm, 77937 ms[0m
+[0;32mI (78358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78507) smart_embed: Saved: 4.39 cm, 78092 ms[0m
+[0;32mI (78515) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (78558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78662) smart_embed: Saved: 4.39 cm, 78247 ms[0m
+[0;32mI (78758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78823) smart_embed: Saved: 4.39 cm, 78403 ms[0m
+[0;32mI (78858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (78978) smart_embed: Saved: 4.39 cm, 78564 ms[0m
+[0;32mI (79015) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (79058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (79133) smart_embed: Saved: 4.39 cm, 78719 ms[0m
+[0;32mI (79158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (79258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (79289) smart_embed: Saved: 4.39 cm, 78874 ms[0m
+[0;32mI (79358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (79443) smart_embed: Saved: 4.39 cm, 79029 ms[0m
+[0;32mI (79458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (79516) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (79558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (79599) smart_embed: Saved: 4.39 cm, 79184 ms[0m
+[0;32mI (79658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (79753) smart_embed: Saved: 4.39 cm, 79339 ms[0m
+[0;32mI (79758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (79858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (79908) smart_embed: Saved: 4.39 cm, 79494 ms[0m
+[0;32mI (79958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (80016) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (80058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (80064) smart_embed: Saved: 4.39 cm, 79649 ms[0m
+[0;32mI (80158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (80224) smart_embed: Saved: 4.39 cm, 79805 ms[0m
+[0;32mI (80258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (80358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (80378) smart_embed: Saved: 4.39 cm, 79964 ms[0m
+[0;32mI (80458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (80517) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (80533) smart_embed: Saved: 4.39 cm, 80119 ms[0m
+[0;32mI (80558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (80658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (80688) smart_embed: Saved: 4.39 cm, 80274 ms[0m
+[0;32mI (80758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (80843) smart_embed: Saved: 4.39 cm, 80429 ms[0m
+[0;32mI (80858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (80958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (81000) smart_embed: Saved: 4.39 cm, 80584 ms[0m
+[0;32mI (81018) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (81058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (81154) smart_embed: Saved: 4.39 cm, 80740 ms[0m
+[0;32mI (81158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (81258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (81310) smart_embed: Saved: 4.39 cm, 80895 ms[0m
+[0;32mI (81358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (81458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (81465) smart_embed: Saved: 4.39 cm, 81050 ms[0m
+[0;32mI (81519) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (81558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (81623) smart_embed: Saved: 4.39 cm, 81205 ms[0m
+[0;32mI (81658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (81758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (81779) smart_embed: Saved: 4.39 cm, 81364 ms[0m
+[0;32mI (81858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (81934) smart_embed: Saved: 4.39 cm, 81519 ms[0m
+[0;32mI (81958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (82020) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (82058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (82089) smart_embed: Saved: 4.39 cm, 81674 ms[0m
+[0;32mI (82158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (82244) smart_embed: Saved: 4.39 cm, 81829 ms[0m
+[0;32mI (82258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (82358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (82399) smart_embed: Saved: 4.39 cm, 81984 ms[0m
+[0;32mI (82423) smart_embed: System running - Distance: 4.9 cm, Valid: Yes, LED: ON[0m
+[0;32mI (82458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (82521) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (82554) smart_embed: Saved: 4.39 cm, 82140 ms[0m
+[0;32mI (82558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (82658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (82710) smart_embed: Saved: 4.39 cm, 82295 ms[0m
+[0;32mI (82758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (82858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (82865) smart_embed: Saved: 4.39 cm, 82450 ms[0m
+[0;32mI (82958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (83020) smart_embed: Saved: 4.39 cm, 82605 ms[0m
+[0;32mI (83022) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (83058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (83158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (83179) smart_embed: Saved: 4.39 cm, 82760 ms[0m
+[0;32mI (83258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (83336) smart_embed: Saved: 4.39 cm, 82920 ms[0m
+[0;32mI (83358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (83458) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (83490) smart_embed: Saved: 4.39 cm, 83076 ms[0m
+[0;32mI (83523) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (83558) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (83646) smart_embed: Saved: 4.39 cm, 83231 ms[0m
+[0;32mI (83658) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (83758) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (83800) smart_embed: Saved: 4.39 cm, 83386 ms[0m
+[0;32mI (83858) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (83955) smart_embed: Saved: 4.39 cm, 83541 ms[0m
+[0;32mI (83958) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (84024) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (84058) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (84110) smart_embed: Saved: 4.39 cm, 83696 ms[0m
+[0;32mI (84158) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (84258) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (84266) smart_embed: Saved: 4.39 cm, 83851 ms[0m
+[0;32mI (84358) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (84420) smart_embed: Saved: 4.39 cm, 84006 ms[0m
+[0;32mI (84456) example: Ultrasonic API called[0m
+[0;32mI (84456) example: Distance read: 4.39 cm[0m
+[0;32mI (84457) example: Sending response: {"distance":4.39,"timestamp":84098}[0m
+[0;32mI (84462) example: LED status response: {"status":"success","led":"on"}[0m
+[0;32mI (84472) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;33mW (84507) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (84508) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (84525) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (84574) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (84582) smart_embed: Saved: 4.39 cm, 84161 ms[0m
+[0;32mI (84674) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (84736) smart_embed: Saved: 4.39 cm, 84322 ms[0m
+[0;32mI (84774) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (84874) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (84891) smart_embed: Saved: 4.39 cm, 84477 ms[0m
+[0;32mI (84974) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (85026) smart_embed: Distance: 4.9 cm[0m
+[0;32mI (85046) smart_embed: Saved: 4.39 cm, 84632 ms[0m
+[0;32mI (85074) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (85174) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (85201) smart_embed: Saved: 4.39 cm, 84787 ms[0m
+[0;32mI (85274) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m
+[0;32mI (85358) smart_embed: Saved: 4.39 cm, 84942 ms[0m
+[0;32mI (85374) smart_embed: LED ON - Distance: 4.9 cm < 10.0 cm[0m

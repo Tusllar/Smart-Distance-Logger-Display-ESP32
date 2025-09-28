@@ -1,0 +1,2 @@
+source D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/gdbinit/symbols
+source D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/gdbinit/connect

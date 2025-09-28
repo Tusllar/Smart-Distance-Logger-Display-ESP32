@@ -1,0 +1,1114 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\Smart_Embed\build\Smart_Embed.elf D:\ESP32C3\Espressif\frameworks\Smart_Embed\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+ˁGPIESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 28 2025 12:40:55[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=283b4h (164788) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=000383dc vaddr=3fc94c00 size=02dd4h ( 11732) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=0003b1b8 vaddr=40380000 size=04e60h ( 20064) load[0m
+[0;32mI (123) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=a42d4h (672468) map[0m
+[0;32mI (234) esp_image: segment 4: paddr=000e42fc vaddr=40384e60 size=0fbc0h ( 64448) load[0m
+[0;32mI (246) esp_image: segment 5: paddr=000f3ec4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (252) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (252) boot: Disabling RNG early entropy source...[0m
+[0;32mI (263) cpu_start: Unicore app[0m
+[0;32mI (272) cpu_start: Pro cpu start user code[0m
+[0;32mI (272) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (272) app_init: Application information:[0m
+[0;32mI (272) app_init: Project name:     Smart_Embed[0m
+[0;32mI (276) app_init: App version:      1[0m
+[0;32mI (279) app_init: Compile time:     Sep 28 2025 12:39:37[0m
+[0;32mI (284) app_init: ELF file SHA256:  4e4664b08...[0m
+[0;32mI (289) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (292) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (296) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (300) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (304) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (310) heap_init: At 3FC9BD10 len 000242F0 (144 KiB): RAM[0m
+[0;32mI (315) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (322) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (328) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (334) spi_flash: detected chip: generic[0m
+[0;32mI (337) spi_flash: flash io: dio[0m
+[0;33mW (340) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (352) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (358) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (365) main_task: Started on CPU0[0m
+[0;32mI (383) main_task: Calling app_main()[0m
+[0;32mI (383) smart_embed: Starting Smart Distance Logger & Display[0m
+[0;32mI (392) wifi station: ESP_WIFI_MODE_STA[0m
+[0;32mI (394) pp: pp rom version: 9387209[0m
+[0;32mI (394) net80211: net80211 rom version: 9387209[0m
+[0;32mI (396) wifi:wifi driver task: 3fca4704, prio:23, stack:6656, core=0[0m
+[0;32mI (404) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (404) wifi:wifi certification version: v7.0[0m
+[0;32mI (406) wifi:config NVS flash: enabled[0m
+[0;32mI (410) wifi:config nano formatting: disabled[0m
+[0;32mI (414) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (419) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (423) wifi:Init management short buffer num: 32[0m
+[0;32mI (427) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (431) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (435) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (439) wifi:Init static rx buffer num: 10[0m
+[0;32mI (443) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (447) wifi_init: rx ba win: 6[0m
+[0;32mI (450) wifi_init: accept mbox: 6[0m
+[0;32mI (453) wifi_init: tcpip mbox: 32[0m
+[0;32mI (456) wifi_init: udp mbox: 6[0m
+[0;32mI (458) wifi_init: tcp mbox: 6[0m
+[0;32mI (461) wifi_init: tcp tx win: 5760[0m
+[0;32mI (464) wifi_init: tcp rx win: 5760[0m
+[0;32mI (468) wifi_init: tcp mss: 1440[0m
+[0;32mI (471) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (474) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (479) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (516) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (516) wifi:enable tsf[0m
+[0;32mI (519) wifi station: wifi_init_sta finished.[0m
+[0;32mI (525) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (526) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (560) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (609) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (712) wifi:connected with 4 chi em, aid = 10, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (713) wifi:security: WPA2-PSK, phy: bgn, rssi: -45[0m
+[0;32mI (716) wifi:pm start, type: 1[0m
+
+[0;32mI (717) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (725) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (814) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2029) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2029) wifi station: got ip:192.168.1.10[0m
+[0;32mI (2030) wifi station: connected to ap SSID:4 chi em password:daytro6868[0m
+D (2036) i2c.common: new bus(0) at 0x3fcac178
+D (2040) i2c.common: bus clock source frequency: 40000000hz
+[0;32mI (2148) oled_driver: OLED driver initialized successfully[0m
+[0;32mI (2148) ultrasonic: Ultrasonic sensor initialized[0m
+[0;32mI (2148) smart_embed: Ultrasonic sensor initialized[0m
+[0;32mI (2151) smart_embed: System initialized successfully[0m
+[0;32mI (2156) smart_embed: Sensor task started[0m
+[0;32mI (2165) smart_embed: Distance: 86.4 cm[0m
+[0;32mI (2165) smart_embed: Display task started[0m
+[0;32mI (2166) smart_embed: LED task started[0m
+[0;32mI (2171) smart_embed: HTTP Server task started[0m
+[0;32mI (2172) smart_embed: All tasks created successfully[0m
+[0;33mW (2675) smart_embed: Distance reading error or out of range[0m
+[0;33mW (3185) smart_embed: Distance reading error or out of range[0m
+[0;33mW (3695) smart_embed: Distance reading error or out of range[0m
+[0;33mW (4205) smart_embed: Distance reading error or out of range[0m
+[0;33mW (4715) smart_embed: Distance reading error or out of range[0m
+[0;33mW (5225) smart_embed: Distance reading error or out of range[0m
+[0;33mW (5735) smart_embed: Distance reading error or out of range[0m
+[0;33mW (6245) smart_embed: Distance reading error or out of range[0m
+[0;33mW (6755) smart_embed: Distance reading error or out of range[0m
+[0;32mI (6961) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:23:fc:a8), tid:0, ssn:4, winSize:64[0m
+[0;32mI (7175) example: Starting server on port: '80'[0m
+[0;32mI (7177) example: Registering URI handlers[0m
+[0;32mI (7177) smart_embed: HTTP Server started on http://192.168.4.1[0m
+[0;32mI (7260) smart_embed: Distance: 86.9 cm[0m
+[0;33mW (7771) smart_embed: Distance reading error or out of range[0m
+[0;33mW (8281) smart_embed: Distance reading error or out of range[0m
+[0;33mW (8791) smart_embed: Distance reading error or out of range[0m
+[0;33mW (9301) smart_embed: Distance reading error or out of range[0m
+[0;33mW (9811) smart_embed: Distance reading error or out of range[0m
+[0;33mW (10321) smart_embed: Distance reading error or out of range[0m
+[0;33mW (10831) smart_embed: Distance reading error or out of range[0m
+[0;33mW (11341) smart_embed: Distance reading error or out of range[0m
+[0;33mW (11851) smart_embed: Distance reading error or out of range[0m
+[0;32mI (12179) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (12361) smart_embed: Distance reading error or out of range[0m
+[0;33mW (12871) smart_embed: Distance reading error or out of range[0m
+[0;33mW (13381) smart_embed: Distance reading error or out of range[0m
+[0;33mW (13891) smart_embed: Distance reading error or out of range[0m
+[0;33mW (14401) smart_embed: Distance reading error or out of range[0m
+[0;33mW (14911) smart_embed: Distance reading error or out of range[0m
+[0;33mW (15421) smart_embed: Distance reading error or out of range[0m
+[0;33mW (15931) smart_embed: Distance reading error or out of range[0m
+[0;33mW (16441) smart_embed: Distance reading error or out of range[0m
+[0;33mW (16951) smart_embed: Distance reading error or out of range[0m
+[0;33mW (17461) smart_embed: Distance reading error or out of range[0m
+[0;33mW (17971) smart_embed: Distance reading error or out of range[0m
+[0;33mW (18481) smart_embed: Distance reading error or out of range[0m
+[0;33mW (18991) smart_embed: Distance reading error or out of range[0m
+[0;32mI (19153) example: LED status check - GPIO level: 0[0m
+[0;32mI (19154) example: LED status response: {"status":"success","led":"off"}[0m
+[0;33mW (19501) smart_embed: Distance reading error or out of range[0m
+[0;33mW (20011) smart_embed: Distance reading error or out of range[0m
+[0;33mW (20521) smart_embed: Distance reading error or out of range[0m
+[0;33mW (21031) smart_embed: Distance reading error or out of range[0m
+[0;32mI (21532) smart_embed: Distance: 10.0 cm[0m
+[0;32mI (21816) example: Ultrasonic API called[0m
+[0;32mI (21827) example: Distance read: -1.00 cm[0m
+[0;32mI (21828) example: Sending response: {"distance":-1.00,"timestamp":21494}[0m
+[0;32mI (21832) example: LED status check - GPIO level: 0[0m
+[0;32mI (21832) example: LED status response: {"status":"success","led":"off"}[0m
+[0;33mW (21865) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (21867) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (22042) smart_embed: Distance reading error or out of range[0m
+[0;32mI (22179) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;32mI (22542) smart_embed: Distance: 6.5 cm[0m
+[0;32mI (22570) smart_embed: LED ON - Distance: 6.5 cm < 10.0 cm[0m
+[0;32mI (22670) smart_embed: LED ON - Distance: 6.5 cm < 10.0 cm[0m
+[0;32mI (22770) smart_embed: LED ON - Distance: 6.5 cm < 10.0 cm[0m
+[0;32mI (22870) smart_embed: LED ON - Distance: 6.5 cm < 10.0 cm[0m
+[0;32mI (22970) smart_embed: LED ON - Distance: 6.5 cm < 10.0 cm[0m
+[0;32mI (23043) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (23070) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (23170) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (23270) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (23370) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (23470) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (23544) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (23570) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (23670) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (23770) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (23870) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (23970) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (24045) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (24070) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (24170) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (24270) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (24370) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (24470) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (24546) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (24570) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (24670) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (24684) example: LED status check - GPIO level: 0[0m
+[0;32mI (24684) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (24770) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (24870) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (24970) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (25047) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (25070) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (25170) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (25270) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (25370) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (25470) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (25548) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (25570) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (25599) example: LED status check - GPIO level: 0[0m
+[0;32mI (25600) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (25670) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (25770) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (25870) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (25970) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (26049) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (26070) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (26170) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (26270) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (26316) example: LED status check - GPIO level: 0[0m
+[0;32mI (26316) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (26370) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (26470) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (26540) example: LED status check - GPIO level: 0[0m
+[0;32mI (26540) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (26550) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (26570) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (26670) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (26770) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (26870) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (26931) example: LED status check - GPIO level: 0[0m
+[0;32mI (26931) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (26970) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (27051) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (27070) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (27170) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (27238) example: LED status check - GPIO level: 0[0m
+[0;32mI (27238) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (27270) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (27370) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (27470) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (27546) example: LED status check - GPIO level: 0[0m
+[0;32mI (27547) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (27552) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (27570) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (27670) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (27770) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (27870) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (27954) example: LED status check - GPIO level: 0[0m
+[0;32mI (27955) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (27970) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (28053) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (28070) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (28170) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (28270) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (28367) example: LED status check - GPIO level: 0[0m
+[0;32mI (28367) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (28370) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (28472) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (28554) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (28572) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (28672) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (28772) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (28872) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (28972) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (29055) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (29072) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (29172) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (29272) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (29372) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (29472) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (29556) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (29572) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (29594) example: LED status check - GPIO level: 0[0m
+[0;32mI (29595) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (29672) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (29772) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (29872) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (29972) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (30057) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (30072) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (30172) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (30272) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (30372) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (30472) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (30558) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (30572) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (30672) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (30772) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (30872) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (30972) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (31059) smart_embed: Distance: 6.1 cm[0m
+[0;32mI (31072) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (31172) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (31272) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (31372) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (31472) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (31560) smart_embed: Distance: 6.1 cm[0m
+[0;32mI (31572) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (31672) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (31772) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (31872) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (31972) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (32062) smart_embed: Distance: 8.2 cm[0m
+[0;32mI (32072) smart_embed: LED ON - Distance: 8.2 cm < 10.0 cm[0m
+[0;32mI (32172) smart_embed: LED ON - Distance: 8.2 cm < 10.0 cm[0m
+[0;32mI (32179) smart_embed: System running - Distance: 8.2 cm, Valid: Yes, LED: ON[0m
+[0;32mI (32272) smart_embed: LED ON - Distance: 8.2 cm < 10.0 cm[0m
+[0;32mI (32372) smart_embed: LED ON - Distance: 8.2 cm < 10.0 cm[0m
+[0;32mI (32472) smart_embed: LED ON - Distance: 8.2 cm < 10.0 cm[0m
+[0;32mI (32562) smart_embed: Distance: 7.5 cm[0m
+[0;32mI (32572) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;32mI (32672) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;32mI (32772) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;32mI (32872) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;32mI (32972) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;32mI (33063) smart_embed: Distance: 6.0 cm[0m
+[0;32mI (33072) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (33172) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (33272) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (33372) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (33472) smart_embed: LED ON - Distance: 6.0 cm < 10.0 cm[0m
+[0;32mI (33565) smart_embed: Distance: 14.0 cm[0m
+[0;32mI (33901) example: LED status check - GPIO level: 0[0m
+[0;32mI (33901) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (34065) smart_embed: Distance: 5.1 cm[0m
+[0;32mI (34072) smart_embed: LED ON - Distance: 5.1 cm < 10.0 cm[0m
+[0;32mI (34172) smart_embed: LED ON - Distance: 5.1 cm < 10.0 cm[0m
+[0;32mI (34272) smart_embed: LED ON - Distance: 5.1 cm < 10.0 cm[0m
+[0;32mI (34372) smart_embed: LED ON - Distance: 5.1 cm < 10.0 cm[0m
+[0;32mI (34472) smart_embed: LED ON - Distance: 5.1 cm < 10.0 cm[0m
+[0;32mI (34566) smart_embed: Distance: 5.9 cm[0m
+[0;32mI (34572) smart_embed: LED ON - Distance: 5.9 cm < 10.0 cm[0m
+[0;32mI (34611) example: LED status check - GPIO level: 0[0m
+[0;32mI (34611) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (34672) smart_embed: LED ON - Distance: 5.9 cm < 10.0 cm[0m
+[0;32mI (34772) smart_embed: LED ON - Distance: 5.9 cm < 10.0 cm[0m
+[0;32mI (34872) smart_embed: LED ON - Distance: 5.9 cm < 10.0 cm[0m
+[0;32mI (34972) smart_embed: LED ON - Distance: 5.9 cm < 10.0 cm[0m
+[0;32mI (35067) smart_embed: Distance: 5.9 cm[0m
+[0;32mI (35072) smart_embed: LED ON - Distance: 5.9 cm < 10.0 cm[0m
+[0;32mI (35172) smart_embed: LED ON - Distance: 5.9 cm < 10.0 cm[0m
+[0;32mI (35272) smart_embed: LED ON - Distance: 5.9 cm < 10.0 cm[0m
+[0;32mI (35327) example: LED status check - GPIO level: 0[0m
+[0;32mI (35328) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (35372) smart_embed: LED ON - Distance: 5.9 cm < 10.0 cm[0m
+[0;32mI (35472) smart_embed: LED ON - Distance: 5.9 cm < 10.0 cm[0m
+[0;32mI (35568) smart_embed: Distance: 6.8 cm[0m
+[0;32mI (35572) smart_embed: LED ON - Distance: 6.8 cm < 10.0 cm[0m
+[0;32mI (35672) smart_embed: LED ON - Distance: 6.8 cm < 10.0 cm[0m
+[0;32mI (35772) smart_embed: LED ON - Distance: 6.8 cm < 10.0 cm[0m
+[0;32mI (35872) smart_embed: LED ON - Distance: 6.8 cm < 10.0 cm[0m
+[0;32mI (35972) smart_embed: LED ON - Distance: 6.8 cm < 10.0 cm[0m
+[0;32mI (36069) smart_embed: Distance: 7.0 cm[0m
+[0;32mI (36072) smart_embed: LED ON - Distance: 7.0 cm < 10.0 cm[0m
+[0;32mI (36172) smart_embed: LED ON - Distance: 7.0 cm < 10.0 cm[0m
+[0;32mI (36272) smart_embed: LED ON - Distance: 7.0 cm < 10.0 cm[0m
+[0;32mI (36372) smart_embed: LED ON - Distance: 7.0 cm < 10.0 cm[0m
+[0;32mI (36472) smart_embed: LED ON - Distance: 7.0 cm < 10.0 cm[0m
+[0;32mI (36570) smart_embed: Distance: 7.5 cm[0m
+[0;32mI (36572) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;32mI (36672) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;32mI (36772) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;32mI (36872) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;32mI (36972) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;32mI (37072) smart_embed: LED ON - Distance: 7.5 cm < 10.0 cm[0m
+[0;33mW (37081) smart_embed: Distance reading error or out of range[0m
+[0;32mI (37178) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (37591) smart_embed: Distance reading error or out of range[0m
+[0;33mW (38101) smart_embed: Distance reading error or out of range[0m
+[0;33mW (38611) smart_embed: Distance reading error or out of range[0m
+[0;33mW (39121) smart_embed: Distance reading error or out of range[0m
+[0;33mW (39632) smart_embed: Distance reading error or out of range[0m
+[0;32mI (40138) smart_embed: Distance: 97.9 cm[0m
+[0;33mW (40656) smart_embed: Distance reading error or out of range[0m
+[0;33mW (41166) smart_embed: Distance reading error or out of range[0m
+[0;33mW (41676) smart_embed: Distance reading error or out of range[0m
+[0;33mW (42186) smart_embed: Distance reading error or out of range[0m
+[0;32mI (42186) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;32mI (42692) smart_embed: Distance: 96.6 cm[0m
+[0;33mW (43202) smart_embed: Distance reading error or out of range[0m
+[0;33mW (43712) smart_embed: Distance reading error or out of range[0m
+[0;33mW (44222) smart_embed: Distance reading error or out of range[0m
+[0;33mW (44732) smart_embed: Distance reading error or out of range[0m
+[0;33mW (45242) smart_embed: Distance reading error or out of range[0m
+[0;33mW (45752) smart_embed: Distance reading error or out of range[0m
+[0;33mW (46262) smart_embed: Distance reading error or out of range[0m
+[0;33mW (46772) smart_embed: Distance reading error or out of range[0m
+[0;33mW (47282) smart_embed: Distance reading error or out of range[0m
+[0;33mW (47792) smart_embed: Distance reading error or out of range[0m
+[0;33mW (48302) smart_embed: Distance reading error or out of range[0m
+[0;33mW (48812) smart_embed: Distance reading error or out of range[0m
+[0;33mW (49322) smart_embed: Distance reading error or out of range[0m
+[0;33mW (49832) smart_embed: Distance reading error or out of range[0m
+[0;33mW (50342) smart_embed: Distance reading error or out of range[0m
+[0;33mW (50852) smart_embed: Distance reading error or out of range[0m
+[0;33mW (51362) smart_embed: Distance reading error or out of range[0m
+[0;33mW (51872) smart_embed: Distance reading error or out of range[0m
+[0;32mI (52188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (52382) smart_embed: Distance reading error or out of range[0m
+[0;33mW (52892) smart_embed: Distance reading error or out of range[0m
+[0;33mW (53402) smart_embed: Distance reading error or out of range[0m
+[0;33mW (53912) smart_embed: Distance reading error or out of range[0m
+[0;33mW (54422) smart_embed: Distance reading error or out of range[0m
+[0;33mW (54932) smart_embed: Distance reading error or out of range[0m
+[0;33mW (55442) smart_embed: Distance reading error or out of range[0m
+[0;33mW (55952) smart_embed: Distance reading error or out of range[0m
+[0;33mW (56462) smart_embed: Distance reading error or out of range[0m
+[0;33mW (56972) smart_embed: Distance reading error or out of range[0m
+[0;33mW (57482) smart_embed: Distance reading error or out of range[0m
+[0;33mW (57992) smart_embed: Distance reading error or out of range[0m
+[0;33mW (58502) smart_embed: Distance reading error or out of range[0m
+[0;33mW (59012) smart_embed: Distance reading error or out of range[0m
+[0;33mW (59522) smart_embed: Distance reading error or out of range[0m
+[0;33mW (60032) smart_embed: Distance reading error or out of range[0m
+[0;33mW (60542) smart_embed: Distance reading error or out of range[0m
+[0;33mW (61052) smart_embed: Distance reading error or out of range[0m
+[0;33mW (61562) smart_embed: Distance reading error or out of range[0m
+[0;33mW (62072) smart_embed: Distance reading error or out of range[0m
+[0;32mI (62188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (62582) smart_embed: Distance reading error or out of range[0m
+[0;33mW (63092) smart_embed: Distance reading error or out of range[0m
+[0;33mW (63602) smart_embed: Distance reading error or out of range[0m
+[0;33mW (64112) smart_embed: Distance reading error or out of range[0m
+[0;33mW (64622) smart_embed: Distance reading error or out of range[0m
+[0;33mW (65132) smart_embed: Distance reading error or out of range[0m
+[0;33mW (65642) smart_embed: Distance reading error or out of range[0m
+[0;33mW (66152) smart_embed: Distance reading error or out of range[0m
+[0;33mW (66663) smart_embed: Distance reading error or out of range[0m
+[0;33mW (67173) smart_embed: Distance reading error or out of range[0m
+[0;32mI (67178) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;32mI (67678) smart_embed: Distance: 90.2 cm[0m
+[0;33mW (68189) smart_embed: Distance reading error or out of range[0m
+[0;33mW (68699) smart_embed: Distance reading error or out of range[0m
+[0;33mW (69209) smart_embed: Distance reading error or out of range[0m
+[0;33mW (69719) smart_embed: Distance reading error or out of range[0m
+[0;33mW (70229) smart_embed: Distance reading error or out of range[0m
+[0;33mW (70739) smart_embed: Distance reading error or out of range[0m
+[0;33mW (71249) smart_embed: Distance reading error or out of range[0m
+[0;33mW (71759) smart_embed: Distance reading error or out of range[0m
+[0;32mI (72188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (72269) smart_embed: Distance reading error or out of range[0m
+[0;33mW (72779) smart_embed: Distance reading error or out of range[0m
+[0;33mW (73289) smart_embed: Distance reading error or out of range[0m
+[0;33mW (73799) smart_embed: Distance reading error or out of range[0m
+[0;33mW (74309) smart_embed: Distance reading error or out of range[0m
+[0;33mW (74819) smart_embed: Distance reading error or out of range[0m
+[0;33mW (75329) smart_embed: Distance reading error or out of range[0m
+[0;33mW (75839) smart_embed: Distance reading error or out of range[0m
+[0;33mW (76349) smart_embed: Distance reading error or out of range[0m
+[0;33mW (76859) smart_embed: Distance reading error or out of range[0m
+[0;33mW (77369) smart_embed: Distance reading error or out of range[0m
+[0;33mW (77879) smart_embed: Distance reading error or out of range[0m
+[0;33mW (78389) smart_embed: Distance reading error or out of range[0m
+[0;33mW (78899) smart_embed: Distance reading error or out of range[0m
+[0;33mW (79409) smart_embed: Distance reading error or out of range[0m
+[0;33mW (79919) smart_embed: Distance reading error or out of range[0m
+[0;33mW (80429) smart_embed: Distance reading error or out of range[0m
+[0;33mW (80939) smart_embed: Distance reading error or out of range[0m
+[0;33mW (81449) smart_embed: Distance reading error or out of range[0m
+[0;32mI (81722) example: LED status check - GPIO level: 0[0m
+[0;32mI (81723) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (81727) example: Ultrasonic API called[0m
+[0;32mI (81738) example: Distance read: -1.00 cm[0m
+[0;32mI (81739) example: Sending response: {"distance":-1.00,"timestamp":81405}[0m
+[0;33mW (81769) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (81770) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (81959) smart_embed: Distance reading error or out of range[0m
+[0;32mI (82188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (82469) smart_embed: Distance reading error or out of range[0m
+[0;33mW (82979) smart_embed: Distance reading error or out of range[0m
+[0;33mW (83489) smart_embed: Distance reading error or out of range[0m
+[0;33mW (83999) smart_embed: Distance reading error or out of range[0m
+[0;33mW (84509) smart_embed: Distance reading error or out of range[0m
+[0;33mW (85019) smart_embed: Distance reading error or out of range[0m
+[0;33mW (85529) smart_embed: Distance reading error or out of range[0m
+[0;33mW (86039) smart_embed: Distance reading error or out of range[0m
+[0;33mW (86549) smart_embed: Distance reading error or out of range[0m
+[0;33mW (87059) smart_embed: Distance reading error or out of range[0m
+[0;33mW (87569) smart_embed: Distance reading error or out of range[0m
+[0;33mW (88079) smart_embed: Distance reading error or out of range[0m
+[0;33mW (88589) smart_embed: Distance reading error or out of range[0m
+[0;33mW (89099) smart_embed: Distance reading error or out of range[0m
+[0;33mW (89609) smart_embed: Distance reading error or out of range[0m
+[0;33mW (90119) smart_embed: Distance reading error or out of range[0m
+[0;33mW (90629) smart_embed: Distance reading error or out of range[0m
+[0;33mW (91139) smart_embed: Distance reading error or out of range[0m
+[0;33mW (91649) smart_embed: Distance reading error or out of range[0m
+[0;33mW (92159) smart_embed: Distance reading error or out of range[0m
+[0;32mI (92188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;32mI (92665) smart_embed: Distance: 93.8 cm[0m
+[0;33mW (93175) smart_embed: Distance reading error or out of range[0m
+[0;33mW (93685) smart_embed: Distance reading error or out of range[0m
+[0;33mW (94195) smart_embed: Distance reading error or out of range[0m
+[0;33mW (94705) smart_embed: Distance reading error or out of range[0m
+[0;33mW (95215) smart_embed: Distance reading error or out of range[0m
+[0;33mW (95725) smart_embed: Distance reading error or out of range[0m
+[0;33mW (96235) smart_embed: Distance reading error or out of range[0m
+[0;33mW (96745) smart_embed: Distance reading error or out of range[0m
+[0;32mI (97178) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (97255) smart_embed: Distance reading error or out of range[0m
+[0;33mW (97765) smart_embed: Distance reading error or out of range[0m
+[0;33mW (98275) smart_embed: Distance reading error or out of range[0m
+[0;33mW (98785) smart_embed: Distance reading error or out of range[0m
+[0;33mW (99295) smart_embed: Distance reading error or out of range[0m
+[0;33mW (99805) smart_embed: Distance reading error or out of range[0m
+[0;33mW (100315) smart_embed: Distance reading error or out of range[0m
+[0;33mW (100825) smart_embed: Distance reading error or out of range[0m
+[0;33mW (101335) smart_embed: Distance reading error or out of range[0m
+[0;33mW (101845) smart_embed: Distance reading error or out of range[0m
+[0;32mI (102188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (102355) smart_embed: Distance reading error or out of range[0m
+[0;33mW (102865) smart_embed: Distance reading error or out of range[0m
+[0;33mW (103375) smart_embed: Distance reading error or out of range[0m
+[0;33mW (103885) smart_embed: Distance reading error or out of range[0m
+[0;33mW (104395) smart_embed: Distance reading error or out of range[0m
+[0;33mW (104905) smart_embed: Distance reading error or out of range[0m
+[0;33mW (105415) smart_embed: Distance reading error or out of range[0m
+[0;33mW (105925) smart_embed: Distance reading error or out of range[0m
+[0;33mW (106435) smart_embed: Distance reading error or out of range[0m
+[0;33mW (106945) smart_embed: Distance reading error or out of range[0m
+[0;33mW (107455) smart_embed: Distance reading error or out of range[0m
+[0;33mW (107965) smart_embed: Distance reading error or out of range[0m
+[0;33mW (108475) smart_embed: Distance reading error or out of range[0m
+[0;33mW (108985) smart_embed: Distance reading error or out of range[0m
+[0;33mW (109495) smart_embed: Distance reading error or out of range[0m
+[0;33mW (110005) smart_embed: Distance reading error or out of range[0m
+[0;33mW (110515) smart_embed: Distance reading error or out of range[0m
+[0;33mW (111025) smart_embed: Distance reading error or out of range[0m
+[0;33mW (111535) smart_embed: Distance reading error or out of range[0m
+[0;33mW (112045) smart_embed: Distance reading error or out of range[0m
+[0;32mI (112188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (112555) smart_embed: Distance reading error or out of range[0m
+[0;33mW (113065) smart_embed: Distance reading error or out of range[0m
+[0;33mW (113575) smart_embed: Distance reading error or out of range[0m
+[0;33mW (114085) smart_embed: Distance reading error or out of range[0m
+[0;33mW (114595) smart_embed: Distance reading error or out of range[0m
+[0;33mW (115105) smart_embed: Distance reading error or out of range[0m
+[0;33mW (115615) smart_embed: Distance reading error or out of range[0m
+[0;33mW (116125) smart_embed: Distance reading error or out of range[0m
+[0;33mW (116635) smart_embed: Distance reading error or out of range[0m
+[0;33mW (117145) smart_embed: Distance reading error or out of range[0m
+[0;32mI (117651) smart_embed: Distance: 99.9 cm[0m
+[0;33mW (118162) smart_embed: Distance reading error or out of range[0m
+[0;33mW (118673) smart_embed: Distance reading error or out of range[0m
+[0;33mW (119183) smart_embed: Distance reading error or out of range[0m
+[0;33mW (119693) smart_embed: Distance reading error or out of range[0m
+[0;33mW (120203) smart_embed: Distance reading error or out of range[0m
+[0;33mW (120713) smart_embed: Distance reading error or out of range[0m
+[0;33mW (121223) smart_embed: Distance reading error or out of range[0m
+[0;33mW (121733) smart_embed: Distance reading error or out of range[0m
+[0;32mI (122188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (122243) smart_embed: Distance reading error or out of range[0m
+[0;33mW (122753) smart_embed: Distance reading error or out of range[0m
+[0;33mW (123263) smart_embed: Distance reading error or out of range[0m
+[0;33mW (123773) smart_embed: Distance reading error or out of range[0m
+[0;33mW (124283) smart_embed: Distance reading error or out of range[0m
+[0;33mW (124793) smart_embed: Distance reading error or out of range[0m
+[0;33mW (125303) smart_embed: Distance reading error or out of range[0m
+[0;33mW (125813) smart_embed: Distance reading error or out of range[0m
+[0;33mW (126323) smart_embed: Distance reading error or out of range[0m
+[0;33mW (126833) smart_embed: Distance reading error or out of range[0m
+[0;32mI (127178) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (127343) smart_embed: Distance reading error or out of range[0m
+[0;33mW (127853) smart_embed: Distance reading error or out of range[0m
+[0;33mW (128363) smart_embed: Distance reading error or out of range[0m
+[0;33mW (128873) smart_embed: Distance reading error or out of range[0m
+[0;33mW (129383) smart_embed: Distance reading error or out of range[0m
+[0;33mW (129893) smart_embed: Distance reading error or out of range[0m
+[0;33mW (130403) smart_embed: Distance reading error or out of range[0m
+[0;33mW (130914) smart_embed: Distance reading error or out of range[0m
+[0;33mW (131424) smart_embed: Distance reading error or out of range[0m
+[0;33mW (131934) smart_embed: Distance reading error or out of range[0m
+[0;32mI (132188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (132444) smart_embed: Distance reading error or out of range[0m
+[0;33mW (132954) smart_embed: Distance reading error or out of range[0m
+[0;33mW (133464) smart_embed: Distance reading error or out of range[0m
+[0;33mW (133974) smart_embed: Distance reading error or out of range[0m
+[0;33mW (134484) smart_embed: Distance reading error or out of range[0m
+[0;33mW (134994) smart_embed: Distance reading error or out of range[0m
+[0;33mW (135504) smart_embed: Distance reading error or out of range[0m
+[0;33mW (136014) smart_embed: Distance reading error or out of range[0m
+[0;33mW (136524) smart_embed: Distance reading error or out of range[0m
+[0;33mW (137034) smart_embed: Distance reading error or out of range[0m
+[0;33mW (137544) smart_embed: Distance reading error or out of range[0m
+[0;33mW (138054) smart_embed: Distance reading error or out of range[0m
+[0;33mW (138564) smart_embed: Distance reading error or out of range[0m
+[0;33mW (139074) smart_embed: Distance reading error or out of range[0m
+[0;33mW (139584) smart_embed: Distance reading error or out of range[0m
+[0;33mW (140094) smart_embed: Distance reading error or out of range[0m
+[0;33mW (140604) smart_embed: Distance reading error or out of range[0m
+[0;33mW (141114) smart_embed: Distance reading error or out of range[0m
+[0;33mW (141624) smart_embed: Distance reading error or out of range[0m
+[0;32mI (141834) example: Ultrasonic API called[0m
+[0;32mI (141845) example: Distance read: -1.00 cm[0m
+[0;32mI (141846) example: Sending response: {"distance":-1.00,"timestamp":141512}[0m
+[0;32mI (141850) example: LED status check - GPIO level: 0[0m
+[0;32mI (141850) example: LED status response: {"status":"success","led":"off"}[0m
+[0;33mW (141885) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (141887) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (142134) smart_embed: Distance reading error or out of range[0m
+[0;32mI (142188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (142644) smart_embed: Distance reading error or out of range[0m
+[0;32mI (143149) smart_embed: Distance: 92.7 cm[0m
+[0;33mW (143660) smart_embed: Distance reading error or out of range[0m
+[0;33mW (144170) smart_embed: Distance reading error or out of range[0m
+[0;33mW (144680) smart_embed: Distance reading error or out of range[0m
+[0;33mW (145190) smart_embed: Distance reading error or out of range[0m
+[0;33mW (145700) smart_embed: Distance reading error or out of range[0m
+[0;33mW (146210) smart_embed: Distance reading error or out of range[0m
+[0;33mW (146720) smart_embed: Distance reading error or out of range[0m
+[0;33mW (147230) smart_embed: Distance reading error or out of range[0m
+[0;33mW (147740) smart_embed: Distance reading error or out of range[0m
+[0;33mW (148250) smart_embed: Distance reading error or out of range[0m
+[0;33mW (148760) smart_embed: Distance reading error or out of range[0m
+[0;33mW (149270) smart_embed: Distance reading error or out of range[0m
+[0;33mW (149780) smart_embed: Distance reading error or out of range[0m
+[0;33mW (150290) smart_embed: Distance reading error or out of range[0m
+[0;33mW (150800) smart_embed: Distance reading error or out of range[0m
+[0;33mW (151310) smart_embed: Distance reading error or out of range[0m
+[0;33mW (151820) smart_embed: Distance reading error or out of range[0m
+[0;32mI (152188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (152330) smart_embed: Distance reading error or out of range[0m
+[0;33mW (152840) smart_embed: Distance reading error or out of range[0m
+[0;33mW (153350) smart_embed: Distance reading error or out of range[0m
+[0;33mW (153860) smart_embed: Distance reading error or out of range[0m
+[0;33mW (154370) smart_embed: Distance reading error or out of range[0m
+[0;33mW (154880) smart_embed: Distance reading error or out of range[0m
+[0;33mW (155390) smart_embed: Distance reading error or out of range[0m
+[0;33mW (155900) smart_embed: Distance reading error or out of range[0m
+[0;33mW (156410) smart_embed: Distance reading error or out of range[0m
+[0;33mW (156920) smart_embed: Distance reading error or out of range[0m
+[0;32mI (157178) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (157430) smart_embed: Distance reading error or out of range[0m
+[0;33mW (157940) smart_embed: Distance reading error or out of range[0m
+[0;33mW (158450) smart_embed: Distance reading error or out of range[0m
+[0;33mW (158960) smart_embed: Distance reading error or out of range[0m
+[0;33mW (159470) smart_embed: Distance reading error or out of range[0m
+[0;33mW (159980) smart_embed: Distance reading error or out of range[0m
+[0;33mW (160490) smart_embed: Distance reading error or out of range[0m
+[0;33mW (161000) smart_embed: Distance reading error or out of range[0m
+[0;33mW (161510) smart_embed: Distance reading error or out of range[0m
+[0;33mW (162020) smart_embed: Distance reading error or out of range[0m
+[0;32mI (162188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (162530) smart_embed: Distance reading error or out of range[0m
+[0;33mW (163040) smart_embed: Distance reading error or out of range[0m
+[0;33mW (163550) smart_embed: Distance reading error or out of range[0m
+[0;33mW (164060) smart_embed: Distance reading error or out of range[0m
+[0;33mW (164570) smart_embed: Distance reading error or out of range[0m
+[0;33mW (165081) smart_embed: Distance reading error or out of range[0m
+[0;33mW (165591) smart_embed: Distance reading error or out of range[0m
+[0;33mW (166101) smart_embed: Distance reading error or out of range[0m
+[0;33mW (166611) smart_embed: Distance reading error or out of range[0m
+[0;33mW (167121) smart_embed: Distance reading error or out of range[0m
+[0;33mW (167631) smart_embed: Distance reading error or out of range[0m
+[0;32mI (168136) smart_embed: Distance: 88.7 cm[0m
+[0;33mW (168647) smart_embed: Distance reading error or out of range[0m
+[0;33mW (169158) smart_embed: Distance reading error or out of range[0m
+[0;33mW (169668) smart_embed: Distance reading error or out of range[0m
+[0;33mW (170178) smart_embed: Distance reading error or out of range[0m
+[0;33mW (170688) smart_embed: Distance reading error or out of range[0m
+[0;33mW (171198) smart_embed: Distance reading error or out of range[0m
+[0;33mW (171708) smart_embed: Distance reading error or out of range[0m
+[0;32mI (172188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (172218) smart_embed: Distance reading error or out of range[0m
+[0;33mW (172728) smart_embed: Distance reading error or out of range[0m
+[0;33mW (173238) smart_embed: Distance reading error or out of range[0m
+[0;33mW (173748) smart_embed: Distance reading error or out of range[0m
+[0;33mW (174258) smart_embed: Distance reading error or out of range[0m
+[0;33mW (174768) smart_embed: Distance reading error or out of range[0m
+[0;33mW (175278) smart_embed: Distance reading error or out of range[0m
+[0;33mW (175788) smart_embed: Distance reading error or out of range[0m
+[0;33mW (176298) smart_embed: Distance reading error or out of range[0m
+[0;33mW (176808) smart_embed: Distance reading error or out of range[0m
+[0;33mW (177318) smart_embed: Distance reading error or out of range[0m
+[0;33mW (177828) smart_embed: Distance reading error or out of range[0m
+[0;33mW (178338) smart_embed: Distance reading error or out of range[0m
+[0;33mW (178848) smart_embed: Distance reading error or out of range[0m
+[0;33mW (179358) smart_embed: Distance reading error or out of range[0m
+[0;33mW (179868) smart_embed: Distance reading error or out of range[0m
+[0;33mW (180378) smart_embed: Distance reading error or out of range[0m
+[0;33mW (180888) smart_embed: Distance reading error or out of range[0m
+[0;33mW (181398) smart_embed: Distance reading error or out of range[0m
+[0;33mW (181908) smart_embed: Distance reading error or out of range[0m
+[0;32mI (182188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (182418) smart_embed: Distance reading error or out of range[0m
+[0;33mW (182928) smart_embed: Distance reading error or out of range[0m
+[0;33mW (183438) smart_embed: Distance reading error or out of range[0m
+[0;33mW (183948) smart_embed: Distance reading error or out of range[0m
+[0;33mW (184458) smart_embed: Distance reading error or out of range[0m
+[0;33mW (184968) smart_embed: Distance reading error or out of range[0m
+[0;33mW (185478) smart_embed: Distance reading error or out of range[0m
+[0;33mW (185988) smart_embed: Distance reading error or out of range[0m
+[0;33mW (186498) smart_embed: Distance reading error or out of range[0m
+[0;33mW (187008) smart_embed: Distance reading error or out of range[0m
+[0;32mI (187178) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (187518) smart_embed: Distance reading error or out of range[0m
+[0;33mW (188028) smart_embed: Distance reading error or out of range[0m
+[0;33mW (188538) smart_embed: Distance reading error or out of range[0m
+[0;33mW (189048) smart_embed: Distance reading error or out of range[0m
+[0;33mW (189558) smart_embed: Distance reading error or out of range[0m
+[0;33mW (190068) smart_embed: Distance reading error or out of range[0m
+[0;33mW (190578) smart_embed: Distance reading error or out of range[0m
+[0;33mW (191088) smart_embed: Distance reading error or out of range[0m
+[0;33mW (191598) smart_embed: Distance reading error or out of range[0m
+[0;33mW (192108) smart_embed: Distance reading error or out of range[0m
+[0;32mI (192188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (192618) smart_embed: Distance reading error or out of range[0m
+[0;33mW (193128) smart_embed: Distance reading error or out of range[0m
+[0;32mI (193634) smart_embed: Distance: 101.0 cm[0m
+[0;33mW (194145) smart_embed: Distance reading error or out of range[0m
+[0;33mW (194655) smart_embed: Distance reading error or out of range[0m
+[0;33mW (195165) smart_embed: Distance reading error or out of range[0m
+[0;33mW (195675) smart_embed: Distance reading error or out of range[0m
+[0;33mW (196185) smart_embed: Distance reading error or out of range[0m
+[0;33mW (196695) smart_embed: Distance reading error or out of range[0m
+[0;33mW (197205) smart_embed: Distance reading error or out of range[0m
+[0;33mW (197715) smart_embed: Distance reading error or out of range[0m
+[0;33mW (198225) smart_embed: Distance reading error or out of range[0m
+[0;33mW (198735) smart_embed: Distance reading error or out of range[0m
+[0;33mW (199245) smart_embed: Distance reading error or out of range[0m
+[0;33mW (199755) smart_embed: Distance reading error or out of range[0m
+[0;33mW (200265) smart_embed: Distance reading error or out of range[0m
+[0;33mW (200775) smart_embed: Distance reading error or out of range[0m
+[0;33mW (201285) smart_embed: Distance reading error or out of range[0m
+[0;33mW (201795) smart_embed: Distance reading error or out of range[0m
+[0;33mW (201882) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (201884) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (201886) example: LED status check - GPIO level: 0[0m
+[0;32mI (201887) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (201897) example: Ultrasonic API called[0m
+[0;32mI (201908) example: Distance read: -1.00 cm[0m
+[0;32mI (201908) example: Sending response: {"distance":-1.00,"timestamp":201575}[0m
+[0;32mI (202188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (202305) smart_embed: Distance reading error or out of range[0m
+[0;33mW (202815) smart_embed: Distance reading error or out of range[0m
+[0;33mW (203325) smart_embed: Distance reading error or out of range[0m
+[0;33mW (203835) smart_embed: Distance reading error or out of range[0m
+[0;33mW (204345) smart_embed: Distance reading error or out of range[0m
+[0;33mW (204855) smart_embed: Distance reading error or out of range[0m
+[0;33mW (205365) smart_embed: Distance reading error or out of range[0m
+[0;33mW (205875) smart_embed: Distance reading error or out of range[0m
+[0;33mW (206385) smart_embed: Distance reading error or out of range[0m
+[0;33mW (206895) smart_embed: Distance reading error or out of range[0m
+[0;33mW (207405) smart_embed: Distance reading error or out of range[0m
+[0;33mW (207915) smart_embed: Distance reading error or out of range[0m
+[0;33mW (208425) smart_embed: Distance reading error or out of range[0m
+[0;33mW (208935) smart_embed: Distance reading error or out of range[0m
+[0;33mW (209445) smart_embed: Distance reading error or out of range[0m
+[0;33mW (209955) smart_embed: Distance reading error or out of range[0m
+[0;33mW (210465) smart_embed: Distance reading error or out of range[0m
+[0;33mW (210975) smart_embed: Distance reading error or out of range[0m
+[0;33mW (211485) smart_embed: Distance reading error or out of range[0m
+[0;33mW (211995) smart_embed: Distance reading error or out of range[0m
+[0;32mI (212188) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (212505) smart_embed: Distance reading error or out of range[0m
+[0;33mW (213015) smart_embed: Distance reading error or out of range[0m
+[0;33mW (213525) smart_embed: Distance reading error or out of range[0m
+[0;33mW (214035) smart_embed: Distance reading error or out of range[0m
+[0;33mW (214545) smart_embed: Distance reading error or out of range[0m
+[0;33mW (215055) smart_embed: Distance reading error or out of range[0m
+[0;33mW (215565) smart_embed: Distance reading error or out of range[0m
+[0;33mW (216075) smart_embed: Distance reading error or out of range[0m
+[0;33mW (216585) smart_embed: Distance reading error or out of range[0m
+[0;33mW (217095) smart_embed: Distance reading error or out of range[0m
+[0;32mI (217178) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (217605) smart_embed: Distance reading error or out of range[0m
+[0;33mW (218115) smart_embed: Distance reading error or out of range[0m
+[0;32mI (218621) smart_embed: Distance: 97.5 cm[0m
+[0;33mW (219131) smart_embed: Distance reading error or out of range[0m
+[0;33mW (219641) smart_embed: Distance reading error or out of range[0m
+[0;33mW (220151) smart_embed: Distance reading error or out of range[0m
+[0;33mW (220661) smart_embed: Distance reading error or out of range[0m
+[0;33mW (221171) smart_embed: Distance reading error or out of range[0m
+[0;33mW (221681) smart_embed: Distance reading error or out of range[0m
+[0;33mW (222191) smart_embed: Distance reading error or out of range[0m
+[0;32mI (222191) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (222701) smart_embed: Distance reading error or out of range[0m
+[0;33mW (223211) smart_embed: Distance reading error or out of range[0m
+[0;33mW (223721) smart_embed: Distance reading error or out of range[0m
+[0;33mW (224231) smart_embed: Distance reading error or out of range[0m
+[0;33mW (224741) smart_embed: Distance reading error or out of range[0m
+[0;33mW (225251) smart_embed: Distance reading error or out of range[0m
+[0;33mW (225761) smart_embed: Distance reading error or out of range[0m
+[0;33mW (226271) smart_embed: Distance reading error or out of range[0m
+[0;33mW (226781) smart_embed: Distance reading error or out of range[0m
+[0;33mW (227291) smart_embed: Distance reading error or out of range[0m
+[0;33mW (227801) smart_embed: Distance reading error or out of range[0m
+[0;33mW (228311) smart_embed: Distance reading error or out of range[0m
+[0;33mW (228821) smart_embed: Distance reading error or out of range[0m
+[0;33mW (229331) smart_embed: Distance reading error or out of range[0m
+[0;33mW (229841) smart_embed: Distance reading error or out of range[0m
+[0;33mW (230351) smart_embed: Distance reading error or out of range[0m
+[0;33mW (230861) smart_embed: Distance reading error or out of range[0m
+[0;33mW (231371) smart_embed: Distance reading error or out of range[0m
+[0;33mW (231881) smart_embed: Distance reading error or out of range[0m
+[0;32mI (232193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (232391) smart_embed: Distance reading error or out of range[0m
+[0;33mW (232901) smart_embed: Distance reading error or out of range[0m
+[0;33mW (233411) smart_embed: Distance reading error or out of range[0m
+[0;33mW (233921) smart_embed: Distance reading error or out of range[0m
+[0;33mW (234431) smart_embed: Distance reading error or out of range[0m
+[0;33mW (234941) smart_embed: Distance reading error or out of range[0m
+[0;33mW (235451) smart_embed: Distance reading error or out of range[0m
+[0;33mW (235961) smart_embed: Distance reading error or out of range[0m
+[0;33mW (236471) smart_embed: Distance reading error or out of range[0m
+[0;33mW (236981) smart_embed: Distance reading error or out of range[0m
+[0;33mW (237491) smart_embed: Distance reading error or out of range[0m
+[0;33mW (238001) smart_embed: Distance reading error or out of range[0m
+[0;33mW (238511) smart_embed: Distance reading error or out of range[0m
+[0;33mW (239021) smart_embed: Distance reading error or out of range[0m
+[0;33mW (239531) smart_embed: Distance reading error or out of range[0m
+[0;33mW (240042) smart_embed: Distance reading error or out of range[0m
+[0;33mW (240552) smart_embed: Distance reading error or out of range[0m
+[0;33mW (241062) smart_embed: Distance reading error or out of range[0m
+[0;33mW (241572) smart_embed: Distance reading error or out of range[0m
+[0;33mW (242082) smart_embed: Distance reading error or out of range[0m
+[0;32mI (242193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (242592) smart_embed: Distance reading error or out of range[0m
+[0;33mW (243102) smart_embed: Distance reading error or out of range[0m
+[0;32mI (243607) smart_embed: Distance: 88.3 cm[0m
+[0;33mW (244118) smart_embed: Distance reading error or out of range[0m
+[0;33mW (244628) smart_embed: Distance reading error or out of range[0m
+[0;33mW (245138) smart_embed: Distance reading error or out of range[0m
+[0;33mW (245648) smart_embed: Distance reading error or out of range[0m
+[0;33mW (246158) smart_embed: Distance reading error or out of range[0m
+[0;33mW (246668) smart_embed: Distance reading error or out of range[0m
+[0;33mW (247178) smart_embed: Distance reading error or out of range[0m
+[0;32mI (247178) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (247688) smart_embed: Distance reading error or out of range[0m
+[0;33mW (248198) smart_embed: Distance reading error or out of range[0m
+[0;33mW (248708) smart_embed: Distance reading error or out of range[0m
+[0;33mW (249218) smart_embed: Distance reading error or out of range[0m
+[0;33mW (249728) smart_embed: Distance reading error or out of range[0m
+[0;33mW (250238) smart_embed: Distance reading error or out of range[0m
+[0;33mW (250748) smart_embed: Distance reading error or out of range[0m
+[0;33mW (251258) smart_embed: Distance reading error or out of range[0m
+[0;33mW (251768) smart_embed: Distance reading error or out of range[0m
+[0;32mI (252193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (252278) smart_embed: Distance reading error or out of range[0m
+[0;33mW (252788) smart_embed: Distance reading error or out of range[0m
+[0;33mW (253298) smart_embed: Distance reading error or out of range[0m
+[0;33mW (253808) smart_embed: Distance reading error or out of range[0m
+[0;33mW (254318) smart_embed: Distance reading error or out of range[0m
+[0;33mW (254828) smart_embed: Distance reading error or out of range[0m
+[0;33mW (255338) smart_embed: Distance reading error or out of range[0m
+[0;33mW (255848) smart_embed: Distance reading error or out of range[0m
+[0;33mW (256358) smart_embed: Distance reading error or out of range[0m
+[0;33mW (256868) smart_embed: Distance reading error or out of range[0m
+[0;33mW (257378) smart_embed: Distance reading error or out of range[0m
+[0;33mW (257888) smart_embed: Distance reading error or out of range[0m
+[0;33mW (258398) smart_embed: Distance reading error or out of range[0m
+[0;33mW (258908) smart_embed: Distance reading error or out of range[0m
+[0;33mW (259418) smart_embed: Distance reading error or out of range[0m
+[0;33mW (259928) smart_embed: Distance reading error or out of range[0m
+[0;33mW (260438) smart_embed: Distance reading error or out of range[0m
+[0;33mW (260948) smart_embed: Distance reading error or out of range[0m
+[0;33mW (261458) smart_embed: Distance reading error or out of range[0m
+[0;32mI (261748) example: Ultrasonic API called[0m
+[0;32mI (261758) example: Distance read: -1.00 cm[0m
+[0;32mI (261759) example: Sending response: {"distance":-1.00,"timestamp":261426}[0m
+[0;32mI (261763) example: LED status check - GPIO level: 0[0m
+[0;32mI (261764) example: LED status response: {"status":"success","led":"off"}[0m
+[0;33mW (261799) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (261800) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (261968) smart_embed: Distance reading error or out of range[0m
+[0;32mI (262193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (262478) smart_embed: Distance reading error or out of range[0m
+[0;33mW (262988) smart_embed: Distance reading error or out of range[0m
+[0;33mW (263498) smart_embed: Distance reading error or out of range[0m
+[0;33mW (264008) smart_embed: Distance reading error or out of range[0m
+[0;33mW (264518) smart_embed: Distance reading error or out of range[0m
+[0;33mW (265028) smart_embed: Distance reading error or out of range[0m
+[0;33mW (265538) smart_embed: Distance reading error or out of range[0m
+[0;33mW (266048) smart_embed: Distance reading error or out of range[0m
+[0;33mW (266558) smart_embed: Distance reading error or out of range[0m
+[0;33mW (267068) smart_embed: Distance reading error or out of range[0m
+[0;33mW (267578) smart_embed: Distance reading error or out of range[0m
+[0;33mW (268088) smart_embed: Distance reading error or out of range[0m
+[0;32mI (268593) smart_embed: Distance: 93.0 cm[0m
+[0;33mW (269104) smart_embed: Distance reading error or out of range[0m
+[0;33mW (269614) smart_embed: Distance reading error or out of range[0m
+[0;33mW (270124) smart_embed: Distance reading error or out of range[0m
+[0;33mW (270634) smart_embed: Distance reading error or out of range[0m
+[0;33mW (271144) smart_embed: Distance reading error or out of range[0m
+[0;33mW (271654) smart_embed: Distance reading error or out of range[0m
+[0;33mW (272164) smart_embed: Distance reading error or out of range[0m
+[0;32mI (272193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (272674) smart_embed: Distance reading error or out of range[0m
+[0;33mW (273184) smart_embed: Distance reading error or out of range[0m
+[0;33mW (273694) smart_embed: Distance reading error or out of range[0m
+[0;33mW (274204) smart_embed: Distance reading error or out of range[0m
+[0;33mW (274714) smart_embed: Distance reading error or out of range[0m
+[0;33mW (275224) smart_embed: Distance reading error or out of range[0m
+[0;33mW (275734) smart_embed: Distance reading error or out of range[0m
+[0;33mW (276244) smart_embed: Distance reading error or out of range[0m
+[0;33mW (276754) smart_embed: Distance reading error or out of range[0m
+[0;32mI (277179) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (277264) smart_embed: Distance reading error or out of range[0m
+[0;33mW (277774) smart_embed: Distance reading error or out of range[0m
+[0;33mW (278284) smart_embed: Distance reading error or out of range[0m
+[0;33mW (278794) smart_embed: Distance reading error or out of range[0m
+[0;33mW (279304) smart_embed: Distance reading error or out of range[0m
+[0;33mW (279814) smart_embed: Distance reading error or out of range[0m
+[0;33mW (280324) smart_embed: Distance reading error or out of range[0m
+[0;33mW (280834) smart_embed: Distance reading error or out of range[0m
+[0;33mW (281344) smart_embed: Distance reading error or out of range[0m
+[0;33mW (281854) smart_embed: Distance reading error or out of range[0m
+[0;32mI (282193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (282364) smart_embed: Distance reading error or out of range[0m
+[0;33mW (282874) smart_embed: Distance reading error or out of range[0m
+[0;33mW (283384) smart_embed: Distance reading error or out of range[0m
+[0;33mW (283894) smart_embed: Distance reading error or out of range[0m
+[0;33mW (284404) smart_embed: Distance reading error or out of range[0m
+[0;33mW (284914) smart_embed: Distance reading error or out of range[0m
+[0;33mW (285424) smart_embed: Distance reading error or out of range[0m
+[0;33mW (285934) smart_embed: Distance reading error or out of range[0m
+[0;33mW (286444) smart_embed: Distance reading error or out of range[0m
+[0;33mW (286954) smart_embed: Distance reading error or out of range[0m
+[0;33mW (287464) smart_embed: Distance reading error or out of range[0m
+[0;33mW (287974) smart_embed: Distance reading error or out of range[0m
+[0;33mW (288484) smart_embed: Distance reading error or out of range[0m
+[0;33mW (288994) smart_embed: Distance reading error or out of range[0m
+[0;33mW (289504) smart_embed: Distance reading error or out of range[0m
+[0;33mW (290014) smart_embed: Distance reading error or out of range[0m
+[0;33mW (290524) smart_embed: Distance reading error or out of range[0m
+[0;33mW (291034) smart_embed: Distance reading error or out of range[0m
+[0;33mW (291544) smart_embed: Distance reading error or out of range[0m
+[0;33mW (292054) smart_embed: Distance reading error or out of range[0m
+[0;32mI (292193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (292565) smart_embed: Distance reading error or out of range[0m
+[0;33mW (293075) smart_embed: Distance reading error or out of range[0m
+[0;32mI (293580) smart_embed: Distance: 87.4 cm[0m
+[0;33mW (294091) smart_embed: Distance reading error or out of range[0m
+[0;33mW (294601) smart_embed: Distance reading error or out of range[0m
+[0;33mW (295111) smart_embed: Distance reading error or out of range[0m
+[0;33mW (295621) smart_embed: Distance reading error or out of range[0m
+[0;33mW (296131) smart_embed: Distance reading error or out of range[0m
+[0;33mW (296641) smart_embed: Distance reading error or out of range[0m
+[0;33mW (297151) smart_embed: Distance reading error or out of range[0m
+[0;33mW (297661) smart_embed: Distance reading error or out of range[0m
+[0;33mW (298171) smart_embed: Distance reading error or out of range[0m
+[0;33mW (298681) smart_embed: Distance reading error or out of range[0m
+[0;33mW (299191) smart_embed: Distance reading error or out of range[0m
+[0;33mW (299701) smart_embed: Distance reading error or out of range[0m
+[0;33mW (300211) smart_embed: Distance reading error or out of range[0m
+[0;33mW (300721) smart_embed: Distance reading error or out of range[0m
+[0;33mW (301231) smart_embed: Distance reading error or out of range[0m
+[0;33mW (301741) smart_embed: Distance reading error or out of range[0m
+[0;32mI (302193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (302251) smart_embed: Distance reading error or out of range[0m
+[0;33mW (302761) smart_embed: Distance reading error or out of range[0m
+[0;33mW (303271) smart_embed: Distance reading error or out of range[0m
+[0;33mW (303781) smart_embed: Distance reading error or out of range[0m
+[0;33mW (304291) smart_embed: Distance reading error or out of range[0m
+[0;33mW (304801) smart_embed: Distance reading error or out of range[0m
+[0;33mW (305311) smart_embed: Distance reading error or out of range[0m
+[0;33mW (305821) smart_embed: Distance reading error or out of range[0m
+[0;33mW (306331) smart_embed: Distance reading error or out of range[0m
+[0;33mW (306841) smart_embed: Distance reading error or out of range[0m
+[0;32mI (307179) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (307351) smart_embed: Distance reading error or out of range[0m
+[0;33mW (307861) smart_embed: Distance reading error or out of range[0m
+[0;33mW (308371) smart_embed: Distance reading error or out of range[0m
+[0;33mW (308881) smart_embed: Distance reading error or out of range[0m
+[0;33mW (309391) smart_embed: Distance reading error or out of range[0m
+[0;33mW (309901) smart_embed: Distance reading error or out of range[0m
+[0;33mW (310411) smart_embed: Distance reading error or out of range[0m
+[0;33mW (310921) smart_embed: Distance reading error or out of range[0m
+[0;33mW (311431) smart_embed: Distance reading error or out of range[0m
+[0;33mW (311941) smart_embed: Distance reading error or out of range[0m
+[0;32mI (312193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (312451) smart_embed: Distance reading error or out of range[0m
+[0;33mW (312961) smart_embed: Distance reading error or out of range[0m
+[0;33mW (313471) smart_embed: Distance reading error or out of range[0m
+[0;33mW (313981) smart_embed: Distance reading error or out of range[0m
+[0;33mW (314491) smart_embed: Distance reading error or out of range[0m
+[0;33mW (315001) smart_embed: Distance reading error or out of range[0m
+[0;33mW (315511) smart_embed: Distance reading error or out of range[0m
+[0;33mW (316021) smart_embed: Distance reading error or out of range[0m
+[0;33mW (316531) smart_embed: Distance reading error or out of range[0m
+[0;33mW (317041) smart_embed: Distance reading error or out of range[0m
+[0;33mW (317551) smart_embed: Distance reading error or out of range[0m
+[0;33mW (318061) smart_embed: Distance reading error or out of range[0m
+[0;32mI (318567) smart_embed: Distance: 93.6 cm[0m
+[0;33mW (319077) smart_embed: Distance reading error or out of range[0m
+[0;33mW (319587) smart_embed: Distance reading error or out of range[0m
+[0;33mW (320097) smart_embed: Distance reading error or out of range[0m
+[0;33mW (320607) smart_embed: Distance reading error or out of range[0m
+[0;33mW (321117) smart_embed: Distance reading error or out of range[0m
+[0;33mW (321627) smart_embed: Distance reading error or out of range[0m
+[0;32mI (321756) example: Ultrasonic API called[0m
+[0;32mI (321767) example: Distance read: -1.00 cm[0m
+[0;32mI (321767) example: Sending response: {"distance":-1.00,"timestamp":321434}[0m
+[0;33mW (321796) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (321799) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (321801) example: LED status check - GPIO level: 0[0m
+[0;32mI (321801) example: LED status response: {"status":"success","led":"off"}[0m
+[0;33mW (322137) smart_embed: Distance reading error or out of range[0m
+[0;32mI (322193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (322647) smart_embed: Distance reading error or out of range[0m
+[0;33mW (323157) smart_embed: Distance reading error or out of range[0m
+[0;33mW (323667) smart_embed: Distance reading error or out of range[0m
+[0;33mW (324177) smart_embed: Distance reading error or out of range[0m
+[0;33mW (324687) smart_embed: Distance reading error or out of range[0m
+[0;33mW (325197) smart_embed: Distance reading error or out of range[0m
+[0;33mW (325707) smart_embed: Distance reading error or out of range[0m
+[0;33mW (326217) smart_embed: Distance reading error or out of range[0m
+[0;33mW (326727) smart_embed: Distance reading error or out of range[0m
+[0;33mW (327237) smart_embed: Distance reading error or out of range[0m
+[0;33mW (327747) smart_embed: Distance reading error or out of range[0m
+[0;33mW (328257) smart_embed: Distance reading error or out of range[0m
+[0;33mW (328767) smart_embed: Distance reading error or out of range[0m
+[0;33mW (329277) smart_embed: Distance reading error or out of range[0m
+[0;33mW (329787) smart_embed: Distance reading error or out of range[0m
+[0;33mW (330297) smart_embed: Distance reading error or out of range[0m
+[0;33mW (330807) smart_embed: Distance reading error or out of range[0m
+[0;33mW (331317) smart_embed: Distance reading error or out of range[0m
+[0;33mW (331827) smart_embed: Distance reading error or out of range[0m
+[0;32mI (332193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (332337) smart_embed: Distance reading error or out of range[0m
+[0;33mW (332847) smart_embed: Distance reading error or out of range[0m
+[0;33mW (333357) smart_embed: Distance reading error or out of range[0m
+[0;33mW (333867) smart_embed: Distance reading error or out of range[0m
+[0;33mW (334377) smart_embed: Distance reading error or out of range[0m
+[0;33mW (334887) smart_embed: Distance reading error or out of range[0m
+[0;33mW (335397) smart_embed: Distance reading error or out of range[0m
+[0;33mW (335907) smart_embed: Distance reading error or out of range[0m
+[0;33mW (336417) smart_embed: Distance reading error or out of range[0m
+[0;33mW (336927) smart_embed: Distance reading error or out of range[0m
+[0;32mI (337179) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (337437) smart_embed: Distance reading error or out of range[0m
+[0;33mW (337947) smart_embed: Distance reading error or out of range[0m
+[0;33mW (338457) smart_embed: Distance reading error or out of range[0m
+[0;33mW (338967) smart_embed: Distance reading error or out of range[0m
+[0;33mW (339477) smart_embed: Distance reading error or out of range[0m
+[0;33mW (339987) smart_embed: Distance reading error or out of range[0m
+[0;33mW (340497) smart_embed: Distance reading error or out of range[0m
+[0;33mW (341008) smart_embed: Distance reading error or out of range[0m
+[0;33mW (341518) smart_embed: Distance reading error or out of range[0m
+[0;33mW (342028) smart_embed: Distance reading error or out of range[0m
+[0;32mI (342193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (342538) smart_embed: Distance reading error or out of range[0m
+[0;33mW (343048) smart_embed: Distance reading error or out of range[0m
+[0;32mI (343553) smart_embed: Distance: 84.8 cm[0m
+[0;33mW (344064) smart_embed: Distance reading error or out of range[0m
+[0;33mW (344575) smart_embed: Distance reading error or out of range[0m
+[0;33mW (345085) smart_embed: Distance reading error or out of range[0m
+[0;33mW (345595) smart_embed: Distance reading error or out of range[0m
+[0;33mW (346105) smart_embed: Distance reading error or out of range[0m
+[0;33mW (346615) smart_embed: Distance reading error or out of range[0m
+[0;33mW (347125) smart_embed: Distance reading error or out of range[0m
+[0;33mW (347635) smart_embed: Distance reading error or out of range[0m
+[0;33mW (348145) smart_embed: Distance reading error or out of range[0m
+[0;33mW (348655) smart_embed: Distance reading error or out of range[0m
+[0;33mW (349165) smart_embed: Distance reading error or out of range[0m
+[0;33mW (349675) smart_embed: Distance reading error or out of range[0m
+[0;33mW (350185) smart_embed: Distance reading error or out of range[0m
+[0;33mW (350695) smart_embed: Distance reading error or out of range[0m
+[0;33mW (351205) smart_embed: Distance reading error or out of range[0m
+[0;33mW (351715) smart_embed: Distance reading error or out of range[0m
+[0;32mI (352193) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (352225) smart_embed: Distance reading error or out of range[0m
+[0;33mW (352735) smart_embed: Distance reading error or out of range[0m
+[0;33mW (353245) smart_embed: Distance reading error or out of range[0m
+[0;32mI (353746) smart_embed: Distance: 8.6 cm[0m
+[0;32mI (353812) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (353912) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (354012) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (354112) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (354212) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (354247) smart_embed: Distance: 10.3 cm[0m
+[0;32mI (354748) smart_embed: Distance: 11.8 cm[0m
+[0;32mI (355249) smart_embed: Distance: 9.6 cm[0m
+[0;32mI (355312) smart_embed: LED ON - Distance: 9.6 cm < 10.0 cm[0m
+[0;32mI (355412) smart_embed: LED ON - Distance: 9.6 cm < 10.0 cm[0m
+[0;32mI (355512) smart_embed: LED ON - Distance: 9.6 cm < 10.0 cm[0m
+[0;32mI (355612) smart_embed: LED ON - Distance: 9.6 cm < 10.0 cm[0m
+[0;32mI (355712) smart_embed: LED ON - Distance: 9.6 cm < 10.0 cm[0m
+[0;32mI (355750) smart_embed: Distance: 10.3 cm[0m
+[0;32mI (356251) smart_embed: Distance: 10.0 cm[0m
+[0;32mI (356312) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (356412) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (356512) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (356612) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (356712) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (356752) smart_embed: Distance: 10.9 cm[0m
+[0;32mI (357253) smart_embed: Distance: 11.7 cm[0m
+[0;32mI (357754) smart_embed: Distance: 12.6 cm[0m
+[0;32mI (358255) smart_embed: Distance: 14.4 cm[0m
+[0;32mI (358757) smart_embed: Distance: 12.8 cm[0m
+[0;32mI (359258) smart_embed: Distance: 10.9 cm[0m
+[0;33mW (359768) smart_embed: Distance reading error or out of range[0m
+[0;33mW (360278) smart_embed: Distance reading error or out of range[0m
+[0;32mI (360779) smart_embed: Distance: 11.6 cm[0m
+[0;32mI (361280) smart_embed: Distance: 12.0 cm[0m
+[0;32mI (361781) smart_embed: Distance: 11.6 cm[0m
+[0;32mI (362193) smart_embed: System running - Distance: 11.6 cm, Valid: Yes, LED: OFF[0m
+[0;32mI (362282) smart_embed: Distance: 12.0 cm[0m
+[0;32mI (362783) smart_embed: Distance: 11.5 cm[0m
+[0;32mI (363284) smart_embed: Distance: 10.2 cm[0m
+[0;32mI (363785) smart_embed: Distance: 22.5 cm[0m
+[0;33mW (364296) smart_embed: Distance reading error or out of range[0m
+[0;33mW (364806) smart_embed: Distance reading error or out of range[0m
+[0;33mW (365316) smart_embed: Distance reading error or out of range[0m
+[0;33mW (365826) smart_embed: Distance reading error or out of range[0m
+[0;33mW (366336) smart_embed: Distance reading error or out of range[0m
+[0;33mW (366846) smart_embed: Distance reading error or out of range[0m
+[0;32mI (367179) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (367356) smart_embed: Distance reading error or out of range[0m
+[0;33mW (367866) smart_embed: Distance reading error or out of range[0m
+[0;33mW (368376) smart_embed: Distance reading error or out of range[0m
+[0;33mW (368886) smart_embed: Distance reading error or out of range[0m
+[0;33mW (369396) smart_embed: Distance reading error or out of range[0m
+[0;33mW (369906) smart_embed: Distance reading error or out of range[0m
+[0;33mW (370416) smart_embed: Distance reading error or out of range[0m

@@ -1,0 +1,16 @@
+dependencies:
+  idf:
+    source:
+      type: idf
+    version: 5.5.0
+  sd_card:
+    dependencies: []
+    source:
+      path: D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\examples\storage\sd_card\sdmmc\components\sd_card
+      type: local
+    version: '*'
+direct_dependencies:
+- sd_card
+manifest_hash: cee0b16cb8b19cab45fd1dbf26fd5fe0bfe8c3cc6843b710c24ae69f7bcefe3c
+target: esp32c3
+version: 2.0.0
