@@ -13,6 +13,7 @@
 // #include <stdlib.h>
 // #include <unistd.h>
 #include <esp_log.h>
+#include <stdbool.h>
 #include <sys/param.h>
 #include "esp_netif.h"
 #include "esp_event.h"
@@ -36,6 +37,9 @@ extern volatile int g_led_status;
 extern QueueHandle_t distance_queue;
 extern const uint8_t index_html_start[] asm("_binary_index_html_start");
 extern const uint8_t index_html_end[] asm("_binary_index_html_end");
+// Read-only access to latest distance without consuming queue
+extern float g_distance;
+extern bool g_distance_valid;
 
 
 static esp_err_t sensor_history_handler(httpd_req_t *req)
@@ -102,6 +106,21 @@ static const httpd_uri_t hello = {
     .handler   = hello_get_handler,
     /* Let's pass response string in user
      * context to demonstrate it's usage */
+    .user_ctx  = NULL
+};
+
+// Serve index.html at root path
+static esp_err_t root_get_handler(httpd_req_t *req)
+{
+    httpd_resp_set_type(req, "text/html");
+    httpd_resp_send(req, (const char *)index_html_start, index_html_end - index_html_start);
+    return ESP_OK;
+}
+
+static const httpd_uri_t root = {
+    .uri       = "/",
+    .method    = HTTP_GET,
+    .handler   = root_get_handler,
     .user_ctx  = NULL
 };
 
@@ -294,16 +313,21 @@ static const httpd_uri_t led_status = {
 static esp_err_t ultrasonic_handler(httpd_req_t *req)
 {
     ESP_LOGI(TAG, "Ultrasonic API called");
-    float distance = 0.0f;
-    xQueueReceive(distance_queue, &distance, 0); // Lấy giá trị mới nhất
+    float distance = g_distance;
+    // Không tiêu thụ queue để tránh mất dữ liệu lịch sử
+    float peek_value = 0.0f;
+    if (xQueueReceive(distance_queue, &peek_value, 0) == pdTRUE) {
+        distance = peek_value;
+    }
     // Đọc khoảng cách từ cảm biến siêu âm
     // float distance = read_ultrasonic_distance();
     
     ESP_LOGI(TAG, "Distance read: %.2f cm", distance);
     
-    char resp[100];
-    snprintf(resp, sizeof(resp), "{\"distance\":%.2f,\"timestamp\":%lld}", 
-             distance, esp_timer_get_time() / 1000);
+    char resp[128];
+    const char *led_str = (g_led_status == 1) ? "on" : "off";
+    snprintf(resp, sizeof(resp), "{\"distance\":%.2f,\"timestamp\":%lld,\"led\":\"%s\"}",
+             distance, esp_timer_get_time() / 1000, led_str);
     
     ESP_LOGI(TAG, "Sending response: %s", resp);
     
@@ -389,7 +413,7 @@ static const httpd_uri_t ctrl = {
 
 void start_webserver(void)
 {
-    httpd_handle_t server = NULL;
+    // Use the global server handle
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
     config.lru_purge_enable = true;
 
@@ -398,6 +422,7 @@ void start_webserver(void)
     if (httpd_start(&server, &config) == ESP_OK) {
         // Set URI handlers
         ESP_LOGI(TAG, "Registering URI handlers");
+        httpd_register_uri_handler(server, &root);
         httpd_register_uri_handler(server, &hello);
         httpd_register_uri_handler(server, &echo);
         httpd_register_uri_handler(server, &ctrl);

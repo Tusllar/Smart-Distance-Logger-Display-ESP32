@@ -1,0 +1,19 @@
+Command: ninja all
+[1/11] Generating ../../index.html.S
+[2/11] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D D:\ESP32C3\Espressif\frameworks\Smart-Distance-Logger-Display-ESP32\build\bootloader\esp-idf\esptool_py && D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[3/11] No install step for 'bootloader'
+[4/11] Building ASM object esp-idf/http_server_app/CMakeFiles/__idf_http_server_app.dir/__/__/index.html.S.obj
+[5/11] Completed 'bootloader'
+[6/11] Building C object esp-idf/http_server_app/CMakeFiles/__idf_http_server_app.dir/http_server_app.c.obj
+[7/11] Linking C static library esp-idf\http_server_app\libhttp_server_app.a
+[8/11] Generating esp-idf/esp_system/ld/sections.ld
+[9/11] Linking CXX executable Smart_Embed.elf
+FAILED: Smart_Embed.elf 
+C:\Windows\system32\cmd.exe /C "cd . && D:\ESP32C3\Espressif\tools\riscv32-esp-elf\esp-14.2.0_20241119\riscv32-esp-elf\bin\riscv32-esp-elf-g++.exe -march=rv32imc_zicsr_zifencei -nostartfiles -march=rv32imc_zicsr_zifencei    -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32C3=0 -Wl,--Map=D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/Smart_Embed.map -Wl,--no-warn-rwx-segments -Wl,--orphan-handling=warn -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T rom.api.ld -T esp32c3.peripherals.ld -T esp32c3.rom.ld -T esp32c3.rom.api.ld -T esp32c3.rom.bt_funcs.ld -T esp32c3.rom.libgcc.ld -T esp32c3.rom.version.ld -T esp32c3.rom.ble_master.ld -T esp32c3.rom.ble_50.ld -T esp32c3.rom.ble_smp.ld -T esp32c3.rom.ble_dtm.ld -T esp32c3.rom.ble_test.ld -T esp32c3.rom.ble_scan.ld -T esp32c3.rom.eco3.ld -T esp32c3.rom.eco3_bt_funcs.ld -T esp32c3.rom.libc.ld -T esp32c3.rom.libc-suboptimal_for_misaligned_mem.ld -T esp32c3.rom.newlib.ld -T memory.ld -T sections.ld @CMakeFiles\Smart_Embed.elf.rsp -o Smart_Embed.elf && cd ."
+D:/ESP32C3/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld.exe: esp-idf/http_server_app/libhttp_server_app.a(http_server_app.c.obj): in function `ultrasonic_handler':
+D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/components/http_server_app/http_server_app.c:316:(.text.ultrasonic_handler+0x42): undefined reference to `g_distance'
+D:/ESP32C3/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld.exe: D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/components/http_server_app/http_server_app.c:316:(.text.ultrasonic_handler+0x46): undefined reference to `g_distance'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

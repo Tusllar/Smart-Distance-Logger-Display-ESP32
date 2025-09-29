@@ -22,4 +22,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/bootloader/bootloader.elf
+file D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader/bootloader.elf

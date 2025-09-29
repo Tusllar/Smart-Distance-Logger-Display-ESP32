@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/bootloader/bootloader.elf
+    add-symbol-file D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/Smart_Embed.elf
+file D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/Smart_Embed.elf

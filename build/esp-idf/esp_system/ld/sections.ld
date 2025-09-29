@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: D:\ESP32C3\Espressif\frameworks\Smart_Embed\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: D:\ESP32C3\Espressif\frameworks\Smart-Distance-Logger-Display-ESP32\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
 

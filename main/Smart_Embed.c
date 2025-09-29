@@ -22,8 +22,8 @@ QueueHandle_t distance_queue = NULL;
 
 // Global variables
 static oled_driver_t *g_oled = NULL;
-static float g_distance = 0.0f;
-static bool g_distance_valid = false;
+float g_distance = 0.0f;
+bool g_distance_valid = false;
 volatile int g_led_status = 0; // 0: off, 1: on
 
 // LED configuration
@@ -96,11 +96,11 @@ static void display_task(void *pvParameters)
         oled_draw_rectangle(g_oled, 5, 35, 118, 25, 1, 0);  // Clear area with black rectangle
         
         if (g_distance_valid) {
-            float distance_q = 0.0f;
-            xQueuePeek(distance_queue, &distance_q, portMAX_DELAY);
+            // float distance_q = 0.0f;
+            // xQueuePeek(distance_queue, &distance_q, portMAX_DELAY);
             // Display distance
             char distance_str[20];
-            sprintf(distance_str, "Distance: %.1f cm", distance_q);
+            sprintf(distance_str, "Distance: %.1f cm", g_distance);
             oled_display_text(g_oled, distance_str, 64, 40, OLED_FONT_SMALL, OLED_ALIGN_CENTER);
             
             // Display status
@@ -163,7 +163,7 @@ static void http_server_task(void *pvParameters)
     
     // Start HTTP server
     start_webserver();
-    ESP_LOGI(TAG, "HTTP Server started on http://192.168.4.1");
+    ESP_LOGI(TAG, "HTTP Server started on http://192.168.x.x");
     
     // Keep task running
     while (1) {

@@ -1,4 +1,4 @@
-# Install script for directory: D:/ESP32C3/Espressif/frameworks/Smart_Embed/main
+# Install script for directory: D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

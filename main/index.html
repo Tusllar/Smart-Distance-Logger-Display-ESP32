@@ -724,7 +724,7 @@
         let timeLabels = [];
         let updateInterval;
         let startTime = Date.now();
-        let updateRate = 500;
+        let updateRate = 400;
         let maxDataPoints = 30;
         let frameCount = 0;
         let lastFrameTime = performance.now();
@@ -743,7 +743,7 @@
             initChart();
             initPerformanceControls();
             // Thêm đoạn này để lấy dữ liệu lịch sử từ SD card
-            fetch(`http://${deviceIP}/sensor/history`)
+            fetch(`/sensor/history`)
                 .then(response => response.json())
                 .then(history => {
                     // history là mảng [{distance, timestamp}, ...]
@@ -939,7 +939,7 @@
          function sendLEDCommand(command) {
              if (!deviceIP) return;
              
-             const url = `http://${deviceIP}/led?state=${command}`;
+             const url = `/led?state=${command}`;
              
              fetch(url, {
                  method: 'GET',
@@ -995,7 +995,7 @@
 
         // Lấy IP của thiết bị
         function getDeviceIP() {
-            deviceIP = '192.168.1.10'; // Thay đổi IP này theo ESP32 của bạn
+            deviceIP = window.location.hostname; // Lấy IP từ window.location.hostname
             document.getElementById('deviceIP').textContent = deviceIP;
         }
 
@@ -1017,7 +1017,7 @@
         function updateDistance() {
             if (!deviceIP) return;
             
-            fetch(`http://${deviceIP}/ultrasonic`)
+            fetch(`/ultrasonic`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.distance > 0) {
@@ -1030,6 +1030,16 @@
                         
                         // Cập nhật đồ thị với tối ưu hiệu suất
                         updateChartData(distance, timestamp);
+                        
+                        // Cập nhật LED ngay khi có trong response
+                        if (typeof data.led === 'string') {
+                            const serverLedState = data.led === 'on';
+                            if (serverLedState !== ledState) {
+                                ledState = serverLedState;
+                                lastLedState = serverLedState;
+                                updateLEDDisplay();
+                            }
+                        }
                         
                         // Cập nhật hiệu suất
                         updatePerformanceMetrics();
@@ -1109,7 +1119,7 @@
         function startLedSync() {
             ledSyncInterval = setInterval(() => {
                 if (deviceIP) {
-                    fetch(`http://${deviceIP}/led/status`)
+                    fetch(`/led/status`)
                         .then(response => response.json())
                         .then(data => {
                             if (data.status === 'success') {
@@ -1173,7 +1183,7 @@
         // Kiểm tra kết nối định kỳ
         setInterval(() => {
             if (deviceIP) {
-                fetch(`http://${deviceIP}/hello`)
+                fetch(`/hello`)
                     .then(response => {
                         if (response.ok) {
                             updateConnectionStatus('connected', 'Đã kết nối');

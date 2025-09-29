@@ -1,0 +1,495 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\Smart-Distance-Logger-Display-ESP32\build\Smart_Embed.elf D:\ESP32C3\Espressif\frameworks\Smart-Distance-Logger-Display-ESP32\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 29 2025 12:35:14[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2ca24h (182820) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=0003ca4c vaddr=3fc97000 size=02f24h ( 12068) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=0003f978 vaddr=40380000 size=006a0h (  1696) load[0m
+[0;32mI (122) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b8ebch (757436) map[0m
+[0;32mI (250) esp_image: segment 4: paddr=000f8ee4 vaddr=403806a0 size=168d8h ( 92376) load[0m
+[0;32mI (267) esp_image: segment 5: paddr=0010f7c4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (275) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (275) boot: Disabling RNG early entropy source...[0m
+[0;32mI (285) cpu_start: Unicore app[0m
+[0;32mI (293) cpu_start: Pro cpu start user code[0m
+[0;32mI (293) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (293) app_init: Application information:[0m
+[0;32mI (293) app_init: Project name:     Smart_Embed[0m
+[0;32mI (297) app_init: App version:      635567a-dirty[0m
+[0;32mI (302) app_init: Compile time:     Sep 29 2025 12:34:43[0m
+[0;32mI (307) app_init: ELF file SHA256:  d2841957e...[0m
+[0;32mI (311) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (315) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (319) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (323) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (327) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (333) heap_init: At 3FC9E300 len 00021D00 (135 KiB): RAM[0m
+[0;32mI (338) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (344) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (350) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (356) spi_flash: detected chip: generic[0m
+[0;32mI (359) spi_flash: flash io: dio[0m
+[0;33mW (362) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (375) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (380) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (387) main_task: Started on CPU0[0m
+[0;32mI (405) main_task: Calling app_main()[0m
+[0;32mI (405) smart_embed: Starting Smart Distance Logger & Display[0m
+[0;32mI (405) example: Initializing SD card[0m
+[0;32mI (406) example: Using SPI peripheral[0m
+[0;32mI (410) example: Mounting filesystem[0m
+[0;32mI (616) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (726) example: Filesystem mounted[0m
+[0;32mI (734) wifi station: ESP_WIFI_MODE_STA[0m
+[0;32mI (736) pp: pp rom version: 9387209[0m
+[0;32mI (736) net80211: net80211 rom version: 9387209[0m
+[0;32mI (738) wifi:wifi driver task: 3fcaec08, prio:23, stack:6656, core=0[0m
+[0;32mI (747) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (747) wifi:wifi certification version: v7.0[0m
+[0;32mI (748) wifi:config NVS flash: enabled[0m
+[0;32mI (751) wifi:config nano formatting: disabled[0m
+[0;32mI (756) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (760) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (765) wifi:Init management short buffer num: 32[0m
+[0;32mI (769) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (773) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (777) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (781) wifi:Init static rx buffer num: 10[0m
+[0;32mI (785) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (789) wifi_init: rx ba win: 6[0m
+[0;32mI (792) wifi_init: accept mbox: 6[0m
+[0;32mI (795) wifi_init: tcpip mbox: 32[0m
+[0;32mI (798) wifi_init: udp mbox: 6[0m
+[0;32mI (800) wifi_init: tcp mbox: 6[0m
+[0;32mI (803) wifi_init: tcp tx win: 5760[0m
+[0;32mI (806) wifi_init: tcp rx win: 5760[0m
+[0;32mI (810) wifi_init: tcp mss: 1440[0m
+[0;32mI (813) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (816) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (821) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (857) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (858) wifi:enable tsf[0m
+[0;32mI (861) wifi station: wifi_init_sta finished.[0m
+[0;32mI (867) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (868) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (885) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (934) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1040) wifi:connected with 4 chi em, aid = 6, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (1040) wifi:security: WPA2-PSK, phy: bgn, rssi: -44[0m
+[0;32mI (1043) wifi:pm start, type: 1[0m
+
+[0;32mI (1045) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1053) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1062) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2457) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2457) wifi station: got ip:192.168.1.10[0m
+[0;32mI (2458) wifi station: connected to ap SSID:4 chi em password:daytro6868[0m
+D (2464) i2c.common: new bus(0) at 0x3fcb6668
+D (2468) i2c.common: bus clock source frequency: 40000000hz
+[0;32mI (2576) oled_driver: OLED driver initialized successfully[0m
+[0;32mI (2576) ultrasonic: Ultrasonic sensor initialized[0m
+[0;32mI (2576) smart_embed: Ultrasonic sensor initialized[0m
+[0;32mI (2579) smart_embed: System initialized successfully[0m
+[0;32mI (2584) smart_embed: Sensor task started[0m
+[0;32mI (2593) smart_embed: Distance: 85.9 cm[0m
+[0;32mI (2593) smart_embed: Display task started[0m
+[0;32mI (2595) smart_embed: LED task started[0m
+[0;32mI (2599) smart_embed: SD Card task started[0m
+[0;32mI (2644) smart_embed: HTTP Server task started[0m
+[0;32mI (2645) smart_embed: All tasks created successfully[0m
+[0;32mI (2651) smart_embed: Saved: 85.93 cm, 2247 ms[0m
+[0;32mI (2797) smart_embed: Saved: 85.93 cm, 2395 ms[0m
+[0;32mI (2944) smart_embed: Saved: 85.93 cm, 2542 ms[0m
+[0;32mI (3090) smart_embed: Saved: 85.93 cm, 2688 ms[0m
+[0;33mW (3103) smart_embed: Distance reading error or out of range[0m
+[0;32mI (3237) smart_embed: Saved: 85.93 cm, 2835 ms[0m
+[0;32mI (3384) smart_embed: Saved: 85.93 cm, 2982 ms[0m
+[0;32mI (3531) smart_embed: Saved: 85.93 cm, 3129 ms[0m
+[0;33mW (3613) smart_embed: Distance reading error or out of range[0m
+[0;32mI (3677) smart_embed: Saved: 85.93 cm, 3275 ms[0m
+[0;32mI (3824) smart_embed: Saved: 85.93 cm, 3422 ms[0m
+[0;32mI (3971) smart_embed: Saved: 85.93 cm, 3569 ms[0m
+[0;33mW (4123) smart_embed: Distance reading error or out of range[0m
+[0;32mI (4129) smart_embed: Saved: 85.93 cm, 3716 ms[0m
+[0;32mI (4275) smart_embed: Saved: 85.93 cm, 3873 ms[0m
+[0;32mI (4422) smart_embed: Saved: 85.93 cm, 4020 ms[0m
+[0;32mI (4569) smart_embed: Saved: 85.93 cm, 4168 ms[0m
+[0;32mI (4624) smart_embed: Distance: 9.4 cm[0m
+[0;32mI (4624) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (4716) smart_embed: Saved: 85.93 cm, 4314 ms[0m
+[0;32mI (4724) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (4824) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (4862) smart_embed: Saved: 85.93 cm, 4460 ms[0m
+[0;32mI (4925) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (5009) smart_embed: Saved: 85.93 cm, 4607 ms[0m
+[0;32mI (5025) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (5125) smart_embed: Distance: 11.8 cm[0m
+[0;32mI (5155) smart_embed: Saved: 85.93 cm, 4753 ms[0m
+[0;32mI (5302) smart_embed: Saved: 85.93 cm, 4900 ms[0m
+[0;32mI (5448) smart_embed: Saved: 85.93 cm, 5046 ms[0m
+[0;32mI (5595) smart_embed: Saved: 85.93 cm, 5193 ms[0m
+[0;32mI (5625) smart_embed: Distance: 6.1 cm[0m
+[0;32mI (5626) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (5726) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (5741) smart_embed: Saved: 85.93 cm, 5339 ms[0m
+[0;32mI (5826) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (5888) smart_embed: Saved: 85.93 cm, 5486 ms[0m
+[0;32mI (5926) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (6026) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (6035) smart_embed: Saved: 85.93 cm, 5633 ms[0m
+[0;32mI (6126) smart_embed: Distance: 6.1 cm[0m
+[0;32mI (6127) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (6181) smart_embed: Saved: 85.93 cm, 5779 ms[0m
+[0;32mI (6227) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (6327) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (6329) smart_embed: Saved: 85.93 cm, 5926 ms[0m
+[0;32mI (6427) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (6475) smart_embed: Saved: 85.93 cm, 6073 ms[0m
+[0;32mI (6527) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (6622) smart_embed: Saved: 85.93 cm, 6220 ms[0m
+[0;32mI (6627) smart_embed: Distance: 6.9 cm[0m
+[0;32mI (6628) smart_embed: LED ON - Distance: 6.9 cm < 10.0 cm[0m
+[0;32mI (6728) smart_embed: LED ON - Distance: 6.9 cm < 10.0 cm[0m
+[0;32mI (6768) smart_embed: Saved: 85.93 cm, 6366 ms[0m
+[0;32mI (6828) smart_embed: LED ON - Distance: 6.9 cm < 10.0 cm[0m
+[0;32mI (6915) smart_embed: Saved: 85.93 cm, 6513 ms[0m
+[0;32mI (6928) smart_embed: LED ON - Distance: 6.9 cm < 10.0 cm[0m
+[0;32mI (7029) smart_embed: LED ON - Distance: 6.9 cm < 10.0 cm[0m
+[0;32mI (7062) smart_embed: Saved: 85.93 cm, 6660 ms[0m
+[0;32mI (7128) smart_embed: Distance: 7.0 cm[0m
+[0;32mI (7129) smart_embed: LED ON - Distance: 7.0 cm < 10.0 cm[0m
+[0;32mI (7209) smart_embed: Saved: 85.93 cm, 6807 ms[0m
+[0;32mI (7229) smart_embed: LED ON - Distance: 7.0 cm < 10.0 cm[0m
+[0;32mI (7329) smart_embed: LED ON - Distance: 7.0 cm < 10.0 cm[0m
+[0;32mI (7356) smart_embed: Saved: 85.93 cm, 6954 ms[0m
+[0;32mI (7429) smart_embed: LED ON - Distance: 7.0 cm < 10.0 cm[0m
+[0;32mI (7502) smart_embed: Saved: 85.93 cm, 7100 ms[0m
+[0;32mI (7529) smart_embed: LED ON - Distance: 7.0 cm < 10.0 cm[0m
+[0;32mI (7630) smart_embed: Distance: 12.0 cm[0m
+[0;32mI (7646) example: Starting server on port: '80'[0m
+[0;32mI (7649) smart_embed: Saved: 85.93 cm, 7247 ms[0m
+[0;32mI (7652) example: Registering URI handlers[0m
+[0;32mI (7652) smart_embed: HTTP Server started on http://192.168.4.1[0m
+[0;32mI (7796) smart_embed: Saved: 85.93 cm, 7394 ms[0m
+[0;32mI (7950) smart_embed: Saved: 85.93 cm, 7541 ms[0m
+[0;32mI (8097) smart_embed: Saved: 85.93 cm, 7695 ms[0m
+[0;32mI (8130) smart_embed: Distance: 4.3 cm[0m
+[0;32mI (8131) smart_embed: LED ON - Distance: 4.3 cm < 10.0 cm[0m
+[0;32mI (8231) smart_embed: LED ON - Distance: 4.3 cm < 10.0 cm[0m
+[0;32mI (8243) smart_embed: Saved: 85.93 cm, 7841 ms[0m
+[0;32mI (8331) smart_embed: LED ON - Distance: 4.3 cm < 10.0 cm[0m
+[0;32mI (8389) smart_embed: Saved: 85.93 cm, 7987 ms[0m
+[0;32mI (8431) smart_embed: LED ON - Distance: 4.3 cm < 10.0 cm[0m
+[0;32mI (8531) smart_embed: LED ON - Distance: 4.3 cm < 10.0 cm[0m
+[0;32mI (8535) smart_embed: Saved: 85.93 cm, 8133 ms[0m
+[0;32mI (8631) smart_embed: Distance: 4.0 cm[0m
+[0;32mI (8632) smart_embed: LED ON - Distance: 4.0 cm < 10.0 cm[0m
+[0;32mI (8682) smart_embed: Saved: 85.93 cm, 8280 ms[0m
+[0;32mI (8732) smart_embed: LED ON - Distance: 4.0 cm < 10.0 cm[0m
+[0;32mI (8829) smart_embed: Saved: 85.93 cm, 8426 ms[0m
+[0;32mI (8832) smart_embed: LED ON - Distance: 4.0 cm < 10.0 cm[0m
+[0;32mI (8932) smart_embed: LED ON - Distance: 4.0 cm < 10.0 cm[0m
+[0;32mI (8975) smart_embed: Saved: 85.93 cm, 8574 ms[0m
+[0;32mI (9032) smart_embed: LED ON - Distance: 4.0 cm < 10.0 cm[0m
+[0;32mI (9122) smart_embed: Saved: 85.93 cm, 8720 ms[0m
+[0;32mI (9132) smart_embed: Distance: 6.1 cm[0m
+[0;32mI (9133) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (9233) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (9268) smart_embed: Saved: 85.93 cm, 8866 ms[0m
+[0;32mI (9335) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (9414) smart_embed: Saved: 85.93 cm, 9012 ms[0m
+[0;32mI (9435) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (9535) smart_embed: LED ON - Distance: 6.1 cm < 10.0 cm[0m
+[0;32mI (9560) smart_embed: Saved: 85.93 cm, 9158 ms[0m
+[0;32mI (9634) smart_embed: Distance: 17.2 cm[0m
+[0;32mI (9706) smart_embed: Saved: 85.93 cm, 9304 ms[0m
+[0;32mI (9852) smart_embed: Saved: 85.93 cm, 9450 ms[0m
+[0;32mI (9998) smart_embed: Saved: 85.93 cm, 9596 ms[0m
+[0;32mI (10135) smart_embed: Distance: 14.0 cm[0m
+[0;32mI (10143) smart_embed: Saved: 85.93 cm, 9742 ms[0m
+[0;32mI (10290) smart_embed: Saved: 85.93 cm, 9888 ms[0m
+[0;32mI (10436) smart_embed: Saved: 85.93 cm, 10034 ms[0m
+[0;32mI (10582) smart_embed: Saved: 85.93 cm, 10180 ms[0m
+[0;32mI (10637) smart_embed: Distance: 12.2 cm[0m
+[0;32mI (10728) smart_embed: Saved: 85.93 cm, 10326 ms[0m
+[0;32mI (10874) smart_embed: Saved: 85.93 cm, 10472 ms[0m
+[0;32mI (11021) smart_embed: Saved: 85.93 cm, 10619 ms[0m
+[0;32mI (11137) smart_embed: Distance: 5.6 cm[0m
+[0;32mI (11138) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (11167) smart_embed: Saved: 85.93 cm, 10765 ms[0m
+[0;32mI (11238) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (11313) smart_embed: Saved: 85.93 cm, 10911 ms[0m
+[0;32mI (11338) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (11438) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (11459) smart_embed: Saved: 85.93 cm, 11057 ms[0m
+[0;32mI (11538) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (11606) smart_embed: Saved: 85.93 cm, 11204 ms[0m
+[0;32mI (11638) smart_embed: Distance: 5.2 cm[0m
+[0;32mI (11639) smart_embed: LED ON - Distance: 5.2 cm < 10.0 cm[0m
+[0;32mI (11739) smart_embed: LED ON - Distance: 5.2 cm < 10.0 cm[0m
+[0;32mI (11752) smart_embed: Saved: 85.93 cm, 11350 ms[0m
+[0;32mI (11839) smart_embed: LED ON - Distance: 5.2 cm < 10.0 cm[0m
+[0;32mI (11898) smart_embed: Saved: 85.93 cm, 11496 ms[0m
+[0;32mI (11939) smart_embed: LED ON - Distance: 5.2 cm < 10.0 cm[0m
+[0;32mI (12039) smart_embed: LED ON - Distance: 5.2 cm < 10.0 cm[0m
+[0;32mI (12045) smart_embed: Saved: 85.93 cm, 11643 ms[0m
+[0;32mI (12140) smart_embed: Distance: 14.8 cm[0m
+[0;32mI (12191) smart_embed: Saved: 85.93 cm, 11789 ms[0m
+[0;32mI (12337) smart_embed: Saved: 85.93 cm, 11935 ms[0m
+[0;32mI (12483) smart_embed: Saved: 85.93 cm, 12081 ms[0m
+[0;32mI (12629) smart_embed: Saved: 85.93 cm, 12227 ms[0m
+[0;32mI (12641) smart_embed: Distance: 15.2 cm[0m
+[0;32mI (12647) smart_embed: System running - Distance: 15.2 cm, Valid: Yes, LED: OFF[0m
+[0;32mI (12776) smart_embed: Saved: 85.93 cm, 12374 ms[0m
+[0;32mI (12922) smart_embed: Saved: 85.93 cm, 12520 ms[0m
+[0;32mI (13069) smart_embed: Saved: 85.93 cm, 12667 ms[0m
+[0;32mI (13141) smart_embed: Distance: 4.8 cm[0m
+[0;32mI (13142) smart_embed: LED ON - Distance: 4.8 cm < 10.0 cm[0m
+[0;32mI (13215) smart_embed: Saved: 85.93 cm, 12813 ms[0m
+[0;32mI (13242) smart_embed: LED ON - Distance: 4.8 cm < 10.0 cm[0m
+[0;32mI (13342) smart_embed: LED ON - Distance: 4.8 cm < 10.0 cm[0m
+[0;32mI (13360) smart_embed: Saved: 85.93 cm, 12959 ms[0m
+[0;32mI (13442) smart_embed: LED ON - Distance: 4.8 cm < 10.0 cm[0m
+[0;32mI (13507) smart_embed: Saved: 85.93 cm, 13105 ms[0m
+[0;32mI (13542) smart_embed: LED ON - Distance: 4.8 cm < 10.0 cm[0m
+[0;32mI (13643) smart_embed: Distance: 9.7 cm[0m
+[0;32mI (13643) smart_embed: LED ON - Distance: 9.7 cm < 10.0 cm[0m
+[0;32mI (13652) smart_embed: Saved: 85.93 cm, 13251 ms[0m
+[0;32mI (13743) smart_embed: LED ON - Distance: 9.7 cm < 10.0 cm[0m
+[0;32mI (13799) smart_embed: Saved: 85.93 cm, 13397 ms[0m
+[0;32mI (13843) smart_embed: LED ON - Distance: 9.7 cm < 10.0 cm[0m
+[0;32mI (13943) smart_embed: LED ON - Distance: 9.7 cm < 10.0 cm[0m
+[0;32mI (13945) smart_embed: Saved: 85.93 cm, 13543 ms[0m
+[0;32mI (14043) smart_embed: LED ON - Distance: 9.7 cm < 10.0 cm[0m
+[0;32mI (14092) smart_embed: Saved: 85.93 cm, 13690 ms[0m
+[0;32mI (14144) smart_embed: Distance: 12.6 cm[0m
+[0;32mI (14239) smart_embed: Saved: 85.93 cm, 13837 ms[0m
+[0;32mI (14385) smart_embed: Saved: 85.93 cm, 13983 ms[0m
+[0;32mI (14531) smart_embed: Saved: 85.93 cm, 14129 ms[0m
+[0;32mI (14645) smart_embed: Distance: 11.2 cm[0m
+[0;32mI (14677) smart_embed: Saved: 85.93 cm, 14275 ms[0m
+[0;32mI (14824) smart_embed: Saved: 85.93 cm, 14422 ms[0m
+[0;32mI (14970) smart_embed: Saved: 85.93 cm, 14568 ms[0m
+[0;32mI (15117) smart_embed: Saved: 85.93 cm, 14715 ms[0m
+[0;32mI (15145) smart_embed: Distance: 4.8 cm[0m
+[0;32mI (15146) smart_embed: LED ON - Distance: 4.8 cm < 10.0 cm[0m
+[0;32mI (15246) smart_embed: LED ON - Distance: 4.8 cm < 10.0 cm[0m
+[0;32mI (15264) smart_embed: Saved: 85.93 cm, 14861 ms[0m
+[0;32mI (15346) smart_embed: LED ON - Distance: 4.8 cm < 10.0 cm[0m
+[0;32mI (15410) smart_embed: Saved: 85.93 cm, 15008 ms[0m
+[0;32mI (15446) smart_embed: LED ON - Distance: 4.8 cm < 10.0 cm[0m
+[0;32mI (15546) smart_embed: LED ON - Distance: 4.8 cm < 10.0 cm[0m
+[0;32mI (15555) smart_embed: Saved: 85.93 cm, 15154 ms[0m
+[0;32mI (15646) smart_embed: Distance: 6.7 cm[0m
+[0;32mI (15647) smart_embed: LED ON - Distance: 6.7 cm < 10.0 cm[0m
+[0;32mI (15702) smart_embed: Saved: 85.93 cm, 15300 ms[0m
+[0;32mI (15747) smart_embed: LED ON - Distance: 6.7 cm < 10.0 cm[0m
+[0;32mI (15847) smart_embed: LED ON - Distance: 6.7 cm < 10.0 cm[0m
+[0;32mI (15849) smart_embed: Saved: 85.93 cm, 15446 ms[0m
+[0;32mI (15947) smart_embed: LED ON - Distance: 6.7 cm < 10.0 cm[0m
+[0;32mI (15996) smart_embed: Saved: 85.93 cm, 15593 ms[0m
+[0;32mI (16047) smart_embed: LED ON - Distance: 6.7 cm < 10.0 cm[0m
+[0;32mI (16142) smart_embed: Saved: 85.93 cm, 15740 ms[0m
+[0;32mI (16147) smart_embed: Distance: 4.0 cm[0m
+[0;32mI (16147) smart_embed: LED ON - Distance: 4.0 cm < 10.0 cm[0m
+[0;32mI (16248) smart_embed: LED ON - Distance: 4.0 cm < 10.0 cm[0m
+[0;32mI (16288) smart_embed: Saved: 85.93 cm, 15887 ms[0m
+[0;32mI (16348) smart_embed: LED ON - Distance: 4.0 cm < 10.0 cm[0m
+[0;32mI (16435) smart_embed: Saved: 85.93 cm, 16033 ms[0m
+[0;32mI (16448) smart_embed: LED ON - Distance: 4.0 cm < 10.0 cm[0m
+[0;32mI (16548) smart_embed: LED ON - Distance: 4.0 cm < 10.0 cm[0m
+[0;32mI (16580) smart_embed: Saved: 85.93 cm, 16179 ms[0m
+[0;32mI (16647) smart_embed: Distance: 3.1 cm[0m
+[0;32mI (16648) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (16727) smart_embed: Saved: 85.93 cm, 16325 ms[0m
+[0;32mI (16748) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (16848) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (16872) smart_embed: Saved: 85.93 cm, 16471 ms[0m
+[0;32mI (16948) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (17019) smart_embed: Saved: 85.93 cm, 16617 ms[0m
+[0;32mI (17048) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (17148) smart_embed: Distance: 3.1 cm[0m
+[0;32mI (17149) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (17165) smart_embed: Saved: 85.93 cm, 16764 ms[0m
+[0;32mI (17249) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (17312) smart_embed: Saved: 85.93 cm, 16910 ms[0m
+[0;32mI (17349) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (17449) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (17463) smart_embed: Saved: 85.93 cm, 17056 ms[0m
+[0;32mI (17549) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (17610) smart_embed: Saved: 85.93 cm, 17208 ms[0m
+[0;32mI (17649) smart_embed: Distance: 3.6 cm[0m
+[0;32mI (17650) smart_embed: LED ON - Distance: 3.6 cm < 10.0 cm[0m
+[0;32mI (17750) smart_embed: LED ON - Distance: 3.6 cm < 10.0 cm[0m
+[0;32mI (17756) smart_embed: Saved: 85.93 cm, 17354 ms[0m
+[0;32mI (17850) smart_embed: LED ON - Distance: 3.6 cm < 10.0 cm[0m
+[0;32mI (17902) smart_embed: Saved: 85.93 cm, 17500 ms[0m
+[0;32mI (17950) smart_embed: LED ON - Distance: 3.6 cm < 10.0 cm[0m
+[0;32mI (18048) smart_embed: Saved: 85.93 cm, 17646 ms[0m
+[0;32mI (18050) smart_embed: LED ON - Distance: 3.6 cm < 10.0 cm[0m
+[0;32mI (18150) smart_embed: Distance: 3.1 cm[0m
+[0;32mI (18151) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (18194) smart_embed: Saved: 85.93 cm, 17793 ms[0m
+[0;32mI (18251) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (18341) smart_embed: Saved: 85.93 cm, 17939 ms[0m
+[0;32mI (18351) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (18451) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (18487) smart_embed: Saved: 85.93 cm, 18086 ms[0m
+[0;32mI (18551) smart_embed: LED ON - Distance: 3.1 cm < 10.0 cm[0m
+[0;32mI (18634) smart_embed: Saved: 85.93 cm, 18232 ms[0m
+[0;32mI (18651) smart_embed: Distance: 3.5 cm[0m
+[0;32mI (18652) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (18752) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (18781) smart_embed: Saved: 85.93 cm, 18380 ms[0m
+[0;32mI (18852) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (18927) smart_embed: Saved: 85.93 cm, 18525 ms[0m
+[0;32mI (18952) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (19052) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (19074) smart_embed: Saved: 85.93 cm, 18672 ms[0m
+[0;32mI (19152) smart_embed: Distance: 4.5 cm[0m
+[0;32mI (19153) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (19220) smart_embed: Saved: 85.93 cm, 18818 ms[0m
+[0;32mI (19253) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (19353) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (19367) smart_embed: Saved: 85.93 cm, 18965 ms[0m
+[0;32mI (19453) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (19514) smart_embed: Saved: 85.93 cm, 19113 ms[0m
+[0;32mI (19553) smart_embed: LED ON - Distance: 4.5 cm < 10.0 cm[0m
+[0;32mI (19652) smart_embed: Distance: 3.5 cm[0m
+[0;32mI (19653) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (19660) smart_embed: Saved: 85.93 cm, 19259 ms[0m
+[0;32mI (19753) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (19807) smart_embed: Saved: 85.93 cm, 19405 ms[0m
+[0;32mI (19853) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (19953) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (19953) smart_embed: Saved: 85.93 cm, 19551 ms[0m
+[0;32mI (20053) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (20100) smart_embed: Saved: 85.93 cm, 19698 ms[0m
+[0;32mI (20153) smart_embed: Distance: 3.8 cm[0m
+[0;32mI (20154) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (20246) smart_embed: Saved: 85.93 cm, 19844 ms[0m
+[0;32mI (20254) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (20354) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (20392) smart_embed: Saved: 85.93 cm, 19990 ms[0m
+[0;32mI (20454) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (20539) smart_embed: Saved: 85.93 cm, 20137 ms[0m
+[0;32mI (20554) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (20654) smart_embed: Distance: 3.8 cm[0m
+[0;32mI (20655) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (20685) smart_embed: Saved: 85.93 cm, 20283 ms[0m
+[0;32mI (20755) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (20831) smart_embed: Saved: 85.93 cm, 20429 ms[0m
+[0;32mI (20855) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (20955) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (20977) smart_embed: Saved: 85.93 cm, 20575 ms[0m
+[0;32mI (21055) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (21123) smart_embed: Saved: 85.93 cm, 20721 ms[0m
+[0;32mI (21155) smart_embed: Distance: 3.8 cm[0m
+[0;32mI (21155) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (21256) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (21268) smart_embed: Saved: 85.93 cm, 20867 ms[0m
+[0;32mI (21356) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (21416) smart_embed: Saved: 85.93 cm, 21013 ms[0m
+[0;32mI (21456) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (21530) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:23:fc:a8), tid:0, ssn:5, winSize:64[0m
+[0;32mI (21556) smart_embed: LED ON - Distance: 3.8 cm < 10.0 cm[0m
+[0;32mI (21612) smart_embed: Saved: 85.93 cm, 21161 ms[0m
+[0;32mI (21655) smart_embed: Distance: 3.5 cm[0m
+[0;32mI (21656) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (21756) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;32mI (21758) smart_embed: Saved: 85.93 cm, 21356 ms[0m
+[0;32mI (22003) smart_embed: LED ON - Distance: 3.5 cm < 10.0 cm[0m
+[0;33mW (22281) smart_embed: Distance reading error or out of range[0m
+[0;33mW (23755) smart_embed: Distance reading error or out of range[0m
+[0;32mI (24302) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (24655) smart_embed: Distance reading error or out of range[0m
+[0;33mW (25722) smart_embed: Distance reading error or out of range[0m
+[0;33mW (26699) smart_embed: Distance reading error or out of range[0m
+[0;33mW (27643) smart_embed: Distance reading error or out of range[0m
+[0;33mW (28561) smart_embed: Distance reading error or out of range[0m
+[0;33mW (29454) smart_embed: Distance reading error or out of range[0m
+[0;33mW (30408) smart_embed: Distance reading error or out of range[0m
+[0;33mW (31372) smart_embed: Distance reading error or out of range[0m
+[0;33mW (32330) smart_embed: Distance reading error or out of range[0m
+[0;33mW (33241) smart_embed: Distance reading error or out of range[0m
+[1;31mE (33514) smart_embed: Failed to save sensor data to SD card[0m
+[0;33mW (34156) smart_embed: Distance reading error or out of range[0m
+[1;31mE (34518) i2c.master: I2C hardware NACK detected[0m
+[0;33mW (35070) smart_embed: Distance reading error or out of range[0m
+[1;31mE (35343) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (35611) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;33mW (35967) smart_embed: Distance reading error or out of range[0m
+[1;31mE (36319) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (36669) lcd_panel.io.i2c: panel_io_i2c_tx_buffer(193): i2c transaction failed[0m
+[0;33mW (36933) smart_embed: Distance reading error or out of range[0m
+[1;31mE (37549) lcd_panel.ssd1306: panel_ssd1306_draw_bitmap(206): io tx color failed[0m
+[0;33mW (38172) smart_embed: Distance reading error or out of range[0m
+[1;31mE (38437) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (38878) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (38878) task_wdt:  - IDLE (CPU 0)[0m
+[1;31mE (38878) task_wdt: Tasks currently running:[0m
+[1;31mE (38878) task_wdt: CPU 0: httpd[0m
+[1;31mE (38878) task_wdt: Print CPU 0 (current core) registers[0m
+Core  0 register dump:
+MEPC    : 0x40388e14  RA      : 0x40388ea4  SP      : 0x3fcbe7c0  GP      : 0x3fc97800  
+TP      : 0x3fcbed50  T0      : 0x00000000  T1      : 0x80000000  T2      : 0x00000000  
+S0/FP   : 0x00000000  S1      : 0x3fca1b4c  A0      : 0x00000001  A1      : 0x00000000  
+A2      : 0x00000039  A3      : 0x6003f000  A4      : 0x00000000  A5      : 0x600c2000  
+A6      : 0x3fca1c28  A7      : 0x00000001  S2      : 0x3fca1bc0  S3      : 0x3fca1d9c  
+S4      : 0x3fca1efc  S5      : 0x3fcbe8a0  S6      : 0x00000001  S7      : 0x00007619  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0xff000fff  T4      : 0x00000008  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001889  MTVEC   : 0x40380001  MCAUSE  : 0xdeadc0de  MTVAL   : 0xdeadc0de  
+MHARTID : 0x00000000  
+Please enable CONFIG_ESP_SYSTEM_USE_FRAME_POINTER option to have a full backtrace.
+[0;33mW (39106) smart_embed: Distance reading error or out of range[0m
+[1;31mE (39462) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (39729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;33mW (39996) smart_embed: Distance reading error or out of range[0m
+[1;31mE (40616) lcd_panel.io.i2c: panel_io_i2c_tx_buffer(193): i2c transaction failed[0m
+[1;31mE (40891) lcd_panel.ssd1306: panel_ssd1306_draw_bitmap(196): io tx param SSD1306_CMD_SET_COLUMN_RANGE failed[0m
+[0;33mW (41254) smart_embed: Distance reading error or out of range[0m
+[0;32mI (37994) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (42365) smart_embed: Distance reading error or out of range[0m
+[0;33mW (43519) smart_embed: Distance reading error or out of range[0m
+[1;31mE (43878) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (43878) task_wdt:  - IDLE (CPU 0)[0m
+[1;31mE (43878) task_wdt: Tasks currently running:[0m
+[1;31mE (43878) task_wdt: CPU 0: tiT[0m
+[1;31mE (43878) task_wdt: Print CPU 0 (current core) registers[0m
+Core  0 register dump:
+MEPC    : 0x400587d8  RA      : 0x4206e2e6  SP      : 0x3fcaaf60  GP      : 0x3fc97800  
+TP      : 0x3fcab050  T0      : 0x6e617473  T1      : 0x706d6174  T2      : 0x6964227b  
+S0/FP   : 0x3fcde8c8  S1      : 0x3fcbee98  A0      : 0x3fcdec06  A1      : 0x3c0c5094  
+A2      : 0x00000001  A3      : 0x0000002c  A4      : 0x3fcdec07  A5      : 0x3fcdec07  
+A6      : 0x00000001  A7      : 0x00000ea4  S2      : 0x00000001  S3      : 0x3fcbf8ac  
+S4      : 0x000005a0  S5      : 0x00000002  S6      : 0x00000001  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x3c0c5094  S10     : 0x00000001  S11     : 0x00000001  
+T3      : 0x73656d69  T4      : 0x74222c38  T5      : 0x382e3938  T6      : 0x3a226563  
+MSTATUS : 0x00001889  MTVEC   : 0x40380001  MCAUSE  : 0xdeadc0de  MTVAL   : 0xdeadc0de  
+MHARTID : 0x00000000  
+Please enable CONFIG_ESP_SYSTEM_USE_FRAME_POINTER option to have a full backtrace.
+[0;32mI (37994) smart_embed: HTTP Server running - Distance: 0.0 cm, LED: OFF[0m
+[0;33mW (44501) smart_embed: Distance reading error or out of range[0m
+[1;31mE (45041) smart_embed: Failed to save sensor data to SD card[0m
+[0;33mW (45663) smart_embed: Distance reading error or out of range[0m

@@ -11,6 +11,6 @@ dependencies:
     version: '*'
 direct_dependencies:
 - sd_card
-manifest_hash: cee0b16cb8b19cab45fd1dbf26fd5fe0bfe8c3cc6843b710c24ae69f7bcefe3c
+manifest_hash: 8721a842b4c1b397ac3ca6f80af3d9582dba62856e4edb8ac6215e895811c4a8
 target: esp32c3
 version: 2.0.0

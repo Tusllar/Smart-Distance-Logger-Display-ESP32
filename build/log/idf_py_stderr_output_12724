@@ -1,0 +1,22 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\Smart-Distance-Logger-Display-ESP32\build\Smart_Embed.elf D:\ESP32C3\Espressif\frameworks\Smart-Distance-Logger-Display-ESP32\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+[0;33m--- esp-idf-monitor 1.8.0 on com4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42005efe: [0;33muart_ll_get_txfifo_len[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/hal/esp32c3/include/hal/uart_ll.h[0m[0m:[1;31m417[0m
+[0m--- (inlined by) [0;33muart_tx_char[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m190[0m
+[0m--- 0x4200708e: [0;33muart_write[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m237[0m
+[0m--- 0x42007020: [0;33muart_write[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m227[0m
+[0m--- 0x42005ee6: [0;33muart_tx_char[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m186[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x42005efe: [0;33muart_ll_get_txfifo_len[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/hal/esp32c3/include/hal/uart_ll.h[0m[0m:[1;31m417[0m
+[0m--- (inlined by) [0;33muart_tx_char[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m190[0m
+[0m--- 0x4200708e: [0;33muart_write[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m237[0m
+[0m--- 0x42007020: [0;33muart_write[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m227[0m
+[0m--- 0x42005ee6: [0;33muart_tx_char[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m186[0m
+[0m--- 0x40000000: [0;33m_start[0m[0m in [0;32mROM[0m
+[0m--- 0x4000000c: [0;33m_start[0m[0m in [0;32mROM[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m

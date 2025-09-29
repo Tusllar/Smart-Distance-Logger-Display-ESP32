@@ -10,18 +10,18 @@ if(NOT EXISTS "D:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloade
   file(MAKE_DIRECTORY "D:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/bootloader"
-  "D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/bootloader-prefix"
-  "D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/bootloader-prefix/tmp"
-  "D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/bootloader-prefix/src"
-  "D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader"
+  "D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader-prefix"
+  "D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader-prefix/tmp"
+  "D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader-prefix/src"
+  "D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/ESP32C3/Espressif/frameworks/Smart_Embed/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/ESP32C3/Espressif/frameworks/Smart-Distance-Logger-Display-ESP32/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
