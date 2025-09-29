@@ -1,0 +1,597 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\Smart-Distance-Logger-Display-ESP32\build\Smart_Embed.elf D:\ESP32C3\Espressif\frameworks\Smart-Distance-Logger-Display-ESP32\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 29 2025 12:35:14[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2cc24h (183332) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=0003cc4c vaddr=3fc97000 size=02f24h ( 12068) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=0003fb78 vaddr=40380000 size=004a0h (  1184) load[0m
+[0;32mI (122) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b8f44h (757572) map[0m
+[0;32mI (250) esp_image: segment 4: paddr=000f8f6c vaddr=403804a0 size=16ad8h ( 92888) load[0m
+[0;32mI (267) esp_image: segment 5: paddr=0010fa4c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (275) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (275) boot: Disabling RNG early entropy source...[0m
+[0;32mI (285) cpu_start: Unicore app[0m
+[0;32mI (293) cpu_start: Pro cpu start user code[0m
+[0;32mI (293) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (293) app_init: Application information:[0m
+[0;32mI (293) app_init: Project name:     Smart_Embed[0m
+[0;32mI (298) app_init: App version:      76b13bf-dirty[0m
+[0;32mI (302) app_init: Compile time:     Sep 29 2025 20:06:25[0m
+[0;32mI (307) app_init: ELF file SHA256:  84013381b...[0m
+[0;32mI (311) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (315) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (319) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (323) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (327) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (333) heap_init: At 3FC9E300 len 00021D00 (135 KiB): RAM[0m
+[0;32mI (338) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (344) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (350) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (356) spi_flash: detected chip: generic[0m
+[0;32mI (359) spi_flash: flash io: dio[0m
+[0;33mW (362) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (375) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (381) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (406) main_task: Calling app_main()[0m
+[0;32mI (406) smart_embed: Starting Smart Distance Logger & Display[0m
+[0;32mI (406) example: Initializing SD card[0m
+[0;32mI (407) example: Using SPI peripheral[0m
+[0;32mI (411) example: Mounting filesystem[0m
+[0;32mI (415) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (582) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (692) example: Filesystem mounted[0m
+[0;32mI (700) wifi station: ESP_WIFI_MODE_STA[0m
+[0;32mI (702) pp: pp rom version: 9387209[0m
+[0;32mI (702) net80211: net80211 rom version: 9387209[0m
+[0;32mI (704) wifi:wifi driver task: 3fcaec08, prio:23, stack:6656, core=0[0m
+[0;32mI (713) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (713) wifi:wifi certification version: v7.0[0m
+[0;32mI (714) wifi:config NVS flash: enabled[0m
+[0;32mI (717) wifi:config nano formatting: disabled[0m
+[0;32mI (722) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (727) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (731) wifi:Init management short buffer num: 32[0m
+[0;32mI (735) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (739) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (743) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (747) wifi:Init static rx buffer num: 10[0m
+[0;32mI (751) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (755) wifi_init: rx ba win: 6[0m
+[0;32mI (758) wifi_init: accept mbox: 6[0m
+[0;32mI (761) wifi_init: tcpip mbox: 32[0m
+[0;32mI (764) wifi_init: udp mbox: 6[0m
+[0;32mI (766) wifi_init: tcp mbox: 6[0m
+[0;32mI (769) wifi_init: tcp tx win: 5760[0m
+[0;32mI (772) wifi_init: tcp rx win: 5760[0m
+[0;32mI (776) wifi_init: tcp mss: 1440[0m
+[0;32mI (779) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (782) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (787) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (825) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (826) wifi:enable tsf[0m
+[0;32mI (829) wifi station: wifi_init_sta finished.[0m
+[0;32mI (835) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (836) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (852) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (911) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1010) wifi:connected with 4 chi em, aid = 4, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (1011) wifi:security: WPA2-PSK, phy: bgn, rssi: -40[0m
+[0;32mI (1014) wifi:pm start, type: 1[0m
+
+[0;32mI (1016) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1024) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1032) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2343) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2343) wifi station: got ip:192.168.1.10[0m
+[0;32mI (2344) wifi station: connected to ap SSID:4 chi em password:daytro6868[0m
+D (2350) i2c.common: new bus(0) at 0x3fcb6668
+D (2354) i2c.common: bus clock source frequency: 40000000hz
+[0;32mI (2462) oled_driver: OLED driver initialized successfully[0m
+[0;32mI (2462) ultrasonic: Ultrasonic sensor initialized[0m
+[0;32mI (2462) smart_embed: Ultrasonic sensor initialized[0m
+[0;32mI (2465) smart_embed: System initialized successfully[0m
+[0;32mI (2470) smart_embed: Sensor task started[0m
+[0;32mI (2475) smart_embed: Distance: 23.7 cm[0m
+[0;32mI (2477) smart_embed: Display task started[0m
+[0;32mI (2481) smart_embed: LED task started[0m
+[0;32mI (2485) smart_embed: HTTP Server task started[0m
+[0;32mI (2485) smart_embed: SD Card task started[0m
+[0;32mI (2534) smart_embed: All tasks created successfully[0m
+[0;32mI (2540) smart_embed: Saved: 23.70 cm, 2136 ms[0m
+[0;32mI (2727) smart_embed: Saved: 23.70 cm, 2284 ms[0m
+[0;32mI (2874) smart_embed: Saved: 23.70 cm, 2471 ms[0m
+[0;33mW (2987) smart_embed: Distance reading error or out of range[0m
+[0;32mI (3021) smart_embed: Saved: 23.70 cm, 2618 ms[0m
+[0;32mI (3168) smart_embed: Saved: 23.70 cm, 2764 ms[0m
+[0;32mI (3315) smart_embed: Saved: 23.70 cm, 2912 ms[0m
+[0;32mI (3461) smart_embed: Saved: 23.70 cm, 3058 ms[0m
+[0;33mW (3497) smart_embed: Distance reading error or out of range[0m
+[0;32mI (3607) smart_embed: Saved: 23.70 cm, 3204 ms[0m
+[0;32mI (3754) smart_embed: Saved: 23.70 cm, 3350 ms[0m
+[0;32mI (3901) smart_embed: Saved: 23.70 cm, 3497 ms[0m
+[0;33mW (4007) smart_embed: Distance reading error or out of range[0m
+[0;32mI (4054) smart_embed: Saved: 23.70 cm, 3651 ms[0m
+[0;32mI (4200) smart_embed: Saved: 23.70 cm, 3797 ms[0m
+[0;32mI (4347) smart_embed: Saved: 23.70 cm, 3944 ms[0m
+[0;32mI (4494) smart_embed: Saved: 23.70 cm, 4091 ms[0m
+[0;33mW (4517) smart_embed: Distance reading error or out of range[0m
+[0;32mI (4640) smart_embed: Saved: 23.70 cm, 4237 ms[0m
+[0;32mI (4787) smart_embed: Saved: 23.70 cm, 4384 ms[0m
+[0;32mI (4934) smart_embed: Saved: 23.70 cm, 4531 ms[0m
+[0;32mI (5017) smart_embed: Distance: 5.2 cm[0m
+[0;32mI (5018) smart_embed: LED ON - Distance: 5.2 cm < 10.0 cm[0m
+[0;32mI (5080) smart_embed: Saved: 23.70 cm, 4677 ms[0m
+[0;32mI (5118) smart_embed: LED ON - Distance: 5.2 cm < 10.0 cm[0m
+[0;32mI (5218) smart_embed: LED ON - Distance: 5.2 cm < 10.0 cm[0m
+[0;32mI (5226) smart_embed: Saved: 23.70 cm, 4823 ms[0m
+[0;32mI (5318) smart_embed: LED ON - Distance: 5.2 cm < 10.0 cm[0m
+[0;32mI (5373) smart_embed: Saved: 23.70 cm, 4970 ms[0m
+[0;32mI (5418) smart_embed: LED ON - Distance: 5.2 cm < 10.0 cm[0m
+[0;32mI (5519) smart_embed: Distance: 9.4 cm[0m
+[0;32mI (5519) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (5521) smart_embed: Saved: 23.70 cm, 5116 ms[0m
+[0;32mI (5619) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (5667) smart_embed: Saved: 23.70 cm, 5264 ms[0m
+[0;32mI (5719) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (5813) smart_embed: Saved: 23.70 cm, 5410 ms[0m
+[0;32mI (5819) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (5919) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (5959) smart_embed: Saved: 23.70 cm, 5556 ms[0m
+[0;32mI (6019) smart_embed: Distance: 5.6 cm[0m
+[0;32mI (6020) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (6105) smart_embed: Saved: 23.70 cm, 5702 ms[0m
+[0;32mI (6120) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (6220) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (6251) smart_embed: Saved: 23.70 cm, 5848 ms[0m
+[0;32mI (6320) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (6405) smart_embed: Saved: 23.70 cm, 5995 ms[0m
+[0;32mI (6420) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;33mW (6530) smart_embed: Distance reading error or out of range[0m
+[0;32mI (6551) smart_embed: Saved: 23.70 cm, 6148 ms[0m
+[0;32mI (6698) smart_embed: Saved: 23.70 cm, 6295 ms[0m
+[0;32mI (6844) smart_embed: Saved: 23.70 cm, 6441 ms[0m
+[0;32mI (6990) smart_embed: Saved: 23.70 cm, 6587 ms[0m
+[0;32mI (7031) smart_embed: Distance: 12.1 cm[0m
+[0;32mI (7137) smart_embed: Saved: 23.70 cm, 6734 ms[0m
+[0;32mI (7323) smart_embed: Saved: 23.70 cm, 6880 ms[0m
+[0;32mI (7470) smart_embed: Saved: 23.70 cm, 7067 ms[0m
+[0;32mI (7532) smart_embed: Distance: 10.0 cm[0m
+[0;32mI (7532) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (7534) example: Starting server on port: '80'[0m
+[0;32mI (7536) example: Registering URI handlers[0m
+[0;33mW (7538) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;32mI (7545) smart_embed: HTTP Server started on http://192.168.x.x[0m
+[0;32mI (7616) smart_embed: Saved: 23.70 cm, 7213 ms[0m
+[0;32mI (7632) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (7732) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (7761) smart_embed: Saved: 23.70 cm, 7359 ms[0m
+[0;32mI (7832) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (7908) smart_embed: Saved: 23.70 cm, 7505 ms[0m
+[0;32mI (7932) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (8033) smart_embed: Distance: 9.9 cm[0m
+[0;32mI (8033) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (8054) smart_embed: Saved: 23.70 cm, 7651 ms[0m
+[0;32mI (8133) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (8200) smart_embed: Saved: 23.70 cm, 7797 ms[0m
+[0;32mI (8233) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (8333) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (8345) smart_embed: Saved: 23.70 cm, 7943 ms[0m
+[0;32mI (8402) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:23:fc:a8), tid:0, ssn:4, winSize:64[0m
+[0;32mI (8433) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (8492) smart_embed: Saved: 23.70 cm, 8089 ms[0m
+[0;32mI (8534) smart_embed: Distance: 10.4 cm[0m
+[0;33mW (8618) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (8618) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (8638) smart_embed: Saved: 23.70 cm, 8235 ms[0m
+[0;32mI (8784) smart_embed: Saved: 23.70 cm, 8381 ms[0m
+[0;32mI (8931) smart_embed: Saved: 23.70 cm, 8527 ms[0m
+[0;32mI (9035) smart_embed: Distance: 9.9 cm[0m
+[0;32mI (9035) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (9077) smart_embed: Saved: 23.70 cm, 8675 ms[0m
+[0;32mI (9135) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (9224) smart_embed: Saved: 23.70 cm, 8821 ms[0m
+[0;32mI (9235) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (9335) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (9369) smart_embed: Saved: 23.70 cm, 8967 ms[0m
+[0;32mI (9435) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (9516) smart_embed: Saved: 23.70 cm, 9113 ms[0m
+[0;32mI (9536) smart_embed: Distance: 10.0 cm[0m
+[0;32mI (9536) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (9636) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (9662) smart_embed: Saved: 23.70 cm, 9259 ms[0m
+[0;32mI (9736) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (9808) smart_embed: Saved: 23.70 cm, 9405 ms[0m
+[0;32mI (9836) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (9937) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (9954) smart_embed: Saved: 23.70 cm, 9551 ms[0m
+[0;32mI (10037) smart_embed: Distance: 10.4 cm[0m
+[0;32mI (10100) smart_embed: Saved: 23.70 cm, 9697 ms[0m
+[0;32mI (10246) smart_embed: Saved: 23.70 cm, 9843 ms[0m
+[0;32mI (10392) smart_embed: Saved: 23.70 cm, 9989 ms[0m
+[0;32mI (10538) smart_embed: Distance: 10.8 cm[0m
+[0;32mI (10579) smart_embed: Saved: 23.70 cm, 10136 ms[0m
+[0;32mI (10727) smart_embed: Saved: 23.70 cm, 10323 ms[0m
+[0;32mI (10873) smart_embed: Saved: 23.70 cm, 10470 ms[0m
+[0;32mI (11019) smart_embed: Saved: 23.70 cm, 10616 ms[0m
+[0;32mI (11039) smart_embed: Distance: 12.6 cm[0m
+[0;32mI (11165) smart_embed: Saved: 23.70 cm, 10762 ms[0m
+[0;33mW (11273) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (11274) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (11311) smart_embed: Saved: 23.70 cm, 10908 ms[0m
+[0;32mI (11458) smart_embed: Saved: 23.70 cm, 11055 ms[0m
+[0;32mI (11540) smart_embed: Distance: 11.7 cm[0m
+[0;32mI (11604) smart_embed: Saved: 23.70 cm, 11201 ms[0m
+[0;32mI (11750) smart_embed: Saved: 23.70 cm, 11347 ms[0m
+[0;32mI (11896) smart_embed: Saved: 23.70 cm, 11493 ms[0m
+[0;32mI (12041) smart_embed: Distance: 11.3 cm[0m
+[0;32mI (12043) smart_embed: Saved: 23.70 cm, 11639 ms[0m
+[0;33mW (12195) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (12195) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (12205) smart_embed: Saved: 23.70 cm, 11787 ms[0m
+[0;32mI (12352) smart_embed: Saved: 23.70 cm, 11949 ms[0m
+[0;32mI (12498) smart_embed: Saved: 23.70 cm, 12095 ms[0m
+[0;32mI (12536) smart_embed: System running - Distance: 11.3 cm, Valid: Yes, LED: OFF[0m
+[0;32mI (12542) smart_embed: Distance: 11.3 cm[0m
+[0;32mI (12645) smart_embed: Saved: 23.70 cm, 12242 ms[0m
+[0;32mI (12791) smart_embed: Saved: 23.70 cm, 12388 ms[0m
+[0;32mI (12937) smart_embed: Saved: 23.70 cm, 12534 ms[0m
+[0;32mI (13043) smart_embed: Distance: 11.3 cm[0m
+[0;32mI (13083) smart_embed: Saved: 23.70 cm, 12680 ms[0m
+[0;32mI (13229) smart_embed: Saved: 23.70 cm, 12826 ms[0m
+[0;32mI (13375) smart_embed: Saved: 23.70 cm, 12972 ms[0m
+[0;32mI (13521) smart_embed: Saved: 23.70 cm, 13118 ms[0m
+[0;32mI (13544) smart_embed: Distance: 12.2 cm[0m
+[0;32mI (13667) smart_embed: Saved: 23.70 cm, 13264 ms[0m
+[0;32mI (13729) example: Ultrasonic API called[0m
+[0;32mI (13729) example: Distance read: 23.70 cm[0m
+[0;32mI (13730) example: Sending response: {"distance":23.70,"timestamp":13374,"led":"off"}[0m
+[0;32mI (13813) smart_embed: Saved: 5.20 cm, 13410 ms[0m
+[0;32mI (13960) smart_embed: Saved: 5.20 cm, 13557 ms[0m
+[0;32mI (14045) smart_embed: Distance: 11.3 cm[0m
+[0;32mI (14106) smart_embed: Saved: 5.20 cm, 13703 ms[0m
+[0;32mI (14252) smart_embed: Saved: 5.20 cm, 13849 ms[0m
+[0;32mI (14398) smart_embed: Saved: 5.20 cm, 13995 ms[0m
+[0;32mI (14544) smart_embed: Saved: 5.20 cm, 14141 ms[0m
+[0;32mI (14546) smart_embed: Distance: 10.4 cm[0m
+[0;32mI (14692) smart_embed: Saved: 5.20 cm, 14289 ms[0m
+[0;32mI (14839) smart_embed: Saved: 5.20 cm, 14436 ms[0m
+[0;32mI (14985) smart_embed: Saved: 5.20 cm, 14582 ms[0m
+[0;32mI (15047) smart_embed: Distance: 10.8 cm[0m
+[0;32mI (15132) smart_embed: Saved: 5.20 cm, 14729 ms[0m
+[0;33mW (15264) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (15265) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (15278) smart_embed: Saved: 5.20 cm, 14875 ms[0m
+[0;32mI (15425) smart_embed: Saved: 5.20 cm, 15022 ms[0m
+[0;32mI (15547) smart_embed: Distance: 7.8 cm[0m
+[0;32mI (15548) smart_embed: LED ON - Distance: 7.8 cm < 10.0 cm[0m
+[0;32mI (15571) smart_embed: Saved: 5.20 cm, 15168 ms[0m
+[0;32mI (15648) smart_embed: LED ON - Distance: 7.8 cm < 10.0 cm[0m
+[0;32mI (15717) smart_embed: Saved: 5.20 cm, 15314 ms[0m
+[0;32mI (15748) smart_embed: LED ON - Distance: 7.8 cm < 10.0 cm[0m
+[0;32mI (15848) smart_embed: LED ON - Distance: 7.8 cm < 10.0 cm[0m
+[0;32mI (15863) smart_embed: Saved: 5.20 cm, 15460 ms[0m
+[0;32mI (15948) smart_embed: LED ON - Distance: 7.8 cm < 10.0 cm[0m
+[0;32mI (16016) smart_embed: Saved: 5.20 cm, 15607 ms[0m
+[0;32mI (16049) smart_embed: Distance: 10.0 cm[0m
+[0;32mI (16049) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (16149) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (16162) smart_embed: Saved: 5.20 cm, 15759 ms[0m
+[0;32mI (16249) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;33mW (16291) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (16291) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (16308) smart_embed: Saved: 5.20 cm, 15905 ms[0m
+[0;32mI (16349) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (16449) smart_embed: LED ON - Distance: 10.0 cm < 10.0 cm[0m
+[0;32mI (16454) smart_embed: Saved: 5.20 cm, 16051 ms[0m
+[0;32mI (16550) smart_embed: Distance: 9.9 cm[0m
+[0;32mI (16550) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (16601) smart_embed: Saved: 5.20 cm, 16198 ms[0m
+[0;32mI (16650) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (16747) smart_embed: Saved: 5.20 cm, 16345 ms[0m
+[0;32mI (16750) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (16850) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (16892) smart_embed: Saved: 5.20 cm, 16490 ms[0m
+[0;32mI (16950) smart_embed: LED ON - Distance: 9.9 cm < 10.0 cm[0m
+[0;32mI (17039) smart_embed: Saved: 5.20 cm, 16636 ms[0m
+[0;32mI (17050) smart_embed: Distance: 8.0 cm[0m
+[0;32mI (17051) smart_embed: LED ON - Distance: 8.0 cm < 10.0 cm[0m
+[0;33mW (17111) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (17111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (17151) smart_embed: LED ON - Distance: 8.0 cm < 10.0 cm[0m
+[0;32mI (17185) smart_embed: Saved: 5.20 cm, 16782 ms[0m
+[0;32mI (17251) smart_embed: LED ON - Distance: 8.0 cm < 10.0 cm[0m
+[0;32mI (17333) smart_embed: Saved: 5.20 cm, 16929 ms[0m
+[0;32mI (17351) smart_embed: LED ON - Distance: 8.0 cm < 10.0 cm[0m
+[0;32mI (17451) smart_embed: LED ON - Distance: 8.0 cm < 10.0 cm[0m
+[0;32mI (17479) smart_embed: Saved: 5.20 cm, 17077 ms[0m
+[0;32mI (17551) smart_embed: Distance: 4.4 cm[0m
+[0;32mI (17552) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17626) smart_embed: Saved: 5.20 cm, 17223 ms[0m
+[0;32mI (17652) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17752) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17771) smart_embed: Saved: 5.20 cm, 17369 ms[0m
+[0;32mI (17852) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (17918) smart_embed: Saved: 5.20 cm, 17515 ms[0m
+[0;32mI (17952) smart_embed: LED ON - Distance: 4.4 cm < 10.0 cm[0m
+[0;32mI (18052) smart_embed: Distance: 6.7 cm[0m
+[0;32mI (18053) smart_embed: LED ON - Distance: 6.7 cm < 10.0 cm[0m
+[0;32mI (18065) smart_embed: Saved: 5.20 cm, 17662 ms[0m
+[0;32mI (18153) smart_embed: LED ON - Distance: 6.7 cm < 10.0 cm[0m
+[0;32mI (18211) smart_embed: Saved: 5.20 cm, 17808 ms[0m
+[0;32mI (18253) smart_embed: LED ON - Distance: 6.7 cm < 10.0 cm[0m
+[0;32mI (18353) smart_embed: LED ON - Distance: 6.7 cm < 10.0 cm[0m
+[0;32mI (18357) smart_embed: Saved: 5.20 cm, 17954 ms[0m
+[0;32mI (18453) smart_embed: LED ON - Distance: 6.7 cm < 10.0 cm[0m
+[0;32mI (18504) smart_embed: Saved: 5.20 cm, 18101 ms[0m
+[0;32mI (18553) smart_embed: Distance: 7.2 cm[0m
+[0;32mI (18554) smart_embed: LED ON - Distance: 7.2 cm < 10.0 cm[0m
+[0;32mI (18650) smart_embed: Saved: 5.20 cm, 18247 ms[0m
+[0;32mI (18654) smart_embed: LED ON - Distance: 7.2 cm < 10.0 cm[0m
+[0;32mI (18748) example: Ultrasonic API called[0m
+[0;32mI (18748) example: Distance read: 5.20 cm[0m
+[0;32mI (18749) example: Sending response: {"distance":5.20,"timestamp":18393,"led":"on"}[0m
+[0;32mI (18757) example: LED status response: {"status":"success","led":"on"}[0m
+[0;32mI (18765) smart_embed: LED ON - Distance: 7.2 cm < 10.0 cm[0m
+[0;32mI (18817) smart_embed: Saved: 9.44 cm, 18409 ms[0m
+[0;32mI (18826) example: Ultrasonic API called[0m
+[0;32mI (18826) example: Distance read: 9.44 cm[0m
+[0;32mI (18827) example: Sending response: {"distance":9.44,"timestamp":18471,"led":"on"}[0m
+[0;32mI (18833) example: LED status response: {"status":"success","led":"on"}[0m
+[0;32mI (18869) smart_embed: LED ON - Distance: 7.2 cm < 10.0 cm[0m
+[0;32mI (18964) smart_embed: Saved: 5.58 cm, 18561 ms[0m
+[0;32mI (18969) smart_embed: LED ON - Distance: 7.2 cm < 10.0 cm[0m
+[0;32mI (19055) smart_embed: Distance: 8.1 cm[0m
+[0;32mI (19069) smart_embed: LED ON - Distance: 8.1 cm < 10.0 cm[0m
+[0;32mI (19110) smart_embed: Saved: 5.58 cm, 18707 ms[0m
+[0;32mI (19169) smart_embed: LED ON - Distance: 8.1 cm < 10.0 cm[0m
+[0;32mI (19258) example: Ultrasonic API called[0m
+[0;32mI (19258) example: Distance read: 5.58 cm[0m
+[0;32mI (19259) example: Sending response: {"distance":5.58,"timestamp":18902,"led":"on"}[0m
+[0;32mI (19266) smart_embed: Saved: 5.58 cm, 18854 ms[0m
+[0;32mI (19269) smart_embed: LED ON - Distance: 8.1 cm < 10.0 cm[0m
+[0;32mI (19371) smart_embed: LED ON - Distance: 8.1 cm < 10.0 cm[0m
+[0;32mI (19414) smart_embed: Saved: 12.12 cm, 19010 ms[0m
+[0;32mI (19471) smart_embed: LED ON - Distance: 8.1 cm < 10.0 cm[0m
+[0;33mW (19565) smart_embed: Distance reading error or out of range[0m
+[0;32mI (19571) smart_embed: Saved: 12.12 cm, 19157 ms[0m
+[0;32mI (19667) example: Ultrasonic API called[0m
+[0;32mI (19668) example: Distance read: 12.12 cm[0m
+[0;32mI (19668) example: Sending response: {"distance":12.12,"timestamp":19312,"led":"off"}[0m
+[0;32mI (19720) smart_embed: Saved: 9.96 cm, 19318 ms[0m
+[0;32mI (19868) smart_embed: Saved: 9.96 cm, 19464 ms[0m
+[0;32mI (20023) smart_embed: Saved: 9.96 cm, 19611 ms[0m
+[0;33mW (20075) smart_embed: Distance reading error or out of range[0m
+[0;32mI (20169) smart_embed: Saved: 9.96 cm, 19766 ms[0m
+[0;32mI (20180) example: Ultrasonic API called[0m
+[0;32mI (20180) example: Distance read: 9.96 cm[0m
+[0;32mI (20181) example: Sending response: {"distance":9.96,"timestamp":19825,"led":"off"}[0m
+[0;33mW (20187) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (20190) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (20315) smart_embed: Saved: 9.94 cm, 19912 ms[0m
+[0;32mI (20462) smart_embed: Saved: 9.94 cm, 20059 ms[0m
+[0;32mI (20576) smart_embed: Distance: 9.4 cm[0m
+[0;32mI (20589) example: Ultrasonic API called[0m
+[0;32mI (20589) example: Distance read: 9.94 cm[0m
+[0;32mI (20590) example: Sending response: {"distance":9.94,"timestamp":20234,"led":"off"}[0m
+[0;32mI (20601) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (20608) smart_embed: Saved: 9.94 cm, 20205 ms[0m
+[0;32mI (20701) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (20754) smart_embed: Saved: 10.37 cm, 20351 ms[0m
+[0;32mI (20801) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (20900) smart_embed: Saved: 10.37 cm, 20497 ms[0m
+[0;32mI (20901) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (21000) example: Ultrasonic API called[0m
+[0;32mI (21000) example: Distance read: 10.37 cm[0m
+[0;32mI (21001) example: Sending response: {"distance":10.37,"timestamp":20645,"led":"on"}[0m
+[0;32mI (21007) smart_embed: LED ON - Distance: 9.4 cm < 10.0 cm[0m
+[0;32mI (21053) smart_embed: Saved: 11.31 cm, 20650 ms[0m
+[0;33mW (21086) smart_embed: Distance reading error or out of range[0m
+[0;32mI (21201) smart_embed: Saved: 11.31 cm, 20797 ms[0m
+[0;32mI (21347) smart_embed: Saved: 11.31 cm, 20944 ms[0m
+[0;32mI (21408) example: Ultrasonic API called[0m
+[0;32mI (21409) example: Distance read: 11.31 cm[0m
+[0;32mI (21409) example: Sending response: {"distance":11.31,"timestamp":21053,"led":"off"}[0m
+[0;32mI (21493) smart_embed: Saved: 8.14 cm, 21090 ms[0m
+[0;33mW (21596) smart_embed: Distance reading error or out of range[0m
+[0;32mI (21643) smart_embed: Saved: 8.14 cm, 21240 ms[0m
+[0;32mI (21715) example: Ultrasonic API called[0m
+[0;32mI (21716) example: Distance read: 8.14 cm[0m
+[0;32mI (21716) example: Sending response: {"distance":8.14,"timestamp":21360,"led":"off"}[0m
+[0;32mI (21789) smart_embed: Saved: 9.44 cm, 21386 ms[0m
+[0;32mI (21936) smart_embed: Saved: 9.44 cm, 21533 ms[0m
+[0;32mI (22082) smart_embed: Saved: 9.44 cm, 21679 ms[0m
+[0;33mW (22106) smart_embed: Distance reading error or out of range[0m
+[0;32mI (22125) example: Ultrasonic API called[0m
+[0;32mI (22126) example: Distance read: 9.44 cm[0m
+[0;32mI (22126) example: Sending response: {"distance":9.44,"timestamp":21770,"led":"off"}[0m
+[0;32mI (22132) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (22536) example: Ultrasonic API called[0m
+[0;32mI (22536) example: Distance read: 0.00 cm[0m
+[0;32mI (22536) example: Sending response: {"distance":0.00,"timestamp":22180,"led":"off"}[0m
+[0;32mI (22542) smart_embed: System running - Distance: 0.0 cm, Valid: No, LED: OFF[0m
+[0;33mW (22616) smart_embed: Distance reading error or out of range[0m
+[0;32mI (22944) example: Ultrasonic API called[0m
+[0;32mI (22944) example: Distance read: 0.00 cm[0m
+[0;32mI (22945) example: Sending response: {"distance":0.00,"timestamp":22589,"led":"off"}[0m
+[0;33mW (23126) smart_embed: Distance reading error or out of range[0m
+[0;32mI (23355) example: Ultrasonic API called[0m
+[0;32mI (23355) example: Distance read: 0.00 cm[0m
+[0;32mI (23356) example: Sending response: {"distance":0.00,"timestamp":23000,"led":"off"}[0m
+[0;33mW (23636) smart_embed: Distance reading error or out of range[0m
+[0;32mI (23773) example: Ultrasonic API called[0m
+[0;32mI (23773) example: Distance read: 0.00 cm[0m
+[0;32mI (23773) example: Sending response: {"distance":0.00,"timestamp":23417,"led":"off"}[0m
+[0;32mI (24137) smart_embed: Distance: 8.6 cm[0m
+[0;32mI (24137) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (24175) example: Ultrasonic API called[0m
+[0;32mI (24176) example: Distance read: 8.55 cm[0m
+[0;32mI (24176) example: Sending response: {"distance":8.55,"timestamp":23820,"led":"on"}[0m
+[0;32mI (24183) example: LED status response: {"status":"success","led":"on"}[0m
+[0;32mI (24195) smart_embed: Saved: 8.55 cm, 23781 ms[0m
+[0;32mI (24237) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (24337) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (24437) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (24537) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (24586) example: Ultrasonic API called[0m
+[0;32mI (24587) example: Distance read: 8.55 cm[0m
+[0;32mI (24587) example: Sending response: {"distance":8.55,"timestamp":24231,"led":"on"}[0m
+[0;32mI (24637) smart_embed: Distance: 6.5 cm[0m
+[0;32mI (24638) smart_embed: LED ON - Distance: 6.5 cm < 10.0 cm[0m
+[0;32mI (24728) smart_embed: Saved: 6.46 cm, 24282 ms[0m
+[0;32mI (24738) smart_embed: LED ON - Distance: 6.5 cm < 10.0 cm[0m
+[0;32mI (24838) smart_embed: LED ON - Distance: 6.5 cm < 10.0 cm[0m
+[0;32mI (24875) smart_embed: Saved: 6.46 cm, 24472 ms[0m
+[0;32mI (24938) smart_embed: LED ON - Distance: 6.5 cm < 10.0 cm[0m
+[0;32mI (24993) example: Ultrasonic API called[0m
+[0;32mI (24993) example: Distance read: 6.46 cm[0m
+[0;32mI (24994) example: Sending response: {"distance":6.46,"timestamp":24637,"led":"on"}[0m
+[0;32mI (25022) smart_embed: Saved: 6.46 cm, 24619 ms[0m
+[0;32mI (25038) smart_embed: LED ON - Distance: 6.5 cm < 10.0 cm[0m
+[0;32mI (25138) smart_embed: Distance: 6.9 cm[0m
+[0;32mI (25139) smart_embed: LED ON - Distance: 6.9 cm < 10.0 cm[0m
+[0;32mI (25186) smart_embed: Saved: 6.92 cm, 24783 ms[0m
+[0;32mI (25239) smart_embed: LED ON - Distance: 6.9 cm < 10.0 cm[0m
+[0;32mI (25332) smart_embed: Saved: 6.92 cm, 24929 ms[0m
+[0;32mI (25339) smart_embed: LED ON - Distance: 6.9 cm < 10.0 cm[0m
+[0;32mI (25403) example: Ultrasonic API called[0m
+[0;32mI (25403) example: Distance read: 6.92 cm[0m
+[0;32mI (25404) example: Sending response: {"distance":6.92,"timestamp":25047,"led":"on"}[0m
+[0;32mI (25439) smart_embed: LED ON - Distance: 6.9 cm < 10.0 cm[0m
+[0;32mI (25539) smart_embed: LED ON - Distance: 6.9 cm < 10.0 cm[0m
+[0;32mI (25640) smart_embed: Distance: 8.6 cm[0m
+[0;32mI (25640) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (25688) smart_embed: Saved: 8.62 cm, 25284 ms[0m
+[0;32mI (25740) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (25834) smart_embed: Saved: 8.62 cm, 25431 ms[0m
+[0;32mI (25840) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (25940) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;32mI (25980) smart_embed: Saved: 8.62 cm, 25577 ms[0m
+[0;32mI (26040) smart_embed: LED ON - Distance: 8.6 cm < 10.0 cm[0m
+[0;33mW (26120) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (26121) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (26133) smart_embed: Saved: 8.62 cm, 25723 ms[0m
+[0;32mI (26141) smart_embed: Distance: 8.2 cm[0m
+[0;32mI (26141) smart_embed: LED ON - Distance: 8.2 cm < 10.0 cm[0m
+[0;32mI (26241) smart_embed: LED ON - Distance: 8.2 cm < 10.0 cm[0m
+[0;32mI (26280) smart_embed: Saved: 8.62 cm, 25877 ms[0m
+[0;32mI (26341) smart_embed: LED ON - Distance: 8.2 cm < 10.0 cm[0m
+[0;32mI (26429) example: Ultrasonic API called[0m
+[0;32mI (26430) example: Distance read: 8.62 cm[0m
+[0;32mI (26430) example: Sending response: {"distance":8.62,"timestamp":26074,"led":"on"}[0m
+[0;32mI (26437) example: LED status response: {"status":"success","led":"on"}[0m
+[0;32mI (26442) smart_embed: LED ON - Distance: 8.2 cm < 10.0 cm[0m
+[0;32mI (26486) smart_embed: Saved: 8.62 cm, 26024 ms[0m
+[0;32mI (26546) smart_embed: LED ON - Distance: 8.2 cm < 10.0 cm[0m
+[0;32mI (26633) smart_embed: Saved: 8.21 cm, 26230 ms[0m
+[0;33mW (26651) smart_embed: Distance reading error or out of range[0m
+[0;32mI (26781) smart_embed: Saved: 8.21 cm, 26377 ms[0m
+[0;33mW (26836) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (26836) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (26927) smart_embed: Saved: 8.21 cm, 26524 ms[0m
+[0;33mW (27044) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (27045) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (27073) smart_embed: Saved: 8.21 cm, 26670 ms[0m
+[0;32mI (27152) smart_embed: Distance: 8.5 cm[0m
+[0;32mI (27153) smart_embed: LED ON - Distance: 8.5 cm < 10.0 cm[0m
+[0;32mI (27219) smart_embed: Saved: 8.21 cm, 26816 ms[0m
+[0;33mW (27249) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (27250) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (27257) smart_embed: LED ON - Distance: 8.5 cm < 10.0 cm[0m
+[0;32mI (27358) smart_embed: LED ON - Distance: 8.5 cm < 10.0 cm[0m
+[0;32mI (27365) smart_embed: Saved: 8.21 cm, 26962 ms[0m
+[0;32mI (27452) example: Ultrasonic API called[0m
+[0;32mI (27453) example: Distance read: 8.21 cm[0m
+[0;32mI (27453) example: Sending response: {"distance":8.21,"timestamp":27097,"led":"on"}[0m
+[0;33mW (27460) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (27462) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (27474) smart_embed: LED ON - Distance: 8.5 cm < 10.0 cm[0m
+[0;32mI (27521) smart_embed: Saved: 8.53 cm, 27118 ms[0m
+[0;32mI (27576) smart_embed: LED ON - Distance: 8.5 cm < 10.0 cm[0m
+[0;32mI (27653) smart_embed: Distance: 7.8 cm[0m
+[0;32mI (27668) smart_embed: Saved: 8.53 cm, 27265 ms[0m
+[0;32mI (27676) smart_embed: LED ON - Distance: 7.8 cm < 10.0 cm[0m
+[0;33mW (27690) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (27690) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (27776) smart_embed: LED ON - Distance: 7.8 cm < 10.0 cm[0m
+[0;32mI (27814) smart_embed: Saved: 8.53 cm, 27411 ms[0m
+[0;32mI (27876) smart_embed: LED ON - Distance: 7.8 cm < 10.0 cm[0m
+[0;33mW (27963) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (27964) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (27976) smart_embed: LED ON - Distance: 7.8 cm < 10.0 cm[0m
+[0;32mI (28001) smart_embed: Saved: 8.53 cm, 27557 ms[0m
+[0;32mI (28076) smart_embed: LED ON - Distance: 7.8 cm < 10.0 cm[0m
+[0;32mI (28148) smart_embed: Saved: 8.53 cm, 27745 ms[0m
+[0;32mI (28155) smart_embed: Distance: 5.6 cm[0m
+[0;32mI (28176) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (28276) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (28300) smart_embed: Saved: 8.53 cm, 27891 ms[0m
+[0;32mI (28376) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (28446) smart_embed: Saved: 8.53 cm, 28043 ms[0m
+[0;32mI (28477) example: Ultrasonic API called[0m
+[0;32mI (28478) example: Distance read: 8.53 cm[0m
+[0;32mI (28479) example: Sending response: {"distance":8.53,"timestamp":28122,"led":"on"}[0m
+[0;32mI (28486) example: LED status response: {"status":"success","led":"on"}[0m
+[0;32mI (28490) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;32mI (28592) smart_embed: Saved: 7.75 cm, 28189 ms[0m
+[0;32mI (28593) smart_embed: LED ON - Distance: 5.6 cm < 10.0 cm[0m
+[0;33mW (28616) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (28616) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (28656) smart_embed: Distance: 6.2 cm[0m
+[0;32mI (28694) smart_embed: LED ON - Distance: 6.2 cm < 10.0 cm[0m
+[0;32mI (28739) smart_embed: Saved: 7.75 cm, 28336 ms[0m
+[0;32mI (28794) smart_embed: LED ON - Distance: 6.2 cm < 10.0 cm[0m
+[0;33mW (28887) httpd_uri: httpd_uri: URI '/sensor/history' not found[0m
+[0;33mW (28887) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+[0;32mI (28896) smart_embed: LED ON - Distance: 6.2 cm < 10.0 cm[0m
+[0;32mI (28926) smart_embed: Saved: 7.75 cm, 28482 ms[0m
+[0;32mI (28996) smart_embed: LED ON - Distance: 6.2 cm < 10.0 cm[0m
+[0;32mI (29073) smart_embed: Saved: 7.75 cm, 28670 ms[0m
+[0;32mI (29096) smart_embed: LED ON - Distance: 6.2 cm < 10.0 cm[0m
+[0;33mW (29167) smart_embed: Distance reading error or out of range[0m
+[0;32mI (29219) smart_embed: Saved: 7.75 cm, 28816 ms[0m
+[0;32mI (29366) smart_embed: Saved: 7.75 cm, 28963 ms[0m
+[0;32mI (29500) example: Ultrasonic API called[0m
+[0;32mI (29500) example: Distance read: 7.75 cm[0m
+[0;32mI (29501) example: Sending response: {"distance":7.75,"timestamp":29144,"led":"off"}[0m
+[0;32mI (29512) smart_embed: Saved: 7.75 cm, 29109 ms[0m
+[0;32mI (29659) smart_embed: Saved: 5.63 cm, 29256 ms[0m
+[0;33mW (29677) smart_embed: Distance reading error or out of range[0m
+[0;32mI (29806) smart_embed: Saved: 5.63 cm, 29403 ms[0m
+[0;32mI (29953) smart_embed: Saved: 5.63 cm, 29550 ms[0m
+[0;32mI (30099) smart_embed: Saved: 5.63 cm, 29696 ms[0m
+[0;33mW (30187) smart_embed: Distance reading error or out of range[0m
+[0;32mI (30245) smart_embed: Saved: 5.63 cm, 29842 ms[0m
+[0;32mI (30391) smart_embed: Saved: 5.63 cm, 29988 ms[0m
+[0;32mI (30424) example: Ultrasonic API called[0m
+[0;32mI (30424) example: Distance read: 5.63 cm[0m
+[0;32mI (30425) example: Sending response: {"distance":5.63,"timestamp":30068,"led":"off"}[0m
+[0;32mI (30472) example: LED status response: {"status":"success","led":"off"}[0m
+[0;32mI (30537) smart_embed: Saved: 6.22 cm, 30134 ms[0m
+[0;32mI (30684) smart_embed: Saved: 6.22 cm, 30280 ms[0m
+[0;33mW (30697) smart_embed: Distance reading error or out of range[0m
+[0;32mI (30831) smart_embed: Saved: 6.22 cm, 30428 ms[0m
+[0;32mI (30977) smart_embed: Saved: 6.22 cm, 30574 ms[0m
+[0;32mI (31123) smart_embed: Saved: 6.22 cm, 30720 ms[0m
+[0;33mW (31207) smart_embed: Distance reading error or out of range[0m
+[0;32mI (31269) smart_embed: Saved: 6.22 cm, 30866 ms[0m

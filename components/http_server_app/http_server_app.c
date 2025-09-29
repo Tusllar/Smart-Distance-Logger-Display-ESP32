@@ -44,6 +44,19 @@ extern bool g_distance_valid;
 
 static esp_err_t sensor_history_handler(httpd_req_t *req)
 {
+    // Parse optional limit query (?limit=200)
+    int limit = 200; // default
+    char query[EXAMPLE_HTTP_QUERY_KEY_MAX_LEN] = {0};
+    if (httpd_req_get_url_query_str(req, query, sizeof(query)) == ESP_OK) {
+        char limit_str[16];
+        if (httpd_query_key_value(query, "limit", limit_str, sizeof(limit_str)) == ESP_OK) {
+            int val = atoi(limit_str);
+            if (val > 0 && val <= 2000) {
+                limit = val;
+            }
+        }
+    }
+
     char path[64];
     snprintf(path, sizeof(path), "%s/sensor.csv", MOUNT_POINT);
     FILE *f = fopen(path, "r");
@@ -52,28 +65,67 @@ static esp_err_t sensor_history_handler(httpd_req_t *req)
         return ESP_FAIL;
     }
 
-    httpd_resp_set_type(req, "application/json");
-    httpd_resp_sendstr_chunk(req, "[");   // mở mảng JSON
+    // Use a rolling buffer of the last N entries to avoid sending huge payloads
+    typedef struct {
+        float distance;
+        long long timestamp;
+        bool valid;
+    } history_item_t;
 
+    // Cap memory: max 1024 entries to avoid large allocs
+    int cap = limit;
+    if (cap > 1024) cap = 1024;
+    history_item_t *items = (history_item_t *)calloc(cap, sizeof(history_item_t));
+    if (!items) {
+        fclose(f);
+        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "OOM");
+        return ESP_FAIL;
+    }
+
+    int count = 0;
+    int start_index = 0; // for circular buffer
     char line[128];
-    bool first = true;
     while (fgets(line, sizeof(line), f)) {
         float distance;
         long long timestamp;
         if (sscanf(line, "%f,%lld", &distance, &timestamp) == 2) {
-            if (!first) httpd_resp_sendstr_chunk(req, ",");
-            char item[64];
-            snprintf(item, sizeof(item),
-                     "{\"distance\":%.2f,\"timestamp\":%lld}",
-                     distance, timestamp);
-            httpd_resp_sendstr_chunk(req, item);
-            first = false;
+            items[start_index].distance = distance;
+            items[start_index].timestamp = timestamp;
+            items[start_index].valid = true;
+            start_index = (start_index + 1) % cap;
+            if (count < cap) count++;
         }
     }
-    httpd_resp_sendstr_chunk(req, "]");   // đóng mảng
-    httpd_resp_sendstr_chunk(req, NULL);  // kết thúc chunked
-
     fclose(f);
+
+    httpd_resp_set_type(req, "application/json");
+    httpd_resp_set_hdr(req, "Cache-Control", "no-store");
+    // Stream JSON array
+    httpd_resp_sendstr_chunk(req, "[");
+
+    char item_buf[96];
+    bool first = true;
+    int emitted = 0;
+    int to_emit = count;
+    for (int i = 0; i < to_emit; i++) {
+        int idx = (start_index - count + i);
+        while (idx < 0) idx += cap;
+        idx = idx % cap;
+        if (!items[idx].valid) continue;
+        if (!first) {
+            httpd_resp_sendstr_chunk(req, ",");
+        }
+        snprintf(item_buf, sizeof(item_buf),
+                 "{\"distance\":%.2f,\"timestamp\":%lld}",
+                 items[idx].distance, items[idx].timestamp);
+        httpd_resp_sendstr_chunk(req, item_buf);
+        first = false;
+        emitted++;
+    }
+
+    httpd_resp_sendstr_chunk(req, "]");
+    httpd_resp_sendstr_chunk(req, NULL);
+    free(items);
     return ESP_OK;
 }
 
@@ -226,50 +278,50 @@ static const httpd_uri_t any = {
     .user_ctx  = "Hello World!"
 };
 
-/* LED control handler */
-static esp_err_t led_control_handler(httpd_req_t *req)
-{
-    char query[100];
-    char resp[100];
+// /* LED control handler */
+// static esp_err_t led_control_handler(httpd_req_t *req)
+// {
+//     char query[100];
+//     char resp[100];
     
-    // Get query string
-    if (httpd_req_get_url_query_str(req, query, sizeof(query)) == ESP_OK) {
-        char param[32];
-        if (httpd_query_key_value(query, "state", param, sizeof(param)) == ESP_OK) {
-            ESP_LOGI(TAG, "LED control request: %s", param);
+//     // Get query string
+//     if (httpd_req_get_url_query_str(req, query, sizeof(query)) == ESP_OK) {
+//         char param[32];
+//         if (httpd_query_key_value(query, "state", param, sizeof(param)) == ESP_OK) {
+//             ESP_LOGI(TAG, "LED control request: %s", param);
             
-            if (strcmp(param, "on") == 0) {
-                // Turn on LED (GPIO 1)
-                gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
-                gpio_set_level(LED_PIN, 1);
-                snprintf(resp, sizeof(resp), "{\"status\":\"success\",\"led\":\"on\"}");
-            } else if (strcmp(param, "off") == 0) {
-                // Turn off LED (GPIO 1)
-                gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
-                gpio_set_level(LED_PIN, 0);
-                snprintf(resp, sizeof(resp), "{\"status\":\"success\",\"led\":\"off\"}");
-            } else {
-                snprintf(resp, sizeof(resp), "{\"status\":\"error\",\"message\":\"Invalid state\"}");
-            }
-        } else {
-            snprintf(resp, sizeof(resp), "{\"status\":\"error\",\"message\":\"Missing state parameter\"}");
-        }
-    } else {
-        snprintf(resp, sizeof(resp), "{\"status\":\"error\",\"message\":\"Invalid request\"}");
-    }
+//             if (strcmp(param, "on") == 0) {
+//                 // Turn on LED (GPIO 1)
+//                 gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
+//                 gpio_set_level(LED_PIN, 1);
+//                 snprintf(resp, sizeof(resp), "{\"status\":\"success\",\"led\":\"on\"}");
+//             } else if (strcmp(param, "off") == 0) {
+//                 // Turn off LED (GPIO 1)
+//                 gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
+//                 gpio_set_level(LED_PIN, 0);
+//                 snprintf(resp, sizeof(resp), "{\"status\":\"success\",\"led\":\"off\"}");
+//             } else {
+//                 snprintf(resp, sizeof(resp), "{\"status\":\"error\",\"message\":\"Invalid state\"}");
+//             }
+//         } else {
+//             snprintf(resp, sizeof(resp), "{\"status\":\"error\",\"message\":\"Missing state parameter\"}");
+//         }
+//     } else {
+//         snprintf(resp, sizeof(resp), "{\"status\":\"error\",\"message\":\"Invalid request\"}");
+//     }
     
-    httpd_resp_set_type(req, "application/json");
-    httpd_resp_send(req, resp, strlen(resp));
+//     httpd_resp_set_type(req, "application/json");
+//     httpd_resp_send(req, resp, strlen(resp));
     
-    return ESP_OK;
-}
+//     return ESP_OK;
+// }
 
-static const httpd_uri_t led_control = {
-    .uri       = "/led",
-    .method    = HTTP_GET,
-    .handler   = led_control_handler,
-    .user_ctx  = NULL
-};
+// static const httpd_uri_t led_control = {
+//     .uri       = "/led",
+//     .method    = HTTP_GET,
+//     .handler   = led_control_handler,
+//     .user_ctx  = NULL
+// };
 
 /* LED status handler - để kiểm tra trạng thái LED */
 static esp_err_t led_status_handler(httpd_req_t *req)
@@ -427,7 +479,7 @@ void start_webserver(void)
         httpd_register_uri_handler(server, &echo);
         httpd_register_uri_handler(server, &ctrl);
         httpd_register_uri_handler(server, &any);
-        httpd_register_uri_handler(server, &led_control);
+        // httpd_register_uri_handler(server, &led_control);
         httpd_register_uri_handler(server, &led_status);  // Thêm endpoint LED status
         httpd_register_uri_handler(server, &ultrasonic);  // Thêm endpoint mới
         httpd_register_uri_handler(server, &sensor_history);

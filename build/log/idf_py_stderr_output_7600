@@ -1,0 +1,2 @@
+Command: ninja 4
+ninja: error: unknown target '4', did you mean 'all'?
